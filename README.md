@@ -121,9 +121,16 @@ The database ranking is licensed under the international license [Creative Commo
 
 For commercial use of the data contact us please!
 
-## Adding more databases/workloads/cloud
+## Adding more ...
+
+### ... more databases/workloads/cloud
+
 The goal is to measure and publish as many databases and clouds as possible for different workloads.
 
 If you want a specific DBMS or DBaaS to be integrated, please contact the database provider.
 
 If you are a DBMS vendor or DBaaS provider, please feel free to contact us via GitHub, or via email at ranking@benchant.com.
+
+### ... more rankings
+
+Interested in going beyond databases? If so, get in touch via GitHub, or via email at ranking@benchant.com.
