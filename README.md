@@ -40,6 +40,7 @@ In general, the following workload types are distinguished:
 - CRUD: Simple READ, WRITE, UPDATE and DELETE operations
 - OLTP: Transactional, complex operations of data processing
 - OLAP: Analytical batch processes
+- HTAP: Hybrid transactional and analytics processing 
 - Time-Series: Time-series data with very simple, but high-frequency access patterns
 
 In addition to the access pattern, other workload characteristics can have a major impact
