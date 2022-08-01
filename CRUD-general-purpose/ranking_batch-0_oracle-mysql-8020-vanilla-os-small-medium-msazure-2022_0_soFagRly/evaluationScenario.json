@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "userId": "benchANT",
+    "projectId": "ranking",
+    "batchId": "batch-0",
+    "configurationId": "oracle-mysql-8020-vanilla-os-small-medium-msazure-2022",
+    "configurationLabel": "oracle-mysql-8020-vanilla-os-small-medium-msazure-2022",
+    "executions": 1,
+    "executionCounter": 1
+  },
+  "resourceProvider": {
+    "name": "AZURE",
+    "api": "AZURE"
+  },
+  "dbmsDeployment": {
+    "dbmsType": "MYSQL",
+    "operationType": "DBMS",
+    "version": "8.0.20",
+    "DBMS": {
+      "dataNodes": {
+        "numberOfNodes": 1,
+        "resource": {
+          "costs": {
+            "storageCosts": 0.32,
+            "vmCosts": 0.22
+          },
+          "azureVm": {
+            "region": "northeurope",
+            "imagePublisher": "Canonical",
+            "imageOffer": "0001-com-ubuntu-server-focal",
+            "imageSku": "20_04-lts",
+            "vmSize": "Standard_D4s_v4",
+            "diskType": "Standard_LRS",
+            "diskSize": 100
+          }
+        },
+        "replicationFactor": 1,
+        "memoryAllocation": 0.75
+      }
+    }
+  },
+  "benchmarkDeployment": {
+    "benchmarkNodes": {
+      "numberOfNodes": 1,
+      "resource": {
+        "azureVm": {
+          "region": "northeurope",
+          "imagePublisher": "Canonical",
+          "imageOffer": "0001-com-ubuntu-server-focal",
+          "imageSku": "20_04-lts",
+          "vmSize": "Standard_D32_v4",
+          "diskType": "Standard_LRS",
+          "diskSize": 30
+        }
+      }
+    }
+  },
+  "benchmark": {
+    "id": "YCSB-GeneralPurpose-medium",
+    "distribution": "YCSB",
+    "version": "0.17.0",
+    "ycsb": {
+      "executeLoadPhase": true,
+      "executeRunPhase": true,
+      "dbmsEndpoints": [],
+      "workload": {
+        "workloadType": "LOAD",
+        "workloadClass": "site.ycsb.workloads.CoreWorkload",
+        "maxExecutionTime": 1800,
+        "threadCount": 100,
+        "recordCount": 5000000,
+        "insertStart": 5000000,
+        "insertCount": 0,
+        "operations": 54000000,
+        "targetOps": 0,
+        "fieldCount": 10,
+        "fieldLength": 50,
+        "readAllFileds": true,
+        "readModifyWriteProportion": 0,
+        "requestdistribution": "ZIPFIAN",
+        "scanLengthDistribution": "UNIFORM",
+        "insertOrder": "ORDERED",
+        "readProportion": 0.5,
+        "updateProportion": 0.0,
+        "insertProportion": 0.5,
+        "scanProportion": 0.0,
+        "maxScanLength": 0,
+        "coreWorkloadInsertionRetryLimit": 3,
+        "coreWorkloadInsertionRetryInterval": 3
+      }
+    }
+  }
+}

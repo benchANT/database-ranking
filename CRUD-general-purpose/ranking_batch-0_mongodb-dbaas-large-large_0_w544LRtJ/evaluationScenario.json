@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "userId": "benchANT",
+    "projectId": "ranking",
+    "batchId": "batch-0",
+    "configurationId": "mongodb-50-vanilla-dbaas-large-large-awsec2-2022",
+    "configurationLabel": "mongodb-50-vanilla-dbaas-large-large-awsec2-2022",
+    "executions": 1,
+    "executionCounter": 1
+  },
+  "resourceProvider": {
+    "name": "EC2",
+    "api": "EC2"
+  },
+  "dbaasProvider": {
+    "name": "ATLAS",
+    "api": "ATLAS"
+  },
+  "dbmsDeployment": {
+    "dbmsType": "MONGODB",
+    "operationType": "DBAAS",
+    "version": "5.0",
+    "DBAAS": {
+      "costs": {
+        "storageCosts": 0.0,
+        "vmCosts": 2.2
+      },
+      "mongodbAtlasInstance": {
+        "diskSize": 100.0,
+        "numShards": 1,
+        "clusterType": "REPLICASET",
+        "providerSettings": {
+          "providerName": "AWS",
+          "instanceSizeName": "M50",
+          "regionName": "EU_CENTRAL_1"
+        }
+      }
+    }
+  },
+  "benchmarkDeployment": {
+    "benchmarkNodes": {
+      "numberOfNodes": 1,
+      "resource": {
+        "ec2Vm": {
+          "regionName": "eu-central-1",
+          "instanceType": "c5.4xlarge",
+          "architecture": "x86_64",
+          "imageDistribution": "ubuntu",
+          "imageVersion": "20.04",
+          "volumeType": "GP2",
+          "volumeSize": 30,
+          "iops": 100
+        }
+      }
+    }
+  },
+  "benchmark": {
+    "id": "YCSB-GeneralPurpose-large",
+    "distribution": "YCSB",
+    "version": "0.17.0",
+    "ycsb": {
+      "executeLoadPhase": true,
+      "executeRunPhase": true,
+      "dbmsEndpoints": [],
+      "workload": {
+        "workloadType": "LOAD",
+        "workloadClass": "site.ycsb.workloads.CoreWorkload",
+        "maxExecutionTime": 1800,
+        "threadCount": 200,
+        "recordCount": 5000000,
+        "insertStart": 5000000,
+        "insertCount": 0,
+        "operations": 54000000,
+        "targetOps": 0,
+        "fieldCount": 10,
+        "fieldLength": 50,
+        "readAllFileds": true,
+        "readModifyWriteProportion": 0,
+        "requestdistribution": "ZIPFIAN",
+        "scanLengthDistribution": "UNIFORM",
+        "insertOrder": "ORDERED",
+        "readProportion": 0.5,
+        "updateProportion": 0.0,
+        "insertProportion": 0.5,
+        "scanProportion": 0.0,
+        "maxScanLength": 0,
+        "coreWorkloadInsertionRetryLimit": 3,
+        "coreWorkloadInsertionRetryInterval": 3
+      }
+    }
+  }
+}

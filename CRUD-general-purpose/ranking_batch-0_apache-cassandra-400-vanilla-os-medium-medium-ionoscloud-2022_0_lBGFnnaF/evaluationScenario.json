@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "userId": "benchANT",
+    "projectId": "ranking",
+    "batchId": "batch-0",
+    "configurationId": "apache-cassandra-400-vanilla-os-medium-medium-ionoscloud-2022",
+    "configurationLabel": "apache-cassandra-400-vanilla-os-medium-medium-ionoscloud-2022",
+    "executions": 1,
+    "executionCounter": 1
+  },
+  "resourceProvider": {
+    "name": "IONOS",
+    "api": "IONOS"
+  },
+  "dbmsDeployment": {
+    "dbmsType": "CASSANDRA",
+    "operationType": "DBMS",
+    "version": "4.0.0",
+    "DBMS": {
+      "dataNodes": {
+        "numberOfNodes": 3,
+        "resource": {
+          "costs": {
+            "storageCosts": 0.0533,
+            "vmCosts": 0.3136
+          },
+          "ionosVm": {
+            "location": "de/txl",
+            "availabilityZone": "ZONE_1",
+            "instanceName": "4cores_SKYLAKE_16GB",
+            "cores": 4,
+            "cpuFamiliy": "INTEL_SKYLAKE",
+            "ram": 16384,
+            "image": "ubuntu:20.04",
+            "diskType": "HDD",
+            "volumeSize": 100
+          }
+        },
+        "replicationFactor": 3,
+        "memoryAllocation": 4096
+      }
+    }
+  },
+  "benchmarkDeployment": {
+    "benchmarkNodes": {
+      "numberOfNodes": 1,
+      "resource": {
+        "ionosVm": {
+          "location": "de/txl",
+          "availabilityZone": "ZONE_1",
+          "instanceName": "16cores_SKYLAKE_32GB",
+          "cores": 16,
+          "cpuFamiliy": "INTEL_SKYLAKE",
+          "ram": 32768,
+          "image": "ubuntu:20.04",
+          "diskType": "HDD",
+          "volumeSize": 100
+        }
+      }
+    }
+  },
+  "benchmark": {
+    "id": "YCSB-GeneralPurpose-medium",
+    "distribution": "YCSB",
+    "version": "0.17.0",
+    "ycsb": {
+      "executeLoadPhase": true,
+      "executeRunPhase": true,
+      "dbmsEndpoints": [],
+      "workload": {
+        "workloadType": "LOAD",
+        "workloadClass": "site.ycsb.workloads.CoreWorkload",
+        "maxExecutionTime": 1800,
+        "threadCount": 100,
+        "recordCount": 5000000,
+        "insertStart": 5000000,
+        "insertCount": 0,
+        "operations": 54000000,
+        "targetOps": 0,
+        "fieldCount": 10,
+        "fieldLength": 50,
+        "readAllFileds": true,
+        "readModifyWriteProportion": 0,
+        "requestdistribution": "ZIPFIAN",
+        "scanLengthDistribution": "UNIFORM",
+        "insertOrder": "ORDERED",
+        "readProportion": 0.5,
+        "updateProportion": 0.0,
+        "insertProportion": 0.5,
+        "scanProportion": 0.0,
+        "maxScanLength": 0,
+        "coreWorkloadInsertionRetryLimit": 3,
+        "coreWorkloadInsertionRetryInterval": 3
+      }
+    }
+  }
+}

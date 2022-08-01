@@ -1,0 +1,286 @@
+/usr/java/bin/java -XX:MaxRAMPercentage=85.0 -cp /binary/ycsb/jdbc-binding/conf:/binary/ycsb/conf:/binary/ycsb/lib/jackson-mapper-asl-1.9.4.jar:/binary/ycsb/lib/HdrHistogram-2.1.4.jar:/binary/ycsb/lib/core-0.17.0.jar:/binary/ycsb/lib/jackson-core-asl-1.9.4.jar:/binary/ycsb/lib/htrace-core4-4.1.0-incubating.jar:/binary/ycsb/jdbc-binding/lib/geronimo-jta_1.1_spec-1.1.1.jar:/binary/ycsb/jdbc-binding/lib/mysql-connector-java-5.1.47.jar:/binary/ycsb/jdbc-binding/lib/commons-collections-3.2.1.jar:/binary/ycsb/jdbc-binding/lib/mariadb-java-client-3.0.5.jar:/binary/ycsb/jdbc-binding/lib/commons-pool-1.5.4.jar:/binary/ycsb/jdbc-binding/lib/jdbc-binding-0.17.0.jar:/binary/ycsb/jdbc-binding/lib/postgresql-42.2.5.jar:/binary/ycsb/jdbc-binding/lib/crate-jdbc-standalone-2.6.0.jar:/binary/ycsb/jdbc-binding/lib/openjpa-kernel-2.1.1.jar:/binary/ycsb/jdbc-binding/lib/openjpa-jdbc-2.1.1.jar:/binary/ycsb/jdbc-binding/lib/openjpa-lib-2.1.1.jar:/binary/ycsb/jdbc-binding/lib/serp-1.13.1.jar:/binary/ycsb/jdbc-binding/lib/geronimo-jms_1.1_spec-1.1.1.jar:/binary/ycsb/jdbc-binding/lib/commons-lang-2.4.jar:/binary/ycsb/jdbc-binding/lib/mysql-connector-java-5.1.47/mysql-connector-java-5.1.47-bin.jar:/binary/ycsb/jdbc-binding/lib/mysql-connector-java-5.1.47/src/lib/slf4j-api-1.6.1.jar:/binary/ycsb/jdbc-binding/lib/mysql-connector-java-5.1.47/src/lib/jboss-common-jdbc-wrapper.jar:/binary/ycsb/jdbc-binding/lib/mysql-connector-java-5.1.47/src/lib/jboss-common-jdbc-wrapper-src.jar:/binary/ycsb/jdbc-binding/lib/mysql-connector-java-5.1.47/src/lib/c3p0-0.9.1-pre6.jar site.ycsb.Client -db site.ycsb.db.JdbcDBClient -s -p db.url=jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true -p db.driver=org.postgresql.Driver -p db.user=benchant -p db.passwd=benchANT2022 -p db.batchsize=1000 -p workload=site.ycsb.workloads.CoreWorkload -threads 50 -p recordcount=5000000 -p operationcount=54000000 -p fieldcount=10 -p fieldlength=50 -p requestdistribution=zipfian -p insertorder=ordered -p readproportion=0.5 -p updateproportion=0.0 -p insertproportion=0.5 -p scanproportion=0.0 -p scanlengthdistribution=uniform -p core_workload_insertion_retry_limit=3 -p core_workload_insertion_retry_interval=3 -load
+Command line: -db site.ycsb.db.JdbcDBClient -s -p db.url=jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true -p db.driver=org.postgresql.Driver -p db.user=benchant -p db.passwd=benchANT2022 -p db.batchsize=1000 -p workload=site.ycsb.workloads.CoreWorkload -threads 50 -p recordcount=5000000 -p operationcount=54000000 -p fieldcount=10 -p fieldlength=50 -p requestdistribution=zipfian -p insertorder=ordered -p readproportion=0.5 -p updateproportion=0.0 -p insertproportion=0.5 -p scanproportion=0.0 -p scanlengthdistribution=uniform -p core_workload_insertion_retry_limit=3 -p core_workload_insertion_retry_interval=3 -load
+YCSB Client 0.17.0
+
+Loading workload...
+Starting test.
+2022-07-18 08:40:12:864 0 sec: 0 operations; est completion in 0 second 
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://192.168.0.221:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+2022-07-18 08:40:22:852 10 sec: 32796 operations; 3279.6 current ops/sec; est completion in 25 minutes [INSERT: Count=32801, Max=56127, Min=1535, Avg=12152.87, 90=19855, 99=34655, 99.9=45631, 99.99=53759] 
+2022-07-18 08:40:32:852 20 sec: 76741 operations; 4394.5 current ops/sec; est completion in 21 minutes [INSERT: Count=43944, Max=68031, Min=1663, Avg=11377.02, 90=18063, 99=32927, 99.9=42271, 99.99=46303] 
+2022-07-18 08:40:42:852 30 sec: 122112 operations; 4537.1 current ops/sec; est completion in 19 minutes [INSERT: Count=45368, Max=72831, Min=1070, Avg=11017.93, 90=17007, 99=31839, 99.9=43999, 99.99=67391] 
+2022-07-18 08:40:52:852 40 sec: 168156 operations; 4604.4 current ops/sec; est completion in 19 minutes [INSERT: Count=46043, Max=60959, Min=1007, Avg=10858.13, 90=16751, 99=31343, 99.9=43007, 99.99=60607] 
+2022-07-18 08:41:02:852 50 sec: 214337 operations; 4618.1 current ops/sec; est completion in 18 minutes [INSERT: Count=46181, Max=59519, Min=1624, Avg=10817.69, 90=16463, 99=30815, 99.9=41279, 99.99=54047] 
+2022-07-18 08:41:12:852 60 sec: 259323 operations; 4498.6 current ops/sec; est completion in 18 minutes [INSERT: Count=44986, Max=82047, Min=940, Avg=11122.97, 90=17167, 99=31615, 99.9=46399, 99.99=75711] 
+2022-07-18 08:41:22:852 70 sec: 305571 operations; 4624.8 current ops/sec; est completion in 17 minutes [INSERT: Count=46252, Max=51359, Min=875, Avg=10813.48, 90=16623, 99=30607, 99.9=38303, 99.99=48927] 
+2022-07-18 08:41:32:852 80 sec: 355127 operations; 4955.6 current ops/sec; est completion in 17 minutes [INSERT: Count=49552, Max=57151, Min=866, Avg=10088.19, 90=16415, 99=29423, 99.9=41247, 99.99=55807] 
+2022-07-18 08:41:42:852 90 sec: 404094 operations; 4896.7 current ops/sec; est completion in 17 minutes [INSERT: Count=48975, Max=64799, Min=873, Avg=10209.44, 90=17119, 99=34783, 99.9=50719, 99.99=57119] 
+2022-07-18 08:41:52:852 100 sec: 452861 operations; 4876.7 current ops/sec; est completion in 16 minutes [INSERT: Count=48759, Max=62399, Min=867, Avg=10252.08, 90=17503, 99=33183, 99.9=48511, 99.99=61055] 
+2022-07-18 08:42:02:852 110 sec: 504039 operations; 5117.8 current ops/sec; est completion in 16 minutes [INSERT: Count=51178, Max=66431, Min=910, Avg=9755.96, 90=16095, 99=30527, 99.9=39743, 99.99=51967] 
+2022-07-18 08:42:12:852 120 sec: 555454 operations; 5141.5 current ops/sec; est completion in 16 minutes [INSERT: Count=51418, Max=55935, Min=860, Avg=9737.62, 90=16159, 99=29535, 99.9=41567, 99.99=45823] 
+2022-07-18 08:42:22:852 130 sec: 605684 operations; 5023 current ops/sec; est completion in 15 minutes [INSERT: Count=50230, Max=56415, Min=795, Avg=9950.09, 90=16719, 99=30303, 99.9=43263, 99.99=54687] 
+2022-07-18 08:42:32:852 140 sec: 658151 operations; 5246.7 current ops/sec; est completion in 15 minutes [INSERT: Count=52467, Max=60095, Min=879, Avg=9531.75, 90=15791, 99=28399, 99.9=39103, 99.99=52255] 
+2022-07-18 08:42:42:852 150 sec: 710878 operations; 5272.7 current ops/sec; est completion in 15 minutes [INSERT: Count=52724, Max=52511, Min=805, Avg=9479.55, 90=15807, 99=28015, 99.9=37727, 99.99=48287] 
+2022-07-18 08:42:52:852 160 sec: 762002 operations; 5112.4 current ops/sec; est completion in 14 minutes [INSERT: Count=51124, Max=69951, Min=855, Avg=9779.9, 90=16359, 99=29455, 99.9=52895, 99.99=69311] 
+2022-07-18 08:43:02:852 170 sec: 811386 operations; 4938.4 current ops/sec; est completion in 14 minutes [INSERT: Count=49384, Max=92031, Min=823, Avg=10113.3, 90=17023, 99=33791, 99.9=54239, 99.99=65119] 
+2022-07-18 08:43:12:852 180 sec: 860704 operations; 4931.8 current ops/sec; est completion in 14 minutes [INSERT: Count=49318, Max=63487, Min=862, Avg=10152.31, 90=16751, 99=35071, 99.9=57151, 99.99=61759] 
+2022-07-18 08:43:22:852 190 sec: 910182 operations; 4947.8 current ops/sec; est completion in 14 minutes [INSERT: Count=49478, Max=58847, Min=853, Avg=10099.44, 90=17407, 99=31935, 99.9=48031, 99.99=56991] 
+2022-07-18 08:43:32:852 200 sec: 958880 operations; 4869.8 current ops/sec; est completion in 14 minutes [INSERT: Count=48698, Max=50975, Min=840, Avg=10271.34, 90=17535, 99=33375, 99.9=43775, 99.99=49567] 
+2022-07-18 08:43:42:852 210 sec: 1008637 operations; 4975.7 current ops/sec; est completion in 13 minutes [INSERT: Count=49757, Max=70399, Min=858, Avg=10044.31, 90=16975, 99=32415, 99.9=46879, 99.99=52863] 
+2022-07-18 08:43:52:852 220 sec: 1060835 operations; 5219.8 current ops/sec; est completion in 13 minutes [INSERT: Count=52199, Max=56799, Min=871, Avg=9578.59, 90=15759, 99=28751, 99.9=40415, 99.99=50463] 
+2022-07-18 08:44:02:852 230 sec: 1112752 operations; 5191.7 current ops/sec; est completion in 13 minutes [INSERT: Count=51916, Max=80191, Min=864, Avg=9632.27, 90=15879, 99=29039, 99.9=41343, 99.99=47391] 
+2022-07-18 08:44:12:852 240 sec: 1164570 operations; 5181.8 current ops/sec; est completion in 13 minutes [INSERT: Count=51818, Max=58591, Min=886, Avg=9648.38, 90=15999, 99=29407, 99.9=42783, 99.99=52319] 
+2022-07-18 08:44:22:852 250 sec: 1216517 operations; 5194.7 current ops/sec; est completion in 12 minutes [INSERT: Count=51947, Max=49087, Min=865, Avg=9622.63, 90=15983, 99=28607, 99.9=41855, 99.99=48223] 
+2022-07-18 08:44:32:852 260 sec: 1265463 operations; 4894.6 current ops/sec; est completion in 12 minutes [INSERT: Count=48946, Max=66111, Min=852, Avg=10218.62, 90=17279, 99=31727, 99.9=46463, 99.99=57151] 
+2022-07-18 08:44:42:852 270 sec: 1315219 operations; 4975.6 current ops/sec; est completion in 12 minutes [INSERT: Count=49756, Max=56639, Min=868, Avg=10047.74, 90=16895, 99=31215, 99.9=44287, 99.99=55647] 
+2022-07-18 08:44:52:852 280 sec: 1364765 operations; 4954.6 current ops/sec; est completion in 12 minutes [INSERT: Count=49560, Max=66111, Min=840, Avg=10087.01, 90=16703, 99=33471, 99.9=57855, 99.99=65599] 
+2022-07-18 08:45:02:852 290 sec: 1413211 operations; 4844.6 current ops/sec; est completion in 12 minutes [INSERT: Count=48432, Max=59423, Min=820, Avg=10317.07, 90=17311, 99=32831, 99.9=47135, 99.99=58751] 
+2022-07-18 08:45:12:852 300 sec: 1462312 operations; 4910.1 current ops/sec; est completion in 12 minutes [INSERT: Count=49101, Max=79359, Min=851, Avg=10188.45, 90=17071, 99=33439, 99.9=47807, 99.99=60895] 
+2022-07-18 08:45:22:852 310 sec: 1511146 operations; 4883.4 current ops/sec; est completion in 11 minutes [INSERT: Count=48835, Max=63519, Min=873, Avg=10234.73, 90=17327, 99=32799, 99.9=56831, 99.99=62207] 
+2022-07-18 08:45:32:852 320 sec: 1558883 operations; 4773.7 current ops/sec; est completion in 11 minutes [INSERT: Count=47736, Max=149119, Min=861, Avg=10471.54, 90=17535, 99=33119, 99.9=115903, 99.99=147199] 
+2022-07-18 08:45:42:852 330 sec: 1605690 operations; 4680.7 current ops/sec; est completion in 11 minutes [INSERT: Count=46809, Max=164607, Min=871, Avg=10665.07, 90=17679, 99=35807, 99.9=133119, 99.99=163455] 
+2022-07-18 08:45:52:852 340 sec: 1654505 operations; 4881.5 current ops/sec; est completion in 11 minutes [INSERT: Count=48813, Max=67647, Min=866, Avg=10261.21, 90=17023, 99=34879, 99.9=54687, 99.99=56703] 
+2022-07-18 08:46:02:852 350 sec: 1703134 operations; 4862.9 current ops/sec; est completion in 11 minutes [INSERT: Count=48629, Max=103999, Min=889, Avg=10281.03, 90=16991, 99=34847, 99.9=82687, 99.99=102015] 
+2022-07-18 08:46:12:852 360 sec: 1752179 operations; 4904.5 current ops/sec; est completion in 11 minutes [INSERT: Count=49045, Max=80383, Min=788, Avg=10195.83, 90=16911, 99=31951, 99.9=65279, 99.99=71551] 
+2022-07-18 08:46:22:852 370 sec: 1802737 operations; 5055.8 current ops/sec; est completion in 10 minutes [INSERT: Count=50562, Max=47391, Min=805, Avg=9888.68, 90=16367, 99=28303, 99.9=38047, 99.99=42591] 
+2022-07-18 08:46:32:852 380 sec: 1852750 operations; 5001.3 current ops/sec; est completion in 10 minutes [INSERT: Count=50009, Max=51999, Min=897, Avg=9994, 90=16719, 99=29295, 99.9=45215, 99.99=50719] 
+2022-07-18 08:46:42:852 390 sec: 1902695 operations; 4994.5 current ops/sec; est completion in 10 minutes [INSERT: Count=49945, Max=62527, Min=901, Avg=10013.39, 90=16511, 99=33311, 99.9=47167, 99.99=51039] 
+2022-07-18 08:46:52:852 400 sec: 1952278 operations; 4958.3 current ops/sec; est completion in 10 minutes [INSERT: Count=49586, Max=65471, Min=869, Avg=10082.15, 90=16943, 99=29615, 99.9=40159, 99.99=62783] 
+2022-07-18 08:47:02:852 410 sec: 2001468 operations; 4919 current ops/sec; est completion in 10 minutes [INSERT: Count=49187, Max=63071, Min=832, Avg=10161.04, 90=17023, 99=31855, 99.9=48159, 99.99=59359] 
+2022-07-18 08:47:12:852 420 sec: 2049373 operations; 4790.5 current ops/sec; est completion in 10 minutes [INSERT: Count=47905, Max=57791, Min=867, Avg=10437.74, 90=17727, 99=35103, 99.9=49631, 99.99=55999] 
+2022-07-18 08:47:22:852 430 sec: 2097475 operations; 4810.2 current ops/sec; est completion in 9 minutes [INSERT: Count=48102, Max=78079, Min=876, Avg=10368.51, 90=17503, 99=35743, 99.9=50655, 99.99=56895] 
+2022-07-18 08:47:32:852 440 sec: 2145671 operations; 4819.6 current ops/sec; est completion in 9 minutes [INSERT: Count=48196, Max=98623, Min=818, Avg=10399.59, 90=17503, 99=35551, 99.9=72319, 99.99=98303] 
+2022-07-18 08:47:42:852 450 sec: 2193860 operations; 4818.9 current ops/sec; est completion in 9 minutes [INSERT: Count=48189, Max=66751, Min=853, Avg=10373.62, 90=17327, 99=35071, 99.9=48639, 99.99=55359] 
+2022-07-18 08:47:52:852 460 sec: 2241499 operations; 4763.9 current ops/sec; est completion in 9 minutes [INSERT: Count=47639, Max=53727, Min=816, Avg=10494.82, 90=18015, 99=32415, 99.9=50527, 99.99=52991] 
+2022-07-18 08:48:02:852 470 sec: 2288503 operations; 4700.4 current ops/sec; est completion in 9 minutes [INSERT: Count=47004, Max=81151, Min=858, Avg=10624.86, 90=18255, 99=35263, 99.9=55071, 99.99=64191] 
+2022-07-18 08:48:12:852 480 sec: 2335358 operations; 4685.5 current ops/sec; est completion in 9 minutes [INSERT: Count=46855, Max=133631, Min=829, Avg=10676.98, 90=17919, 99=34943, 99.9=120127, 99.99=133375] 
+2022-07-18 08:48:22:852 490 sec: 2383304 operations; 4794.6 current ops/sec; est completion in 8 minutes [INSERT: Count=47946, Max=63327, Min=850, Avg=10436.19, 90=17375, 99=35391, 99.9=52479, 99.99=61759] 
+2022-07-18 08:48:32:852 500 sec: 2431505 operations; 4820.1 current ops/sec; est completion in 8 minutes [INSERT: Count=48201, Max=59615, Min=886, Avg=10368.24, 90=17423, 99=32671, 99.9=48351, 99.99=57983] 
+2022-07-18 08:48:42:852 510 sec: 2479157 operations; 4765.2 current ops/sec; est completion in 8 minutes [INSERT: Count=47652, Max=60479, Min=900, Avg=10492.42, 90=17759, 99=33087, 99.9=49567, 99.99=59711] 
+2022-07-18 08:48:52:852 520 sec: 2526173 operations; 4701.6 current ops/sec; est completion in 8 minutes [INSERT: Count=47016, Max=68223, Min=864, Avg=10636.15, 90=17967, 99=34687, 99.9=47167, 99.99=58239] 
+2022-07-18 08:49:02:852 530 sec: 2574442 operations; 4826.9 current ops/sec; est completion in 8 minutes [INSERT: Count=48272, Max=64927, Min=877, Avg=10357.45, 90=17455, 99=35903, 99.9=49791, 99.99=59199] 
+2022-07-18 08:49:12:852 540 sec: 2621477 operations; 4703.5 current ops/sec; est completion in 8 minutes [INSERT: Count=47032, Max=117503, Min=852, Avg=10628.23, 90=17647, 99=36159, 99.9=66111, 99.99=95679] 
+2022-07-18 08:49:22:852 550 sec: 2670588 operations; 4911.1 current ops/sec; est completion in 8 minutes [INSERT: Count=49113, Max=47295, Min=841, Avg=10174.96, 90=17039, 99=31407, 99.9=40447, 99.99=46079] 
+2022-07-18 08:49:32:852 560 sec: 2719583 operations; 4899.5 current ops/sec; est completion in 7 minutes [INSERT: Count=48993, Max=65407, Min=878, Avg=10207.28, 90=17151, 99=30223, 99.9=43647, 99.99=64863] 
+2022-07-18 08:49:42:852 570 sec: 2769098 operations; 4951.5 current ops/sec; est completion in 7 minutes [INSERT: Count=49515, Max=63487, Min=797, Avg=10102.1, 90=16799, 99=30111, 99.9=41215, 99.99=50207] 
+2022-07-18 08:49:52:852 580 sec: 2817058 operations; 4796 current ops/sec; est completion in 7 minutes [INSERT: Count=47960, Max=165759, Min=829, Avg=10420.52, 90=17455, 99=34047, 99.9=125375, 99.99=164095] 
+2022-07-18 08:50:02:852 590 sec: 2867606 operations; 5054.8 current ops/sec; est completion in 7 minutes [INSERT: Count=50548, Max=69759, Min=906, Avg=9887.91, 90=16271, 99=30127, 99.9=39391, 99.99=68479] 
+2022-07-18 08:50:12:852 600 sec: 2915785 operations; 4817.9 current ops/sec; est completion in 7 minutes [INSERT: Count=48181, Max=59391, Min=863, Avg=10382.71, 90=17439, 99=33855, 99.9=48287, 99.99=56287] 
+2022-07-18 08:50:22:852 610 sec: 2963681 operations; 4789.6 current ops/sec; est completion in 7 minutes [INSERT: Count=47894, Max=64415, Min=821, Avg=10434.17, 90=17647, 99=34719, 99.9=51583, 99.99=61631] 
+2022-07-18 08:50:32:852 620 sec: 3011589 operations; 4790.8 current ops/sec; est completion in 6 minutes [INSERT: Count=47908, Max=56735, Min=861, Avg=10440.89, 90=17455, 99=33055, 99.9=52031, 99.99=54623] 
+2022-07-18 08:50:42:852 630 sec: 3059298 operations; 4770.9 current ops/sec; est completion in 6 minutes [INSERT: Count=47709, Max=78207, Min=871, Avg=10479.14, 90=17407, 99=34335, 99.9=52383, 99.99=55135] 
+2022-07-18 08:50:52:852 640 sec: 3105307 operations; 4600.9 current ops/sec; est completion in 6 minutes [INSERT: Count=46009, Max=69567, Min=875, Avg=10863.11, 90=18703, 99=36383, 99.9=60223, 99.99=67135] 
+2022-07-18 08:51:02:852 650 sec: 3152094 operations; 4678.7 current ops/sec; est completion in 6 minutes [INSERT: Count=46789, Max=68415, Min=874, Avg=10688.93, 90=18207, 99=33535, 99.9=54303, 99.99=65215] 
+2022-07-18 08:51:12:852 660 sec: 3196756 operations; 4466.2 current ops/sec; est completion in 6 minutes [INSERT: Count=44660, Max=301055, Min=868, Avg=11191.49, 90=18399, 99=38879, 99.9=269311, 99.99=299775] 
+2022-07-18 08:51:22:852 670 sec: 3243068 operations; 4631.2 current ops/sec; est completion in 6 minutes [INSERT: Count=46312, Max=74175, Min=877, Avg=10801.74, 90=18511, 99=37791, 99.9=53823, 99.99=70079] 
+2022-07-18 08:51:32:852 680 sec: 3289334 operations; 4626.6 current ops/sec; est completion in 5 minutes [INSERT: Count=46267, Max=85311, Min=856, Avg=10802.99, 90=18031, 99=34399, 99.9=74559, 99.99=85247] 
+2022-07-18 08:51:42:852 690 sec: 3336190 operations; 4685.6 current ops/sec; est completion in 5 minutes [INSERT: Count=46855, Max=81983, Min=853, Avg=10672.02, 90=18415, 99=35071, 99.9=51263, 99.99=65983] 
+2022-07-18 08:51:52:852 700 sec: 3383801 operations; 4761.1 current ops/sec; est completion in 5 minutes [INSERT: Count=47611, Max=62015, Min=858, Avg=10499.19, 90=17631, 99=33823, 99.9=50047, 99.99=61567] 
+2022-07-18 08:52:02:852 710 sec: 3430827 operations; 4702.6 current ops/sec; est completion in 5 minutes [INSERT: Count=47026, Max=59423, Min=833, Avg=10629.47, 90=18175, 99=33919, 99.9=47423, 99.99=58175] 
+2022-07-18 08:52:12:852 720 sec: 3478791 operations; 4796.4 current ops/sec; est completion in 5 minutes [INSERT: Count=47964, Max=65535, Min=887, Avg=10423.49, 90=17551, 99=34111, 99.9=53055, 99.99=57279] 
+2022-07-18 08:52:22:852 730 sec: 3524661 operations; 4587 current ops/sec; est completion in 5 minutes [INSERT: Count=45873, Max=105535, Min=836, Avg=10900.54, 90=18175, 99=41663, 99.9=68927, 99.99=79039] 
+2022-07-18 08:52:32:852 740 sec: 3571127 operations; 4646.6 current ops/sec; est completion in 4 minutes [INSERT: Count=46463, Max=67455, Min=843, Avg=10749.97, 90=18367, 99=34047, 99.9=48575, 99.99=61535] 
+2022-07-18 08:52:42:852 750 sec: 3617369 operations; 4624.2 current ops/sec; est completion in 4 minutes [INSERT: Count=46244, Max=87743, Min=857, Avg=10821.57, 90=18271, 99=34175, 99.9=69951, 99.99=74367] 
+2022-07-18 08:52:52:852 760 sec: 3664626 operations; 4725.7 current ops/sec; est completion in 4 minutes [INSERT: Count=47255, Max=73343, Min=803, Avg=10580.1, 90=17887, 99=35711, 99.9=58367, 99.99=71999] 
+2022-07-18 08:53:02:852 770 sec: 3712242 operations; 4761.6 current ops/sec; est completion in 4 minutes [INSERT: Count=47618, Max=70015, Min=858, Avg=10501.72, 90=17615, 99=34047, 99.9=54879, 99.99=61791] 
+2022-07-18 08:53:12:852 780 sec: 3759213 operations; 4697.1 current ops/sec; est completion in 4 minutes [INSERT: Count=46969, Max=85695, Min=768, Avg=10645.37, 90=18175, 99=35871, 99.9=54719, 99.99=73599] 
+2022-07-18 08:53:22:852 790 sec: 3809599 operations; 5038.6 current ops/sec; est completion in 4 minutes [INSERT: Count=50386, Max=49887, Min=868, Avg=9918.98, 90=16527, 99=29423, 99.9=40735, 99.99=45823] 
+2022-07-18 08:53:32:852 800 sec: 3860399 operations; 5080 current ops/sec; est completion in 3 minutes [INSERT: Count=50800, Max=55807, Min=874, Avg=9846.06, 90=16511, 99=29503, 99.9=43999, 99.99=54047] 
+2022-07-18 08:53:42:852 810 sec: 3909993 operations; 4959.4 current ops/sec; est completion in 3 minutes [INSERT: Count=49594, Max=53471, Min=829, Avg=10077.05, 90=17023, 99=29455, 99.9=43903, 99.99=50719] 
+2022-07-18 08:53:52:852 820 sec: 3959263 operations; 4927 current ops/sec; est completion in 3 minutes [INSERT: Count=49270, Max=54975, Min=785, Avg=10144.05, 90=17103, 99=31487, 99.9=48319, 99.99=54143] 
+2022-07-18 08:54:02:852 830 sec: 4010039 operations; 5077.6 current ops/sec; est completion in 3 minutes [INSERT: Count=50776, Max=50623, Min=882, Avg=9849.8, 90=16295, 99=29023, 99.9=42431, 99.99=47583] 
+2022-07-18 08:54:12:852 840 sec: 4058417 operations; 4837.8 current ops/sec; est completion in 3 minutes [INSERT: Count=48379, Max=144255, Min=879, Avg=10330.88, 90=17247, 99=32799, 99.9=115647, 99.99=137087] 
+2022-07-18 08:54:22:852 850 sec: 4105944 operations; 4752.7 current ops/sec; est completion in 3 minutes [INSERT: Count=47529, Max=68031, Min=873, Avg=10525.09, 90=17663, 99=34687, 99.9=53599, 99.99=59455] 
+2022-07-18 08:54:32:852 860 sec: 4153322 operations; 4737.8 current ops/sec; est completion in 2 minutes [INSERT: Count=47377, Max=60991, Min=866, Avg=10554.04, 90=17743, 99=35967, 99.9=56479, 99.99=59647] 
+2022-07-18 08:54:42:852 870 sec: 4200558 operations; 4723.6 current ops/sec; est completion in 2 minutes [INSERT: Count=47234, Max=61983, Min=880, Avg=10577.67, 90=17663, 99=35263, 99.9=53151, 99.99=61407] 
+2022-07-18 08:54:52:852 880 sec: 4245700 operations; 4514.2 current ops/sec; est completion in 2 minutes [INSERT: Count=45142, Max=87103, Min=883, Avg=11078.64, 90=18831, 99=37823, 99.9=60927, 99.99=79871] 
+2022-07-18 08:55:02:852 890 sec: 4291518 operations; 4581.8 current ops/sec; est completion in 2 minutes [INSERT: Count=45821, Max=76351, Min=856, Avg=10910.36, 90=18191, 99=37823, 99.9=68031, 99.99=72511] 
+2022-07-18 08:55:12:852 900 sec: 4337453 operations; 4593.5 current ops/sec; est completion in 2 minutes [INSERT: Count=45932, Max=77055, Min=779, Avg=10880.13, 90=18447, 99=36607, 99.9=60479, 99.99=76415] 
+2022-07-18 08:55:22:852 910 sec: 4383276 operations; 4582.3 current ops/sec; est completion in 2 minutes [INSERT: Count=45823, Max=73215, Min=816, Avg=10872.46, 90=18527, 99=39583, 99.9=57887, 99.99=63455] 
+2022-07-18 08:55:32:852 920 sec: 4430656 operations; 4738 current ops/sec; est completion in 1 minute [INSERT: Count=47381, Max=105727, Min=836, Avg=10581.61, 90=17903, 99=35935, 99.9=63551, 99.99=82303] 
+2022-07-18 08:55:42:852 930 sec: 4478194 operations; 4753.8 current ops/sec; est completion in 1 minute [INSERT: Count=47537, Max=63391, Min=855, Avg=10532.01, 90=17839, 99=34687, 99.9=51711, 99.99=62271] 
+2022-07-18 08:55:52:852 940 sec: 4524462 operations; 4626.8 current ops/sec; est completion in 1 minute [INSERT: Count=46268, Max=153855, Min=884, Avg=10799.57, 90=18207, 99=35583, 99.9=129535, 99.99=150015] 
+2022-07-18 08:56:02:852 950 sec: 4571875 operations; 4741.3 current ops/sec; est completion in 1 minute [INSERT: Count=47413, Max=62303, Min=781, Avg=10541.88, 90=17855, 99=33375, 99.9=48127, 99.99=58175] 
+2022-07-18 08:56:12:852 960 sec: 4618883 operations; 4700.8 current ops/sec; est completion in 1 minute [INSERT: Count=47008, Max=104255, Min=876, Avg=10623.87, 90=17791, 99=36319, 99.9=57247, 99.99=102975] 
+2022-07-18 08:56:22:852 970 sec: 4666060 operations; 4717.7 current ops/sec; est completion in 1 minute [INSERT: Count=47177, Max=70399, Min=820, Avg=10614.19, 90=17887, 99=34943, 99.9=64831, 99.99=68927] 
+2022-07-18 08:56:32:852 980 sec: 4713389 operations; 4732.9 current ops/sec; est completion in 1 minute [INSERT: Count=47329, Max=101631, Min=885, Avg=10564.11, 90=17823, 99=33375, 99.9=56255, 99.99=99519] 
+2022-07-18 08:56:42:852 990 sec: 4760584 operations; 4719.5 current ops/sec; est completion in 50 seconds [INSERT: Count=47195, Max=68543, Min=821, Avg=10592.16, 90=18031, 99=33791, 99.9=52031, 99.99=62175] 
+2022-07-18 08:56:52:852 1000 sec: 4806416 operations; 4583.2 current ops/sec; est completion in 41 seconds [INSERT: Count=45833, Max=65791, Min=862, Avg=10905.7, 90=18447, 99=35903, 99.9=50879, 99.99=56927] 
+2022-07-18 08:57:02:852 1010 sec: 4852403 operations; 4598.7 current ops/sec; est completion in 31 seconds [INSERT: Count=45986, Max=85887, Min=872, Avg=10883.06, 90=18479, 99=35679, 99.9=58431, 99.99=66175] 
+2022-07-18 08:57:12:852 1020 sec: 4898540 operations; 4613.7 current ops/sec; est completion in 22 seconds [INSERT: Count=46137, Max=58015, Min=817, Avg=10832.18, 90=18063, 99=34943, 99.9=49183, 99.99=56799] 
+2022-07-18 08:57:22:852 1030 sec: 4943727 operations; 4518.7 current ops/sec; est completion in 12 seconds [INSERT: Count=45193, Max=60639, Min=833, Avg=11065.7, 90=19103, 99=36927, 99.9=56191, 99.99=59903] 
+2022-07-18 08:57:32:852 1040 sec: 4990401 operations; 4667.4 current ops/sec; est completion in 3 second [CLEANUP: Count=5, Max=268, Min=47, Avg=96.8, 90=268, 99=268, 99.9=268, 99.99=268] [INSERT: Count=46668, Max=73855, Min=869, Avg=10666.44, 90=18415, 99=35391, 99.9=53887, 99.99=57471] 
+2022-07-18 08:57:35:747 1042 sec: 5000000 operations; 3315.72 current ops/sec; [CLEANUP: Count=45, Max=54, Min=26, Avg=34.4, 90=39, 99=54, 99.9=54, 99.99=54] [INSERT: Count=9599, Max=112959, Min=747, Avg=8742.17, 90=15639, 99=32991, 99.9=110719, 99.99=112895] 
+[OVERALL], RunTime(ms), 1042895
+[OVERALL], Throughput(ops/sec), 4794.346506599418
+[TOTAL_GCS_PS_Scavenge], Count, 1352
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 731
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.07009334592648349
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 1352
+[TOTAL_GC_TIME], Time(ms), 731
+[TOTAL_GC_TIME_%], Time(%), 0.07009334592648349
+[CLEANUP], Operations, 50
+[CLEANUP], AverageLatency(us), 40.64
+[CLEANUP], MinLatency(us), 26
+[CLEANUP], MaxLatency(us), 268
+[CLEANUP], 95thPercentileLatency(us), 56
+[CLEANUP], 99thPercentileLatency(us), 268
+[INSERT], Operations, 5000000
+[INSERT], AverageLatency(us), 10395.3055022
+[INSERT], MinLatency(us), 747
+[INSERT], MaxLatency(us), 301055
+[INSERT], 95thPercentileLatency(us), 21199
+[INSERT], 99thPercentileLatency(us), 33279
+[INSERT], Return=OK, 5000000

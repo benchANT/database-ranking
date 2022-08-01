@@ -1,0 +1,100 @@
+[1;32mThis EC2 instance is optimized for Scylla.[0m
+This is a supported kernel version.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages will be REMOVED:
+  systemd-timesyncd
+The following NEW packages will be installed:
+  chrony
+0 upgraded, 1 newly installed, 1 to remove and 12 not upgraded.
+Need to get 220 kB of archives.
+After this operation, 285 kB of additional disk space will be used.
+Get:1 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 chrony amd64 3.5-6ubuntu6.2 [220 kB]
+Fetched 220 kB in 0s (12.2 MB/s)
+dpkg: systemd-timesyncd: dependency problems, but removing anyway as you requested:
+ systemd depends on systemd-timesyncd | time-daemon; however:
+  Package systemd-timesyncd is to be removed.
+  Package time-daemon is not installed.
+  Package systemd-timesyncd which provides time-daemon is to be removed.
+ systemd depends on systemd-timesyncd | time-daemon; however:
+  Package systemd-timesyncd is to be removed.
+  Package time-daemon is not installed.
+  Package systemd-timesyncd which provides time-daemon is to be removed.
+
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 64902 files and directories currently installed.)
+Removing systemd-timesyncd (245.4-4ubuntu3.17) ...
+Selecting previously unselected package chrony.
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 64889 files and directories currently installed.)
+Preparing to unpack .../chrony_3.5-6ubuntu6.2_amd64.deb ...
+Unpacking chrony (3.5-6ubuntu6.2) ...
+Setting up chrony (3.5-6ubuntu6.2) ...
+Creating '_chrony' system user/group for the chronyd daemon…
+
+Creating config file /etc/chrony/chrony.conf with new version
+
+Creating config file /etc/chrony/chrony.keys with new version
+Created symlink /etc/systemd/system/chronyd.service → /lib/systemd/system/chrony.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/chrony.service → /lib/systemd/system/chrony.service.
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for dbus (1.12.16-2ubuntu2.2) ...
+Processing triggers for systemd (245.4-4ubuntu3.17) ...
+200 OK
+Starting Evaluation. This may take a while...
+Measuring sequential write bandwidth: 120 MB/s (deviation 24%)
+Measuring sequential read bandwidth: 128 MB/s
+Measuring random write IOPS: 3239 IOPS (deviation 24%)
+Measuring random read IOPS: 2997 IOPS
+Writing result to /etc/scylla.d/io_properties.yaml
+Writing result to /etc/scylla.d/io.conf
+tuning /sys/devices/pci0000:00/0000:00:04.0/nvme/nvme0/nvme0n1/nvme0n1p1
+tuning /sys/devices/pci0000:00/0000:00:04.0/nvme/nvme0/nvme0n1
+tuning: /sys/devices/pci0000:00/0000:00:04.0/nvme/nvme0/nvme0n1/queue/nomerges 2
+tuning /sys/devices/pci0000:00/0000:00:04.0/nvme/nvme0/nvme0n1/nvme0n1p1
+tuning /sys/devices/pci0000:00/0000:00:04.0/nvme/nvme0/nvme0n1/nvme0n1p1
+tuning /sys/devices/pci0000:00/0000:00:04.0/nvme/nvme0/nvme0n1/nvme0n1p1
+Your current Scylla release is 4.5.1, while the latest patch release is 4.5.6, and the latest minor release is 4.6.3 (recommended)
+[1;31mNo swap is configured, it is highly recommended to setup swap on Scylla node.[0m
+ScyllaDB setup finished.

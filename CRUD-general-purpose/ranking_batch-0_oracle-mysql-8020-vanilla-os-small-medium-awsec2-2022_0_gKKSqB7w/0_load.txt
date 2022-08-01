@@ -1,0 +1,507 @@
+bin/ycsb load jdbc -s -jvm-args=-XX:MaxRAMPercentage=85.0  -p db.url=jdbc:mysql://172.31.23.218:3306/benchdb -p  db.driver=com.mysql.jdbc.Driver  -p  db.user=benchant -p  db.passwd=benchANT2022 -p  db.batchsize=1000  -p workload=site.ycsb.workloads.CoreWorkload -threads 100 -p recordcount=5000000 -p operationcount=54000000 -p fieldcount=10 -p fieldlength=50 -p requestdistribution=zipfian -p insertorder=ordered -p readproportion=0.5 -p updateproportion=0.0 -p insertproportion=0.5 -p scanproportion=0.0 -p scanlengthdistribution=uniform -p core_workload_insertion_retry_limit=3 -p core_workload_insertion_retry_interval=3
+/usr/java/bin/java -XX:MaxRAMPercentage=85.0 -cp /binary/ycsb/jdbc-binding/conf:/binary/ycsb/conf:/binary/ycsb/lib/jackson-mapper-asl-1.9.4.jar:/binary/ycsb/lib/HdrHistogram-2.1.4.jar:/binary/ycsb/lib/core-0.17.0.jar:/binary/ycsb/lib/htrace-core4-4.1.0-incubating.jar:/binary/ycsb/lib/jackson-core-asl-1.9.4.jar:/binary/ycsb/jdbc-binding/lib/crate-jdbc-standalone-2.6.0.jar:/binary/ycsb/jdbc-binding/lib/mariadb-java-client-3.0.5.jar:/binary/ycsb/jdbc-binding/lib/openjpa-lib-2.1.1.jar:/binary/ycsb/jdbc-binding/lib/serp-1.13.1.jar:/binary/ycsb/jdbc-binding/lib/commons-pool-1.5.4.jar:/binary/ycsb/jdbc-binding/lib/geronimo-jta_1.1_spec-1.1.1.jar:/binary/ycsb/jdbc-binding/lib/jdbc-binding-0.17.0.jar:/binary/ycsb/jdbc-binding/lib/mysql-connector-java-5.1.47.jar:/binary/ycsb/jdbc-binding/lib/postgresql-42.2.5.jar:/binary/ycsb/jdbc-binding/lib/commons-lang-2.4.jar:/binary/ycsb/jdbc-binding/lib/commons-collections-3.2.1.jar:/binary/ycsb/jdbc-binding/lib/openjpa-kernel-2.1.1.jar:/binary/ycsb/jdbc-binding/lib/openjpa-jdbc-2.1.1.jar:/binary/ycsb/jdbc-binding/lib/geronimo-jms_1.1_spec-1.1.1.jar:/binary/ycsb/jdbc-binding/lib/mysql-connector-java-5.1.47/mysql-connector-java-5.1.47-bin.jar:/binary/ycsb/jdbc-binding/lib/mysql-connector-java-5.1.47/src/lib/jboss-common-jdbc-wrapper-src.jar:/binary/ycsb/jdbc-binding/lib/mysql-connector-java-5.1.47/src/lib/slf4j-api-1.6.1.jar:/binary/ycsb/jdbc-binding/lib/mysql-connector-java-5.1.47/src/lib/jboss-common-jdbc-wrapper.jar:/binary/ycsb/jdbc-binding/lib/mysql-connector-java-5.1.47/src/lib/c3p0-0.9.1-pre6.jar site.ycsb.Client -db site.ycsb.db.JdbcDBClient -s -p db.url=jdbc:mysql://172.31.23.218:3306/benchdb -p db.driver=com.mysql.jdbc.Driver -p db.user=benchant -p db.passwd=benchANT2022 -p db.batchsize=1000 -p workload=site.ycsb.workloads.CoreWorkload -threads 100 -p recordcount=5000000 -p operationcount=54000000 -p fieldcount=10 -p fieldlength=50 -p requestdistribution=zipfian -p insertorder=ordered -p readproportion=0.5 -p updateproportion=0.0 -p insertproportion=0.5 -p scanproportion=0.0 -p scanlengthdistribution=uniform -p core_workload_insertion_retry_limit=3 -p core_workload_insertion_retry_interval=3 -load
+Command line: -db site.ycsb.db.JdbcDBClient -s -p db.url=jdbc:mysql://172.31.23.218:3306/benchdb -p db.driver=com.mysql.jdbc.Driver -p db.user=benchant -p db.passwd=benchANT2022 -p db.batchsize=1000 -p workload=site.ycsb.workloads.CoreWorkload -threads 100 -p recordcount=5000000 -p operationcount=54000000 -p fieldcount=10 -p fieldlength=50 -p requestdistribution=zipfian -p insertorder=ordered -p readproportion=0.5 -p updateproportion=0.0 -p insertproportion=0.5 -p scanproportion=0.0 -p scanlengthdistribution=uniform -p core_workload_insertion_retry_limit=3 -p core_workload_insertion_retry_interval=3 -load
+YCSB Client 0.17.0
+
+Loading workload...
+Starting test.
+2022-07-18 14:24:59:070 0 sec: 0 operations; est completion in 0 second 
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Adding shard node URL: jdbc:mysql://172.31.23.218:3306/benchdb
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Mon Jul 18 14:24:59 UTC 2022 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Using shards: 1, batchSize:1000, fetchSize: -1
+Using shards: 1, batchSize:1000, fetchSize: -1
+Using shards: 1, batchSize:1000, fetchSize: -1
+Using shards: 1, batchSize:1000, fetchSize: -1
+Using shards: 1, batchSize:1000, fetchSize: -1
+Using shards: 1, batchSize:1000, fetchSize: -1
+Using shards: 1, batchSize:1000, fetchSize: -1
+Using shards: 1, batchSize:1000, fetchSize: -1
+Using shards: 1, batchSize:1000, fetchSize: -1
+Using shards: 1, batchSize:1000, fetchSize: -1
+Using shards: 1, batchSize:1000, fetchSize: -1
+Using shards: 1, batchSize:1000, fetchSize: -1
+Using shards: 1, batchSize:1000, fetchSize: -1
+Using shards: 1, batchSize:1000, fetchSize: -1
+Using shards: 1, batchSize:1000, fetchSize: -1
+Using shards: 1, batchSize:1000, fetchSize: -1
+Using shards: 1, batchSize:1000, fetchSize: -1
+Using shards: 1, batchSize:1000, fetchSize: -1
+Using shards: 1, batchSize:1000, fetchSize: -1
+Using shards: 1, batchSize:1000, fetchSize: -1
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []Using shards: 1, batchSize:1000, fetchSize: -1
+
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+Using shards: 1, batchSize:1000, fetchSize: -1DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+Using shards: 1, batchSize:1000, fetchSize: -1DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []Using shards: 1, batchSize:1000, fetchSize: -1
+
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []Using shards: 1, batchSize:1000, fetchSize: -1
+
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []Using shards: 1, batchSize:1000, fetchSize: -1
+
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []Using shards: 1, batchSize:1000, fetchSize: -1
+
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+Using shards: 1, batchSize:1000, fetchSize: -1DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []Using shards: 1, batchSize:1000, fetchSize: -1
+
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []Using shards: 1, batchSize:1000, fetchSize: -1
+
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []Using shards: 1, batchSize:1000, fetchSize: -1
+
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []Using shards: 1, batchSize:1000, fetchSize: -1
+
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []Using shards: 1, batchSize:1000, fetchSize: -1
+Using shards: 1, batchSize:1000, fetchSize: -1
+
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []Using shards: 1, batchSize:1000, fetchSize: -1
+
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []Using shards: 1, batchSize:1000, fetchSize: -1
+
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+
+Using shards: 1, batchSize:1000, fetchSize: -1DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []Using shards: 1, batchSize:1000, fetchSize: -1
+
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []Using shards: 1, batchSize:1000, fetchSize: -1
+
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []Using shards: 1, batchSize:1000, fetchSize: -1
+
+Using shards: 1, batchSize:1000, fetchSize: -1DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []Using shards: 1, batchSize:1000, fetchSize: -1
+
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []Using shards: 1, batchSize:1000, fetchSize: -1
+
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []Using shards: 1, batchSize:1000, fetchSize: -1
+
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+2022-07-18 14:25:09:054 10 sec: 38620 operations; 3862 current ops/sec; est completion in 21 minutes [INSERT: Count=38620, Max=372735, Min=3614, Avg=23725.43, 90=43039, 99=110079, 99.9=294655, 99.99=368127] 
+2022-07-18 14:25:19:053 20 sec: 94734 operations; 5611.4 current ops/sec; est completion in 17 minutes [INSERT: Count=56114, Max=94143, Min=3028, Avg=17829.59, 90=39103, 99=60191, 99.9=77055, 99.99=91263] 
+2022-07-18 14:25:29:053 30 sec: 162581 operations; 6784.7 current ops/sec; est completion in 14 minutes [INSERT: Count=67848, Max=73535, Min=3426, Avg=14735.19, 90=20255, 99=51807, 99.9=66431, 99.99=71295] 
+2022-07-18 14:25:39:053 40 sec: 235870 operations; 7328.9 current ops/sec; est completion in 13 minutes [INSERT: Count=73288, Max=98559, Min=3744, Avg=13641.97, 90=17599, 99=36159, 99.9=78335, 99.99=92479] 
+2022-07-18 14:25:49:053 50 sec: 301526 operations; 6565.6 current ops/sec; est completion in 13 minutes [INSERT: Count=65659, Max=88319, Min=3246, Avg=15228.93, 90=26975, 99=53567, 99.9=75391, 99.99=86079] 
+2022-07-18 14:25:59:053 60 sec: 356207 operations; 5468.1 current ops/sec; est completion in 13 minutes [INSERT: Count=54678, Max=116927, Min=3458, Avg=18282.2, 90=36447, 99=65791, 99.9=108031, 99.99=113407] 
+2022-07-18 14:26:09:053 70 sec: 411256 operations; 5504.9 current ops/sec; est completion in 13 minutes [INSERT: Count=55057, Max=142335, Min=3980, Avg=18169.04, 90=37375, 99=74943, 99.9=128063, 99.99=137471] 
+2022-07-18 14:26:19:053 80 sec: 468336 operations; 5708 current ops/sec; est completion in 12 minutes [INSERT: Count=57072, Max=95231, Min=3922, Avg=17515.31, 90=36863, 99=55391, 99.9=90111, 99.99=92927] 
+2022-07-18 14:26:29:053 90 sec: 523786 operations; 5545 current ops/sec; est completion in 12 minutes [INSERT: Count=55450, Max=103551, Min=2762, Avg=18012.65, 90=37791, 99=65439, 99.9=89919, 99.99=102271] 
+2022-07-18 14:26:39:053 100 sec: 578009 operations; 5422.3 current ops/sec; est completion in 12 minutes [INSERT: Count=54223, Max=127871, Min=3266, Avg=18436.86, 90=38335, 99=66559, 99.9=84159, 99.99=121151] 
+2022-07-18 14:26:49:053 110 sec: 631598 operations; 5358.9 current ops/sec; est completion in 12 minutes [INSERT: Count=53589, Max=113919, Min=3578, Avg=18651.84, 90=39263, 99=75199, 99.9=107135, 99.99=111103] 
+2022-07-18 14:26:59:053 120 sec: 687489 operations; 5589.1 current ops/sec; est completion in 12 minutes [INSERT: Count=55897, Max=104383, Min=3326, Avg=17925.59, 90=35903, 99=68927, 99.9=98495, 99.99=102335] 
+2022-07-18 14:27:09:053 130 sec: 742601 operations; 5511.2 current ops/sec; est completion in 12 minutes [INSERT: Count=55106, Max=128575, Min=2904, Avg=18138.14, 90=37151, 99=81599, 99.9=121343, 99.99=124863] 
+2022-07-18 14:27:19:053 140 sec: 797441 operations; 5484 current ops/sec; est completion in 12 minutes [INSERT: Count=54840, Max=149631, Min=3026, Avg=18146.2, 90=37599, 99=71807, 99.9=127423, 99.99=146431] 
+2022-07-18 14:27:29:053 150 sec: 851336 operations; 5389.5 current ops/sec; est completion in 12 minutes [INSERT: Count=53895, Max=168447, Min=3018, Avg=18643.73, 90=39551, 99=73023, 99.9=142463, 99.99=160639] 
+2022-07-18 14:27:39:053 160 sec: 906249 operations; 5491.3 current ops/sec; est completion in 12 minutes [INSERT: Count=54913, Max=114815, Min=3546, Avg=18208.22, 90=39263, 99=72639, 99.9=101183, 99.99=111167] 
+2022-07-18 14:27:49:053 170 sec: 961247 operations; 5499.8 current ops/sec; est completion in 11 minutes [INSERT: Count=54998, Max=126911, Min=3156, Avg=18179.85, 90=37631, 99=71743, 99.9=100351, 99.99=117055] 
+2022-07-18 14:27:59:053 180 sec: 1015291 operations; 5404.4 current ops/sec; est completion in 11 minutes [INSERT: Count=54044, Max=98431, Min=3540, Avg=18511.31, 90=38175, 99=74815, 99.9=94911, 99.99=96831] 
+2022-07-18 14:28:09:053 190 sec: 1068537 operations; 5324.6 current ops/sec; est completion in 11 minutes [INSERT: Count=53246, Max=230015, Min=3412, Avg=18762.27, 90=38559, 99=79743, 99.9=127423, 99.99=132607] 
+2022-07-18 14:28:19:053 200 sec: 1121994 operations; 5345.7 current ops/sec; est completion in 11 minutes [INSERT: Count=53457, Max=129919, Min=3600, Avg=18713.8, 90=40319, 99=73407, 99.9=103871, 99.99=111167] 
+2022-07-18 14:28:29:053 210 sec: 1175934 operations; 5394 current ops/sec; est completion in 11 minutes [INSERT: Count=53948, Max=135423, Min=3478, Avg=18537.53, 90=39071, 99=66879, 99.9=121343, 99.99=125695] 
+2022-07-18 14:28:39:053 220 sec: 1229060 operations; 5312.6 current ops/sec; est completion in 11 minutes [INSERT: Count=53129, Max=145535, Min=3326, Avg=18825.32, 90=39647, 99=69759, 99.9=98111, 99.99=141183] 
+2022-07-18 14:28:49:053 230 sec: 1282009 operations; 5294.9 current ops/sec; est completion in 11 minutes [INSERT: Count=52938, Max=159359, Min=3632, Avg=18883.86, 90=37663, 99=82623, 99.9=137855, 99.99=154623] 
+2022-07-18 14:28:59:053 240 sec: 1333716 operations; 5170.7 current ops/sec; est completion in 11 minutes [INSERT: Count=51707, Max=142719, Min=3536, Avg=19308.37, 90=38815, 99=71167, 99.9=121663, 99.99=139903] 
+2022-07-18 14:29:09:053 250 sec: 1386264 operations; 5254.8 current ops/sec; est completion in 10 minutes [INSERT: Count=52552, Max=100031, Min=3170, Avg=19026.65, 90=40063, 99=66047, 99.9=82687, 99.99=94847] 
+2022-07-18 14:29:19:053 260 sec: 1441634 operations; 5537 current ops/sec; est completion in 10 minutes [INSERT: Count=55373, Max=132479, Min=2946, Avg=18019.4, 90=38079, 99=61279, 99.9=81919, 99.99=104447] 
+2022-07-18 14:29:29:053 270 sec: 1493841 operations; 5220.7 current ops/sec; est completion in 10 minutes [INSERT: Count=52200, Max=119743, Min=3502, Avg=19224.05, 90=40543, 99=72639, 99.9=110143, 99.99=116351] 
+2022-07-18 14:29:39:053 280 sec: 1548072 operations; 5423.1 current ops/sec; est completion in 10 minutes [INSERT: Count=54231, Max=130879, Min=3542, Avg=18416.24, 90=39167, 99=72703, 99.9=115391, 99.99=127487] 
+2022-07-18 14:29:49:053 290 sec: 1600861 operations; 5278.9 current ops/sec; est completion in 10 minutes [INSERT: Count=52789, Max=120063, Min=2956, Avg=18904.27, 90=40511, 99=66943, 99.9=96639, 99.99=113023] 
+2022-07-18 14:29:59:053 300 sec: 1655612 operations; 5475.1 current ops/sec; est completion in 10 minutes [INSERT: Count=54751, Max=108991, Min=3078, Avg=18318.95, 90=37407, 99=73663, 99.9=101887, 99.99=107519] 
+2022-07-18 14:30:09:053 310 sec: 1707018 operations; 5140.6 current ops/sec; est completion in 9 minutes [INSERT: Count=51406, Max=344831, Min=2738, Avg=19430.88, 90=37407, 99=112191, 99.9=339711, 99.99=344063] 
+2022-07-18 14:30:19:053 320 sec: 1762206 operations; 5518.8 current ops/sec; est completion in 9 minutes [INSERT: Count=55192, Max=104255, Min=3112, Avg=18139.57, 90=36767, 99=73983, 99.9=95231, 99.99=98943] 
+2022-07-18 14:30:29:053 330 sec: 1816444 operations; 5423.8 current ops/sec; est completion in 9 minutes [INSERT: Count=54234, Max=116991, Min=3872, Avg=18434.37, 90=35487, 99=76031, 99.9=101951, 99.99=114943] 
+2022-07-18 14:30:39:053 340 sec: 1871091 operations; 5464.7 current ops/sec; est completion in 9 minutes [INSERT: Count=54647, Max=134911, Min=3216, Avg=18295.88, 90=36575, 99=76287, 99.9=129791, 99.99=134655] 
+2022-07-18 14:30:49:053 350 sec: 1925584 operations; 5449.3 current ops/sec; est completion in 9 minutes [INSERT: Count=54493, Max=106559, Min=3210, Avg=18352.92, 90=37183, 99=64415, 99.9=99839, 99.99=104127] 
+2022-07-18 14:30:59:053 360 sec: 1989126 operations; 6354.2 current ops/sec; est completion in 9 minutes [INSERT: Count=63542, Max=108223, Min=2690, Avg=15734.14, 90=26287, 99=56127, 99.9=85055, 99.99=104767] 
+2022-07-18 14:31:09:053 370 sec: 2063134 operations; 7400.8 current ops/sec; est completion in 8 minutes [INSERT: Count=74008, Max=64767, Min=3104, Avg=13507.27, 90=17919, 99=36735, 99.9=49983, 99.99=61631] 
+2022-07-18 14:31:19:053 380 sec: 2134503 operations; 7136.9 current ops/sec; est completion in 8 minutes [INSERT: Count=71369, Max=71039, Min=3854, Avg=14015.67, 90=18111, 99=33407, 99.9=62079, 99.99=68095] 
+2022-07-18 14:31:29:053 390 sec: 2208901 operations; 7439.8 current ops/sec; est completion in 8 minutes [INSERT: Count=74398, Max=54719, Min=3262, Avg=13439.28, 90=17631, 99=33055, 99.9=44319, 99.99=51295] 
+2022-07-18 14:31:39:053 400 sec: 2281481 operations; 7258 current ops/sec; est completion in 7 minutes [INSERT: Count=72580, Max=82815, Min=3446, Avg=13775.75, 90=17999, 99=33823, 99.9=64511, 99.99=80255] 
+2022-07-18 14:31:49:053 410 sec: 2355536 operations; 7405.5 current ops/sec; est completion in 7 minutes [INSERT: Count=74055, Max=73855, Min=2918, Avg=13498.66, 90=17743, 99=36287, 99.9=56767, 99.99=64799] 
+2022-07-18 14:31:59:053 420 sec: 2431345 operations; 7580.9 current ops/sec; est completion in 7 minutes [INSERT: Count=75811, Max=74495, Min=3694, Avg=13192.15, 90=17487, 99=31183, 99.9=48447, 99.99=71743] 
+2022-07-18 14:32:09:053 430 sec: 2505551 operations; 7420.6 current ops/sec; est completion in 7 minutes [INSERT: Count=74204, Max=72767, Min=3580, Avg=13476.6, 90=18431, 99=34463, 99.9=50975, 99.99=68863] 
+2022-07-18 14:32:19:053 440 sec: 2583314 operations; 7776.3 current ops/sec; est completion in 6 minutes [INSERT: Count=77766, Max=51167, Min=3728, Avg=12859.08, 90=16959, 99=31087, 99.9=43167, 99.99=48575] 
+2022-07-18 14:32:29:053 450 sec: 2663957 operations; 8064.3 current ops/sec; est completion in 6 minutes [INSERT: Count=80640, Max=62943, Min=3000, Avg=12397, 90=16191, 99=31711, 99.9=51935, 99.99=59871] 
+2022-07-18 14:32:39:054 460 sec: 2741211 operations; 7725.4 current ops/sec; est completion in 6 minutes [INSERT: Count=77254, Max=67647, Min=2958, Avg=12939.83, 90=17231, 99=31919, 99.9=50719, 99.99=56799] 
+2022-07-18 14:32:49:053 470 sec: 2819629 operations; 7841.8 current ops/sec; est completion in 6 minutes [INSERT: Count=78420, Max=84927, Min=3206, Avg=12751.91, 90=16815, 99=34079, 99.9=53055, 99.99=83135] 
+2022-07-18 14:32:59:053 480 sec: 2897269 operations; 7764 current ops/sec; est completion in 5 minutes [INSERT: Count=77639, Max=91519, Min=2816, Avg=12878.84, 90=16959, 99=34591, 99.9=57695, 99.99=67391] 
+2022-07-18 14:33:09:053 490 sec: 2977462 operations; 8019.3 current ops/sec; est completion in 5 minutes [INSERT: Count=80192, Max=55007, Min=3048, Avg=12468.61, 90=16559, 99=31951, 99.9=47199, 99.99=51935] 
+2022-07-18 14:33:19:053 500 sec: 3056987 operations; 7952.5 current ops/sec; est completion in 5 minutes [INSERT: Count=79525, Max=63583, Min=3198, Avg=12573.96, 90=16591, 99=32639, 99.9=49791, 99.99=58847] 
+2022-07-18 14:33:29:053 510 sec: 3135347 operations; 7836 current ops/sec; est completion in 5 minutes [INSERT: Count=78360, Max=88255, Min=3044, Avg=12756.96, 90=17215, 99=32159, 99.9=50015, 99.99=66879] 
+2022-07-18 14:33:39:053 520 sec: 3213982 operations; 7863.5 current ops/sec; est completion in 4 minutes [INSERT: Count=78635, Max=60639, Min=3060, Avg=12718.68, 90=17007, 99=30767, 99.9=49759, 99.99=58847] 
+2022-07-18 14:33:49:053 530 sec: 3293788 operations; 7980.6 current ops/sec; est completion in 4 minutes [INSERT: Count=79806, Max=97343, Min=2806, Avg=12528.63, 90=16447, 99=33855, 99.9=58239, 99.99=79295] 
+2022-07-18 14:33:59:053 540 sec: 3373533 operations; 7974.5 current ops/sec; est completion in 4 minutes [INSERT: Count=79745, Max=116415, Min=3278, Avg=12534.96, 90=16703, 99=32463, 99.9=58559, 99.99=84415] 
+2022-07-18 14:34:09:053 550 sec: 3452730 operations; 7919.7 current ops/sec; est completion in 4 minutes [INSERT: Count=79198, Max=66239, Min=2860, Avg=12627.53, 90=16719, 99=33023, 99.9=49727, 99.99=57695] 
+2022-07-18 14:34:19:053 560 sec: 3533003 operations; 8027.3 current ops/sec; est completion in 3 minutes [INSERT: Count=80276, Max=84863, Min=3342, Avg=12455.69, 90=16463, 99=32751, 99.9=54943, 99.99=81343] 
+2022-07-18 14:34:29:053 570 sec: 3613424 operations; 8042.1 current ops/sec; est completion in 3 minutes [INSERT: Count=80417, Max=79935, Min=3104, Avg=12432.69, 90=16543, 99=32223, 99.9=54975, 99.99=75903] 
+2022-07-18 14:34:39:053 580 sec: 3695101 operations; 8167.7 current ops/sec; est completion in 3 minutes [INSERT: Count=81677, Max=72255, Min=3020, Avg=12243.86, 90=16415, 99=30079, 99.9=48863, 99.99=68543] 
+2022-07-18 14:34:49:053 590 sec: 3775383 operations; 8028.2 current ops/sec; est completion in 3 minutes [INSERT: Count=80284, Max=83199, Min=2798, Avg=12454.01, 90=16335, 99=34047, 99.9=57727, 99.99=77119] 
+2022-07-18 14:34:59:053 600 sec: 3855570 operations; 8018.7 current ops/sec; est completion in 2 minutes [INSERT: Count=80185, Max=63967, Min=3160, Avg=12465.83, 90=16463, 99=33343, 99.9=49823, 99.99=58655] 
+2022-07-18 14:35:09:053 610 sec: 3933828 operations; 7825.8 current ops/sec; est completion in 2 minutes [INSERT: Count=78258, Max=67007, Min=3294, Avg=12781.42, 90=17071, 99=32047, 99.9=54207, 99.99=62815] 
+2022-07-18 14:35:19:053 620 sec: 4011413 operations; 7758.5 current ops/sec; est completion in 2 minutes [INSERT: Count=77587, Max=74943, Min=3638, Avg=12888.38, 90=16815, 99=35359, 99.9=50527, 99.99=71359] 
+2022-07-18 14:35:29:053 630 sec: 4091252 operations; 7983.9 current ops/sec; est completion in 2 minutes [INSERT: Count=79840, Max=67711, Min=3222, Avg=12517.06, 90=16431, 99=35167, 99.9=56159, 99.99=66047] 
+2022-07-18 14:35:39:053 640 sec: 4170645 operations; 7939.3 current ops/sec; est completion in 2 minutes [INSERT: Count=79391, Max=85183, Min=3144, Avg=12598.2, 90=16319, 99=31855, 99.9=54527, 99.99=80959] 
+2022-07-18 14:35:49:053 650 sec: 4249184 operations; 7853.9 current ops/sec; est completion in 1 minute [INSERT: Count=78542, Max=84223, Min=2922, Avg=12728.4, 90=16703, 99=35551, 99.9=56799, 99.99=75327] 
+2022-07-18 14:35:59:053 660 sec: 4327701 operations; 7851.7 current ops/sec; est completion in 1 minute [INSERT: Count=78515, Max=71935, Min=3110, Avg=12738.41, 90=16847, 99=33887, 99.9=58303, 99.99=69247] 
+2022-07-18 14:36:09:053 670 sec: 4407228 operations; 7952.7 current ops/sec; est completion in 1 minute [INSERT: Count=79526, Max=85247, Min=3306, Avg=12569.89, 90=16703, 99=32799, 99.9=55391, 99.99=77567] 
+2022-07-18 14:36:19:053 680 sec: 4486511 operations; 7928.3 current ops/sec; est completion in 1 minute [INSERT: Count=79282, Max=56991, Min=3094, Avg=12609.95, 90=16783, 99=31919, 99.9=50239, 99.99=54911] 
+2022-07-18 14:36:29:053 690 sec: 4566658 operations; 8014.7 current ops/sec; est completion in 1 minute [INSERT: Count=80147, Max=70719, Min=3198, Avg=12475.72, 90=16575, 99=29743, 99.9=47967, 99.99=61471] 
+2022-07-18 14:36:39:053 700 sec: 4645940 operations; 7928.2 current ops/sec; est completion in 54 seconds [INSERT: Count=79291, Max=68927, Min=2636, Avg=12611.95, 90=16607, 99=37727, 99.9=49311, 99.99=55967] 
+2022-07-18 14:36:49:053 710 sec: 4724369 operations; 7842.9 current ops/sec; est completion in 42 seconds [INSERT: Count=78421, Max=73919, Min=2754, Avg=12753.84, 90=16895, 99=35551, 99.9=52543, 99.99=72127] 
+2022-07-18 14:36:59:053 720 sec: 4803010 operations; 7864.1 current ops/sec; est completion in 30 seconds [INSERT: Count=78640, Max=81727, Min=2816, Avg=12709.56, 90=17247, 99=33823, 99.9=60063, 99.99=78655] 
+2022-07-18 14:37:09:053 730 sec: 4878522 operations; 7551.2 current ops/sec; est completion in 19 seconds [INSERT: Count=75512, Max=109695, Min=3206, Avg=13243.08, 90=17007, 99=39391, 99.9=62943, 99.99=98815] 
+2022-07-18 14:37:19:053 740 sec: 4953071 operations; 7454.9 current ops/sec; est completion in 8 second [CLEANUP: Count=1, Max=953, Min=953, Avg=953, 90=953, 99=953, 99.9=953, 99.99=953] [INSERT: Count=74564, Max=106111, Min=3618, Avg=13402.07, 90=17855, 99=35391, 99.9=65855, 99.99=100351] 
+2022-07-18 14:37:28:765 749 sec: 5000000 operations; 4832.06 current ops/sec; [CLEANUP: Count=99, Max=476, Min=98, Avg=156.75, 90=188, 99=225, 99.9=476, 99.99=476] [INSERT: Count=46914, Max=71359, Min=2198, Avg=9846.78, 90=13911, 99=28335, 99.9=54367, 99.99=66687] 
+[OVERALL], RunTime(ms), 749711
+[OVERALL], Throughput(ops/sec), 6669.236545815655
+[TOTAL_GCS_PS_Scavenge], Count, 1742
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 2067
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.2757062388040191
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 1742
+[TOTAL_GC_TIME], Time(ms), 2067
+[TOTAL_GC_TIME_%], Time(%), 0.2757062388040191
+[CLEANUP], Operations, 100
+[CLEANUP], AverageLatency(us), 164.71
+[CLEANUP], MinLatency(us), 98
+[CLEANUP], MaxLatency(us), 953
+[CLEANUP], 95thPercentileLatency(us), 205
+[CLEANUP], 99thPercentileLatency(us), 476
+[INSERT], Operations, 5000000
+[INSERT], AverageLatency(us), 14874.0498164
+[INSERT], MinLatency(us), 2198
+[INSERT], MaxLatency(us), 372735
+[INSERT], 95thPercentileLatency(us), 35519
+[INSERT], 99thPercentileLatency(us), 56671
+[INSERT], Return=OK, 5000000

@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "userId": "benchANT",
+    "projectId": "ranking",
+    "batchId": "batch-0",
+    "configurationId": "scylladb-451-vanilla-os-large-large-awsec2-2022",
+    "configurationLabel": "scylladb-451-vanilla-os-large-large-awsec2-2022",
+    "executions": 1,
+    "executionCounter": 1
+  },
+  "resourceProvider": {
+    "name": "EC2",
+    "api": "EC2"
+  },
+  "dbmsDeployment": {
+    "dbmsType": "SCYLLADB",
+    "operationType": "DBMS",
+    "version": "4.5.1",
+    "DBMS": {
+      "dataNodes": {
+        "numberOfNodes": 3,
+        "resource": {
+          "costs": {
+            "storageCosts": 0.12,
+            "vmCosts": 0.46
+          },
+          "ec2Vm": {
+            "regionName": "eu-central-1",
+            "instanceType": "m5.2xlarge",
+            "architecture": "x86_64",
+            "imageDistribution": "ubuntu",
+            "imageVersion": "20.04",
+            "volumeType": "GP2",
+            "volumeSize": 100,
+            "iops": 100
+          }
+        },
+        "replicationFactor": 3,
+        "memoryAllocation": 0.75
+      }
+    }
+  },
+  "benchmarkDeployment": {
+    "benchmarkNodes": {
+      "numberOfNodes": 1,
+      "resource": {
+        "ec2Vm": {
+          "regionName": "eu-central-1",
+          "instanceType": "c5.4xlarge",
+          "architecture": "x86_64",
+          "imageDistribution": "ubuntu",
+          "imageVersion": "20.04",
+          "volumeType": "GP2",
+          "volumeSize": 30,
+          "iops": 100
+        }
+      }
+    }
+  },
+  "benchmark": {
+    "id": "YCSB-GeneralPurpose-large",
+    "distribution": "YCSB",
+    "version": "master",
+    "ycsb": {
+      "executeLoadPhase": true,
+      "executeRunPhase": true,
+      "dbmsEndpoints": [],
+      "workload": {
+        "workloadType": "LOAD",
+        "workloadClass": "site.ycsb.workloads.CoreWorkload",
+        "maxExecutionTime": 1800,
+        "threadCount": 200,
+        "recordCount": 5000000,
+        "insertStart": 5000000,
+        "insertCount": 0,
+        "operations": 54000000,
+        "targetOps": 0,
+        "fieldCount": 10,
+        "fieldLength": 50,
+        "readAllFileds": true,
+        "readModifyWriteProportion": 0,
+        "requestdistribution": "ZIPFIAN",
+        "scanLengthDistribution": "UNIFORM",
+        "insertOrder": "ORDERED",
+        "readProportion": 0.5,
+        "updateProportion": 0.0,
+        "insertProportion": 0.5,
+        "scanProportion": 0.0,
+        "maxScanLength": 0,
+        "coreWorkloadInsertionRetryLimit": 3,
+        "coreWorkloadInsertionRetryInterval": 3
+      }
+    }
+  }
+}

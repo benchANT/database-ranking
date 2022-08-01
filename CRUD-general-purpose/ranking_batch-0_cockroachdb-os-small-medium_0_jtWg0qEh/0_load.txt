@@ -1,0 +1,403 @@
+/usr/java/bin/java -XX:MaxRAMPercentage=85.0 -cp /binary/ycsb/jdbc-binding/conf:/binary/ycsb/conf:/binary/ycsb/lib/jackson-core-asl-1.9.4.jar:/binary/ycsb/lib/HdrHistogram-2.1.4.jar:/binary/ycsb/lib/htrace-core4-4.1.0-incubating.jar:/binary/ycsb/lib/core-0.17.0.jar:/binary/ycsb/lib/jackson-mapper-asl-1.9.4.jar:/binary/ycsb/jdbc-binding/lib/commons-pool-1.5.4.jar:/binary/ycsb/jdbc-binding/lib/openjpa-jdbc-2.1.1.jar:/binary/ycsb/jdbc-binding/lib/commons-lang-2.4.jar:/binary/ycsb/jdbc-binding/lib/mysql-connector-java-5.1.47.jar:/binary/ycsb/jdbc-binding/lib/crate-jdbc-standalone-2.6.0.jar:/binary/ycsb/jdbc-binding/lib/serp-1.13.1.jar:/binary/ycsb/jdbc-binding/lib/geronimo-jms_1.1_spec-1.1.1.jar:/binary/ycsb/jdbc-binding/lib/postgresql-42.2.5.jar:/binary/ycsb/jdbc-binding/lib/jdbc-binding-0.17.0.jar:/binary/ycsb/jdbc-binding/lib/commons-collections-3.2.1.jar:/binary/ycsb/jdbc-binding/lib/openjpa-lib-2.1.1.jar:/binary/ycsb/jdbc-binding/lib/geronimo-jta_1.1_spec-1.1.1.jar:/binary/ycsb/jdbc-binding/lib/openjpa-kernel-2.1.1.jar:/binary/ycsb/jdbc-binding/lib/mysql-connector-java-5.1.47/mysql-connector-java-5.1.47-bin.jar:/binary/ycsb/jdbc-binding/lib/mysql-connector-java-5.1.47/src/lib/c3p0-0.9.1-pre6.jar:/binary/ycsb/jdbc-binding/lib/mysql-connector-java-5.1.47/src/lib/jboss-common-jdbc-wrapper.jar:/binary/ycsb/jdbc-binding/lib/mysql-connector-java-5.1.47/src/lib/jboss-common-jdbc-wrapper-src.jar:/binary/ycsb/jdbc-binding/lib/mysql-connector-java-5.1.47/src/lib/slf4j-api-1.6.1.jar site.ycsb.Client -db site.ycsb.db.JdbcDBClient -s -p db.url=jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true -p db.driver=org.postgresql.Driver -p db.user=benchant -p db.passwd=baas2020 -p db.batchsize=1000 -p workload=site.ycsb.workloads.CoreWorkload -threads 100 -p recordcount=5000000 -p operationcount=54000000 -p fieldcount=10 -p fieldlength=50 -p requestdistribution=zipfian -p insertorder=ordered -p readproportion=0.5 -p updateproportion=0.0 -p insertproportion=0.5 -p scanproportion=0.0 -p scanlengthdistribution=uniform -p core_workload_insertion_retry_limit=3 -p core_workload_insertion_retry_interval=3 -load
+Command line: -db site.ycsb.db.JdbcDBClient -s -p db.url=jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true -p db.driver=org.postgresql.Driver -p db.user=benchant -p db.passwd=baas2020 -p db.batchsize=1000 -p workload=site.ycsb.workloads.CoreWorkload -threads 100 -p recordcount=5000000 -p operationcount=54000000 -p fieldcount=10 -p fieldlength=50 -p requestdistribution=zipfian -p insertorder=ordered -p readproportion=0.5 -p updateproportion=0.0 -p insertproportion=0.5 -p scanproportion=0.0 -p scanlengthdistribution=uniform -p core_workload_insertion_retry_limit=3 -p core_workload_insertion_retry_interval=3 -load
+YCSB Client 0.17.0
+
+Loading workload...
+Starting test.
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true2022-04-01 05:57:56:785 0 sec: 0 operations; est completion in 0 second 
+
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.31.54:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+2022-04-01 05:58:06:770 10 sec: 24612 operations; 2461.2 current ops/sec; est completion in 33 minutes [INSERT: Count=24612, Max=169983, Min=2314, Avg=24697.79, 90=74047, 99=116863, 99.9=153983, 99.99=162815] 
+2022-04-01 05:58:16:770 20 sec: 58430 operations; 3381.8 current ops/sec; est completion in 28 minutes [INSERT: Count=33818, Max=124799, Min=3524, Avg=29560.28, 90=81151, 99=110655, 99.9=120447, 99.99=123583] 
+2022-04-01 05:58:26:770 30 sec: 93185 operations; 3475.5 current ops/sec; est completion in 26 minutes [INSERT: Count=34768, Max=148095, Min=3666, Avg=28920.41, 90=78079, 99=126847, 99.9=143231, 99.99=145151] 
+2022-04-01 05:58:36:770 40 sec: 129214 operations; 3602.9 current ops/sec; est completion in 25 minutes [INSERT: Count=36017, Max=142207, Min=3110, Avg=27757.15, 90=73983, 99=107327, 99.9=137471, 99.99=140671] 
+2022-04-01 05:58:46:770 50 sec: 164147 operations; 3493.3 current ops/sec; est completion in 24 minutes [INSERT: Count=34932, Max=141951, Min=3168, Avg=28423.51, 90=75327, 99=106623, 99.9=135551, 99.99=139135] 
+2022-04-01 05:58:56:769 60 sec: 197826 operations; 3367.9 current ops/sec; est completion in 24 minutes [INSERT: Count=33679, Max=137855, Min=3714, Avg=29900.65, 90=83967, 99=112831, 99.9=122623, 99.99=137087] 
+2022-04-01 05:59:06:769 70 sec: 236131 operations; 3830.5 current ops/sec; est completion in 23 minutes [INSERT: Count=38305, Max=164863, Min=2988, Avg=25911.31, 90=72447, 99=103935, 99.9=160895, 99.99=162303] 
+2022-04-01 05:59:16:769 80 sec: 274470 operations; 3833.9 current ops/sec; est completion in 22 minutes [INSERT: Count=38340, Max=142207, Min=3748, Avg=26248.39, 90=64799, 99=116543, 99.9=136959, 99.99=141951] 
+2022-04-01 05:59:26:770 90 sec: 316345 operations; 4187.5 current ops/sec; est completion in 22 minutes [INSERT: Count=41884, Max=134015, Min=2510, Avg=23894.23, 90=56447, 99=102335, 99.9=123839, 99.99=133759] 
+2022-04-01 05:59:36:770 100 sec: 384703 operations; 6835.8 current ops/sec; est completion in 20 minutes [INSERT: Count=68350, Max=116543, Min=1921, Avg=14622.2, 90=23119, 99=58495, 99.9=104575, 99.99=110463] 
+2022-04-01 05:59:46:770 110 sec: 460388 operations; 7568.5 current ops/sec; est completion in 18 minutes [INSERT: Count=75686, Max=62047, Min=1353, Avg=13215.76, 90=20159, 99=35071, 99.9=45023, 99.99=55295] 
+2022-04-01 05:59:56:770 120 sec: 534302 operations; 7391.4 current ops/sec; est completion in 16 minutes [INSERT: Count=73911, Max=71231, Min=1742, Avg=13524.59, 90=20687, 99=37311, 99.9=49215, 99.99=58143] 
+2022-04-01 06:00:06:769 130 sec: 607499 operations; 7319.7 current ops/sec; est completion in 15 minutes [INSERT: Count=73197, Max=74687, Min=1862, Avg=13660.42, 90=20879, 99=37727, 99.9=52351, 99.99=66047] 
+2022-04-01 06:00:16:769 140 sec: 680389 operations; 7289 current ops/sec; est completion in 14 minutes [INSERT: Count=72891, Max=68991, Min=1792, Avg=13720.16, 90=21295, 99=37375, 99.9=48063, 99.99=56319] 
+2022-04-01 06:00:26:770 150 sec: 753950 operations; 7356.1 current ops/sec; est completion in 14 minutes [INSERT: Count=73560, Max=66943, Min=1820, Avg=13587.86, 90=20767, 99=34559, 99.9=44639, 99.99=51999] 
+2022-04-01 06:00:36:769 160 sec: 832209 operations; 7825.9 current ops/sec; est completion in 13 minutes [INSERT: Count=78264, Max=65183, Min=1917, Avg=12780.18, 90=19295, 99=32367, 99.9=43423, 99.99=52319] 
+2022-04-01 06:00:46:770 170 sec: 908895 operations; 7668.6 current ops/sec; est completion in 12 minutes [INSERT: Count=76682, Max=61087, Min=1814, Avg=13025.87, 90=19679, 99=33919, 99.9=43743, 99.99=54623] 
+2022-04-01 06:00:56:770 180 sec: 982825 operations; 7393 current ops/sec; est completion in 12 minutes [INSERT: Count=73943, Max=182399, Min=2116, Avg=13533.89, 90=20239, 99=34815, 99.9=166271, 99.99=177279] 
+2022-04-01 06:01:06:770 190 sec: 1058353 operations; 7552.8 current ops/sec; est completion in 11 minutes [INSERT: Count=75514, Max=75519, Min=2062, Avg=13236.43, 90=19775, 99=35775, 99.9=67775, 99.99=74367] 
+2022-04-01 06:01:16:769 200 sec: 1133483 operations; 7513 current ops/sec; est completion in 11 minutes [INSERT: Count=75134, Max=90943, Min=1746, Avg=13310.87, 90=20191, 99=35871, 99.9=65919, 99.99=76735] 
+2022-04-01 06:01:26:770 210 sec: 1205608 operations; 7212.5 current ops/sec; est completion in 11 minutes [INSERT: Count=72130, Max=91583, Min=1537, Avg=13852.51, 90=21103, 99=40703, 99.9=78143, 99.99=86143] 
+2022-04-01 06:01:36:770 220 sec: 1279335 operations; 7372.7 current ops/sec; est completion in 10 minutes [INSERT: Count=73718, Max=70271, Min=2176, Avg=13573.61, 90=20527, 99=38079, 99.9=49855, 99.99=59711] 
+2022-04-01 06:01:46:769 230 sec: 1350496 operations; 7116.1 current ops/sec; est completion in 10 minutes [INSERT: Count=71166, Max=99775, Min=1885, Avg=14047.41, 90=21631, 99=39775, 99.9=56895, 99.99=88191] 
+2022-04-01 06:01:56:769 240 sec: 1422995 operations; 7249.9 current ops/sec; est completion in 10 minutes [INSERT: Count=72495, Max=82047, Min=1902, Avg=13790.53, 90=21263, 99=39775, 99.9=56415, 99.99=74111] 
+2022-04-01 06:02:06:769 250 sec: 1498136 operations; 7514.1 current ops/sec; est completion in 9 minutes [INSERT: Count=75140, Max=75455, Min=1999, Avg=13304.79, 90=20143, 99=37823, 99.9=49279, 99.99=63615] 
+2022-04-01 06:02:16:770 260 sec: 1571539 operations; 7340.3 current ops/sec; est completion in 9 minutes [INSERT: Count=73403, Max=73087, Min=1485, Avg=13618.72, 90=20895, 99=38527, 99.9=54143, 99.99=63519] 
+2022-04-01 06:02:26:770 270 sec: 1646510 operations; 7497.1 current ops/sec; est completion in 9 minutes [INSERT: Count=74982, Max=70783, Min=1498, Avg=13342.69, 90=20671, 99=38751, 99.9=51327, 99.99=64511] 
+2022-04-01 06:02:36:770 280 sec: 1724301 operations; 7779.1 current ops/sec; est completion in 8 minutes [INSERT: Count=77792, Max=204543, Min=1700, Avg=12851.2, 90=19247, 99=33631, 99.9=192383, 99.99=200319] 
+2022-04-01 06:02:46:770 290 sec: 1801379 operations; 7707.8 current ops/sec; est completion in 8 minutes [INSERT: Count=77075, Max=149119, Min=1719, Avg=12971.76, 90=19503, 99=34143, 99.9=140287, 99.99=147583] 
+2022-04-01 06:02:56:770 300 sec: 1878022 operations; 7664.3 current ops/sec; est completion in 8 minutes [INSERT: Count=76655, Max=58591, Min=1817, Avg=13042.03, 90=19903, 99=33823, 99.9=47519, 99.99=56831] 
+2022-04-01 06:03:06:770 310 sec: 1952123 operations; 7410.1 current ops/sec; est completion in 8 minutes [INSERT: Count=74087, Max=70719, Min=1871, Avg=13495.21, 90=20367, 99=34079, 99.9=45279, 99.99=54207] 
+2022-04-01 06:03:16:770 320 sec: 2029032 operations; 7690.9 current ops/sec; est completion in 7 minutes [INSERT: Count=76907, Max=73343, Min=1581, Avg=12999.59, 90=19967, 99=34719, 99.9=48575, 99.99=56959] 
+2022-04-01 06:03:26:770 330 sec: 2106923 operations; 7789.1 current ops/sec; est completion in 7 minutes [INSERT: Count=77887, Max=80319, Min=1947, Avg=12835.88, 90=19679, 99=34175, 99.9=46911, 99.99=63007] 
+2022-04-01 06:03:36:770 340 sec: 2182196 operations; 7527.3 current ops/sec; est completion in 7 minutes [INSERT: Count=75278, Max=76543, Min=1499, Avg=13284.78, 90=20207, 99=36799, 99.9=53887, 99.99=70847] 
+2022-04-01 06:03:46:770 350 sec: 2256333 operations; 7413.7 current ops/sec; est completion in 7 minutes [INSERT: Count=74139, Max=87743, Min=1662, Avg=13487.45, 90=20879, 99=39295, 99.9=55999, 99.99=72767] 
+2022-04-01 06:03:56:770 360 sec: 2331509 operations; 7517.6 current ops/sec; est completion in 6 minutes [INSERT: Count=75171, Max=70527, Min=1962, Avg=13297.27, 90=20543, 99=36351, 99.9=46655, 99.99=57215] 
+2022-04-01 06:04:06:770 370 sec: 2403674 operations; 7216.5 current ops/sec; est completion in 6 minutes [INSERT: Count=72165, Max=199423, Min=1811, Avg=13858.44, 90=21327, 99=40287, 99.9=188415, 99.99=197503] 
+2022-04-01 06:04:16:769 380 sec: 2477488 operations; 7381.4 current ops/sec; est completion in 6 minutes [INSERT: Count=73812, Max=204287, Min=1647, Avg=13546.04, 90=20271, 99=38815, 99.9=187135, 99.99=199551] 
+2022-04-01 06:04:26:770 390 sec: 2550682 operations; 7319.4 current ops/sec; est completion in 6 minutes [INSERT: Count=73198, Max=73151, Min=2002, Avg=13653.2, 90=21039, 99=38207, 99.9=48863, 99.99=60991] 
+2022-04-01 06:04:36:770 400 sec: 2626348 operations; 7566.6 current ops/sec; est completion in 6 minutes [INSERT: Count=75664, Max=74495, Min=2096, Avg=13216.99, 90=20095, 99=37663, 99.9=50463, 99.99=60575] 
+2022-04-01 06:04:46:770 410 sec: 2698748 operations; 7240 current ops/sec; est completion in 5 minutes [INSERT: Count=72397, Max=197503, Min=1558, Avg=13809.83, 90=20847, 99=41567, 99.9=182015, 99.99=196735] 
+2022-04-01 06:04:56:770 420 sec: 2774111 operations; 7536.3 current ops/sec; est completion in 5 minutes [INSERT: Count=75363, Max=73855, Min=1739, Avg=13271.12, 90=20463, 99=38111, 99.9=50591, 99.99=60447] 
+2022-04-01 06:05:06:770 430 sec: 2845303 operations; 7119.2 current ops/sec; est completion in 5 minutes [INSERT: Count=71192, Max=66239, Min=1768, Avg=14039.73, 90=21775, 99=40511, 99.9=52575, 99.99=62271] 
+2022-04-01 06:05:16:769 440 sec: 2920199 operations; 7489.6 current ops/sec; est completion in 5 minutes [INSERT: Count=74897, Max=73023, Min=2027, Avg=13349.86, 90=20703, 99=36831, 99.9=53023, 99.99=64831] 
+2022-04-01 06:05:26:769 450 sec: 2992791 operations; 7259.2 current ops/sec; est completion in 5 minutes [INSERT: Count=72593, Max=86335, Min=1960, Avg=13775.54, 90=21071, 99=40095, 99.9=56031, 99.99=69631] 
+2022-04-01 06:05:36:769 460 sec: 3070054 operations; 7726.3 current ops/sec; est completion in 4 minutes [INSERT: Count=77266, Max=67391, Min=2088, Avg=12939.23, 90=19551, 99=37951, 99.9=48351, 99.99=54335] 
+2022-04-01 06:05:46:770 470 sec: 3143981 operations; 7392.7 current ops/sec; est completion in 4 minutes [INSERT: Count=73937, Max=79935, Min=2066, Avg=13524, 90=20767, 99=38943, 99.9=54207, 99.99=73983] 
+2022-04-01 06:05:56:770 480 sec: 3219649 operations; 7566.8 current ops/sec; est completion in 4 minutes [INSERT: Count=75653, Max=64511, Min=1477, Avg=13214.32, 90=20255, 99=38911, 99.9=49919, 99.99=57695] 
+2022-04-01 06:06:06:770 490 sec: 3294477 operations; 7482.8 current ops/sec; est completion in 4 minutes [INSERT: Count=74834, Max=75519, Min=1451, Avg=13362.64, 90=20639, 99=40575, 99.9=58559, 99.99=66815] 
+2022-04-01 06:06:16:770 500 sec: 3365273 operations; 7079.6 current ops/sec; est completion in 4 minutes [INSERT: Count=70791, Max=240639, Min=1768, Avg=14118.01, 90=21759, 99=41343, 99.9=224639, 99.99=234751] 
+2022-04-01 06:06:26:770 510 sec: 3440507 operations; 7523.4 current ops/sec; est completion in 3 minutes [INSERT: Count=75239, Max=347135, Min=2023, Avg=13290.9, 90=19823, 99=35519, 99.9=291327, 99.99=333055] 
+2022-04-01 06:06:36:769 520 sec: 3515710 operations; 7520.3 current ops/sec; est completion in 3 minutes [INSERT: Count=75197, Max=110015, Min=1732, Avg=13301.27, 90=20383, 99=35807, 99.9=96575, 99.99=107775] 
+2022-04-01 06:06:46:769 530 sec: 3595092 operations; 7938.2 current ops/sec; est completion in 3 minutes [INSERT: Count=79382, Max=63071, Min=1984, Avg=12593.6, 90=19199, 99=33567, 99.9=46399, 99.99=56607] 
+2022-04-01 06:06:56:770 540 sec: 3669874 operations; 7478.2 current ops/sec; est completion in 3 minutes [INSERT: Count=74782, Max=72127, Min=1491, Avg=13368.96, 90=20767, 99=35935, 99.9=49887, 99.99=64351] 
+2022-04-01 06:07:06:769 550 sec: 3746821 operations; 7694.7 current ops/sec; est completion in 3 minutes [INSERT: Count=76947, Max=206591, Min=1639, Avg=12976.43, 90=19487, 99=34975, 99.9=184191, 99.99=199167] 
+2022-04-01 06:07:16:769 560 sec: 3822242 operations; 7542.1 current ops/sec; est completion in 2 minutes [INSERT: Count=75423, Max=62175, Min=1813, Avg=13274.51, 90=20607, 99=35231, 99.9=48351, 99.99=58335] 
+2022-04-01 06:07:26:770 570 sec: 3892148 operations; 6990.6 current ops/sec; est completion in 2 minutes [INSERT: Count=69905, Max=145535, Min=1757, Avg=14287.83, 90=22863, 99=43007, 99.9=118143, 99.99=134399] 
+2022-04-01 06:07:36:769 580 sec: 3964950 operations; 7280.2 current ops/sec; est completion in 2 minutes [INSERT: Count=72801, Max=123007, Min=1568, Avg=13749.21, 90=21647, 99=40127, 99.9=57919, 99.99=106559] 
+2022-04-01 06:07:46:770 590 sec: 4039179 operations; 7422.9 current ops/sec; est completion in 2 minutes [INSERT: Count=74230, Max=71935, Min=1373, Avg=13463.77, 90=20895, 99=38623, 99.9=50367, 99.99=67455] 
+2022-04-01 06:07:56:770 600 sec: 4116585 operations; 7740.6 current ops/sec; est completion in 2 minutes [INSERT: Count=77405, Max=69823, Min=2106, Avg=12923.99, 90=19839, 99=37151, 99.9=47519, 99.99=58303] 
+2022-04-01 06:08:06:770 610 sec: 4190763 operations; 7417.8 current ops/sec; est completion in 1 minute [INSERT: Count=74178, Max=71167, Min=1827, Avg=13477.69, 90=20879, 99=39007, 99.9=51999, 99.99=65247] 
+2022-04-01 06:08:16:769 620 sec: 4267706 operations; 7694.3 current ops/sec; est completion in 1 minute [INSERT: Count=76943, Max=66943, Min=1714, Avg=12991.43, 90=19807, 99=36831, 99.9=48671, 99.99=59615] 
+2022-04-01 06:08:26:769 630 sec: 4341879 operations; 7417.3 current ops/sec; est completion in 1 minute [INSERT: Count=74174, Max=70655, Min=1788, Avg=13482.13, 90=20863, 99=38559, 99.9=51871, 99.99=62591] 
+2022-04-01 06:08:36:769 640 sec: 4414997 operations; 7311.8 current ops/sec; est completion in 1 minute [INSERT: Count=73117, Max=474623, Min=2030, Avg=13673.92, 90=20063, 99=38335, 99.9=454911, 99.99=465663] 
+2022-04-01 06:08:46:770 650 sec: 4489983 operations; 7498.6 current ops/sec; est completion in 1 minute [INSERT: Count=74986, Max=74239, Min=1716, Avg=13334.24, 90=20591, 99=38399, 99.9=55839, 99.99=71423] 
+2022-04-01 06:08:56:770 660 sec: 4564228 operations; 7424.5 current ops/sec; est completion in 1 minute [INSERT: Count=74250, Max=62879, Min=1911, Avg=13466.19, 90=20671, 99=37471, 99.9=47679, 99.99=56511] 
+2022-04-01 06:09:06:770 670 sec: 4636705 operations; 7247.7 current ops/sec; est completion in 53 seconds [INSERT: Count=72475, Max=65375, Min=1959, Avg=13795.92, 90=21103, 99=39199, 99.9=51807, 99.99=60927] 
+2022-04-01 06:09:16:770 680 sec: 4710342 operations; 7363.7 current ops/sec; est completion in 42 seconds [INSERT: Count=73634, Max=76223, Min=1917, Avg=13574.34, 90=20799, 99=38623, 99.9=55391, 99.99=71807] 
+2022-04-01 06:09:26:769 690 sec: 4784657 operations; 7431.5 current ops/sec; est completion in 32 seconds [INSERT: Count=74318, Max=76927, Min=1548, Avg=13460.03, 90=20719, 99=38847, 99.9=52319, 99.99=72895] 
+2022-04-01 06:09:36:770 700 sec: 4858149 operations; 7349.2 current ops/sec; est completion in 21 seconds [INSERT: Count=73489, Max=91711, Min=1603, Avg=13602.19, 90=21007, 99=38655, 99.9=53727, 99.99=73791] 
+2022-04-01 06:09:46:770 710 sec: 4933181 operations; 7503.2 current ops/sec; est completion in 10 seconds [INSERT: Count=75032, Max=75327, Min=1750, Avg=13327.53, 90=20783, 99=37567, 99.9=49375, 99.99=56351] 
+2022-04-01 06:09:56:115 719 sec: 5000000 operations; 7149.48 current ops/sec; [CLEANUP: Count=100, Max=424, Min=38, Avg=93.72, 90=135, 99=223, 99.9=424, 99.99=424] [INSERT: Count=66819, Max=77439, Min=1150, Avg=11738.26, 90=18511, 99=36895, 99.9=50367, 99.99=63231] 
+[OVERALL], RunTime(ms), 719345
+[OVERALL], Throughput(ops/sec), 6950.767712293823
+[TOTAL_GCS_PS_Scavenge], Count, 1355
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 1129
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.15694833494359453
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 1355
+[TOTAL_GC_TIME], Time(ms), 1129
+[TOTAL_GC_TIME_%], Time(%), 0.15694833494359453
+[CLEANUP], Operations, 100
+[CLEANUP], AverageLatency(us), 93.72
+[CLEANUP], MinLatency(us), 38
+[CLEANUP], MaxLatency(us), 424
+[CLEANUP], 95thPercentileLatency(us), 155
+[CLEANUP], 99thPercentileLatency(us), 223
+[INSERT], Operations, 5000000
+[INSERT], AverageLatency(us), 14277.3683766
+[INSERT], MinLatency(us), 1150
+[INSERT], MaxLatency(us), 474623
+[INSERT], 95thPercentileLatency(us), 28079
+[INSERT], 99thPercentileLatency(us), 62623
+[INSERT], Return=OK, 5000000

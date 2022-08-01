@@ -1,0 +1,594 @@
+/usr/java/bin/java -XX:MaxRAMPercentage=85.0 -cp /binary/ycsb/jdbc-binding/conf:/binary/ycsb/conf:/binary/ycsb/lib/jackson-core-asl-1.9.4.jar:/binary/ycsb/lib/HdrHistogram-2.1.4.jar:/binary/ycsb/lib/htrace-core4-4.1.0-incubating.jar:/binary/ycsb/lib/core-0.17.0.jar:/binary/ycsb/lib/jackson-mapper-asl-1.9.4.jar:/binary/ycsb/jdbc-binding/lib/commons-pool-1.5.4.jar:/binary/ycsb/jdbc-binding/lib/openjpa-jdbc-2.1.1.jar:/binary/ycsb/jdbc-binding/lib/commons-lang-2.4.jar:/binary/ycsb/jdbc-binding/lib/mysql-connector-java-5.1.47.jar:/binary/ycsb/jdbc-binding/lib/crate-jdbc-standalone-2.6.0.jar:/binary/ycsb/jdbc-binding/lib/serp-1.13.1.jar:/binary/ycsb/jdbc-binding/lib/geronimo-jms_1.1_spec-1.1.1.jar:/binary/ycsb/jdbc-binding/lib/postgresql-42.2.5.jar:/binary/ycsb/jdbc-binding/lib/jdbc-binding-0.17.0.jar:/binary/ycsb/jdbc-binding/lib/commons-collections-3.2.1.jar:/binary/ycsb/jdbc-binding/lib/openjpa-lib-2.1.1.jar:/binary/ycsb/jdbc-binding/lib/geronimo-jta_1.1_spec-1.1.1.jar:/binary/ycsb/jdbc-binding/lib/openjpa-kernel-2.1.1.jar:/binary/ycsb/jdbc-binding/lib/mysql-connector-java-5.1.47/mysql-connector-java-5.1.47-bin.jar:/binary/ycsb/jdbc-binding/lib/mysql-connector-java-5.1.47/src/lib/c3p0-0.9.1-pre6.jar:/binary/ycsb/jdbc-binding/lib/mysql-connector-java-5.1.47/src/lib/jboss-common-jdbc-wrapper.jar:/binary/ycsb/jdbc-binding/lib/mysql-connector-java-5.1.47/src/lib/jboss-common-jdbc-wrapper-src.jar:/binary/ycsb/jdbc-binding/lib/mysql-connector-java-5.1.47/src/lib/slf4j-api-1.6.1.jar site.ycsb.Client -db site.ycsb.db.JdbcDBClient -s -p db.url=jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true;jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true;jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true -p db.driver=org.postgresql.Driver -p db.user=benchant -p db.passwd=baas2020 -p db.batchsize=1000 -p workload=site.ycsb.workloads.CoreWorkload -threads 100 -p recordcount=5000000 -p operationcount=54000000 -p fieldcount=10 -p fieldlength=50 -p requestdistribution=zipfian -p insertorder=ordered -p readproportion=0.5 -p updateproportion=0.0 -p insertproportion=0.5 -p scanproportion=0.0 -p scanlengthdistribution=uniform -p core_workload_insertion_retry_limit=3 -p core_workload_insertion_retry_interval=3 -load
+Command line: -db site.ycsb.db.JdbcDBClient -s -p db.url=jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true;jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true;jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true -p db.driver=org.postgresql.Driver -p db.user=benchant -p db.passwd=baas2020 -p db.batchsize=1000 -p workload=site.ycsb.workloads.CoreWorkload -threads 100 -p recordcount=5000000 -p operationcount=54000000 -p fieldcount=10 -p fieldlength=50 -p requestdistribution=zipfian -p insertorder=ordered -p readproportion=0.5 -p updateproportion=0.0 -p insertproportion=0.5 -p scanproportion=0.0 -p scanlengthdistribution=uniform -p core_workload_insertion_retry_limit=3 -p core_workload_insertion_retry_interval=3 -load
+YCSB Client 0.17.0
+
+Loading workload...
+Starting test.
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true2022-04-01 08:57:17:032 0 sec: 0 operations; est completion in 0 second 
+
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.17.163:26257,172.31.18.196:26257,172.31.25.56:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.18.196:26257,172.31.25.56:26257,172.31.17.163:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Adding shard node URL: jdbc:postgresql://172.31.25.56:26257,172.31.17.163:26257,172.31.18.196:26257/benchdb?sslmode=disable&loadBalanceHosts=true
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 3, batchSize:1000, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+2022-04-01 08:57:27:014 10 sec: 17826 operations; 1782.6 current ops/sec; est completion in 46 minutes [INSERT: Count=17826, Max=97023, Min=2414, Avg=21339.44, 90=40223, 99=66367, 99.9=94207, 99.99=96191] 
+2022-04-01 08:57:37:014 20 sec: 59963 operations; 4213.7 current ops/sec; est completion in 27 minutes [INSERT: Count=42137, Max=101759, Min=5836, Avg=23787.53, 90=40479, 99=60415, 99.9=93183, 99.99=96319] 
+2022-04-01 08:57:47:014 30 sec: 103707 operations; 4374.4 current ops/sec; est completion in 23 minutes [INSERT: Count=43744, Max=93119, Min=4392, Avg=22859.27, 90=42719, 99=60511, 99.9=85759, 99.99=92095] 
+2022-04-01 08:57:57:014 40 sec: 147593 operations; 4388.6 current ops/sec; est completion in 21 minutes [INSERT: Count=43886, Max=66367, Min=4360, Avg=22756.77, 90=40895, 99=54687, 99.9=62015, 99.99=65023] 
+2022-04-01 08:58:07:014 50 sec: 194692 operations; 4709.9 current ops/sec; est completion in 20 minutes [INSERT: Count=47099, Max=82431, Min=4332, Avg=21214.93, 90=39583, 99=58495, 99.9=72191, 99.99=81407] 
+2022-04-01 08:58:17:014 60 sec: 242229 operations; 4753.7 current ops/sec; est completion in 19 minutes [INSERT: Count=47537, Max=90943, Min=4160, Avg=21074.2, 90=39519, 99=63231, 99.9=82623, 99.99=87103] 
+2022-04-01 08:58:27:014 70 sec: 310275 operations; 6804.6 current ops/sec; est completion in 17 minutes [INSERT: Count=68056, Max=78655, Min=3794, Avg=14688.5, 90=27727, 99=45279, 99.9=64927, 99.99=78399] 
+2022-04-01 08:58:37:014 80 sec: 398245 operations; 8797 current ops/sec; est completion in 15 minutes [INSERT: Count=87960, Max=42495, Min=3092, Avg=11361.18, 90=15599, 99=27679, 99.9=34271, 99.99=38239] 
+2022-04-01 08:58:47:014 90 sec: 486007 operations; 8776.2 current ops/sec; est completion in 13 minutes [INSERT: Count=87762, Max=55551, Min=3298, Avg=11400.58, 90=15719, 99=27439, 99.9=34815, 99.99=41567] 
+2022-04-01 08:58:57:014 100 sec: 570968 operations; 8496.1 current ops/sec; est completion in 12 minutes [INSERT: Count=84962, Max=53951, Min=3390, Avg=11770.38, 90=16527, 99=31695, 99.9=42207, 99.99=48543] 
+2022-04-01 08:59:07:014 110 sec: 659676 operations; 8870.8 current ops/sec; est completion in 12 minutes [INSERT: Count=88708, Max=52927, Min=3220, Avg=11271.69, 90=16119, 99=31279, 99.9=42815, 99.99=50079] 
+2022-04-01 08:59:17:014 120 sec: 748883 operations; 8920.7 current ops/sec; est completion in 11 minutes [INSERT: Count=89206, Max=63295, Min=2950, Avg=11207.92, 90=15959, 99=29999, 99.9=41951, 99.99=50399] 
+2022-04-01 08:59:27:014 130 sec: 838441 operations; 8955.8 current ops/sec; est completion in 10 minutes [INSERT: Count=89558, Max=55359, Min=2944, Avg=11166.94, 90=15583, 99=27951, 99.9=39263, 99.99=48831] 
+2022-04-01 08:59:37:014 140 sec: 927998 operations; 8955.7 current ops/sec; est completion in 10 minutes [INSERT: Count=89557, Max=44639, Min=3048, Avg=11161.25, 90=15191, 99=27343, 99.9=34591, 99.99=41119] 
+2022-04-01 08:59:47:014 150 sec: 1015331 operations; 8733.3 current ops/sec; est completion in 9 minutes [INSERT: Count=87341, Max=254719, Min=3290, Avg=11447.83, 90=15447, 99=28143, 99.9=200959, 99.99=248703] 
+2022-04-01 08:59:57:014 160 sec: 1102167 operations; 8683.6 current ops/sec; est completion in 9 minutes [INSERT: Count=86830, Max=54751, Min=3160, Avg=11510.11, 90=15927, 99=30015, 99.9=39711, 99.99=45727] 
+2022-04-01 09:00:07:014 170 sec: 1187475 operations; 8530.8 current ops/sec; est completion in 9 minutes [INSERT: Count=85311, Max=57759, Min=3332, Avg=11722.81, 90=16191, 99=31903, 99.9=42559, 99.99=49119] 
+2022-04-01 09:00:17:014 180 sec: 1270073 operations; 8259.8 current ops/sec; est completion in 8 minutes [INSERT: Count=82593, Max=61791, Min=3564, Avg=12109.37, 90=16719, 99=35391, 99.9=44703, 99.99=51167] 
+2022-04-01 09:00:27:014 190 sec: 1351930 operations; 8185.7 current ops/sec; est completion in 8 minutes [INSERT: Count=81857, Max=66623, Min=3202, Avg=12216.99, 90=17151, 99=32639, 99.9=49599, 99.99=62911] 
+2022-04-01 09:00:37:014 200 sec: 1433546 operations; 8161.6 current ops/sec; est completion in 8 minutes [INSERT: Count=81620, Max=439807, Min=3068, Avg=12248.71, 90=16671, 99=33407, 99.9=402687, 99.99=433407] 
+2022-04-01 09:00:47:014 210 sec: 1520076 operations; 8653 current ops/sec; est completion in 8 minutes [INSERT: Count=86526, Max=80895, Min=3464, Avg=11555.33, 90=16415, 99=31055, 99.9=40991, 99.99=52063] 
+2022-04-01 09:00:57:014 220 sec: 1608666 operations; 8859 current ops/sec; est completion in 7 minutes [INSERT: Count=88596, Max=49567, Min=3346, Avg=11284.69, 90=15647, 99=30687, 99.9=41311, 99.99=48799] 
+2022-04-01 09:01:07:014 230 sec: 1696798 operations; 8813.2 current ops/sec; est completion in 7 minutes [INSERT: Count=88126, Max=53535, Min=3360, Avg=11345.4, 90=15959, 99=31199, 99.9=40415, 99.99=47295] 
+2022-04-01 09:01:17:014 240 sec: 1786184 operations; 8938.6 current ops/sec; est completion in 7 minutes [INSERT: Count=89394, Max=59743, Min=3414, Avg=11184.2, 90=15655, 99=28607, 99.9=38687, 99.99=45727] 
+2022-04-01 09:01:27:014 250 sec: 1873360 operations; 8717.6 current ops/sec; est completion in 6 minutes [INSERT: Count=87169, Max=56159, Min=3474, Avg=11471.27, 90=16311, 99=30639, 99.9=43711, 99.99=50911] 
+2022-04-01 09:01:37:014 260 sec: 1956416 operations; 8305.6 current ops/sec; est completion in 6 minutes [INSERT: Count=83055, Max=61535, Min=3470, Avg=12037.58, 90=17487, 99=32527, 99.9=46591, 99.99=56095] 
+2022-04-01 09:01:47:014 270 sec: 2041275 operations; 8485.9 current ops/sec; est completion in 6 minutes [INSERT: Count=84889, Max=251007, Min=3528, Avg=11782.16, 90=16359, 99=33343, 99.9=239999, 99.99=249983] 
+2022-04-01 09:01:57:014 280 sec: 2123339 operations; 8206.4 current ops/sec; est completion in 6 minutes [INSERT: Count=82040, Max=262143, Min=3176, Avg=12186.58, 90=17103, 99=33119, 99.9=194431, 99.99=238975] 
+2022-04-01 09:02:07:014 290 sec: 2205200 operations; 8186.1 current ops/sec; est completion in 6 minutes [INSERT: Count=81856, Max=55487, Min=3734, Avg=12211.28, 90=17087, 99=32191, 99.9=41887, 99.99=51775] 
+2022-04-01 09:02:17:014 300 sec: 2287567 operations; 8236.7 current ops/sec; est completion in 5 minutes [INSERT: Count=82366, Max=63487, Min=3146, Avg=12138.32, 90=16735, 99=33311, 99.9=48383, 99.99=62239] 
+2022-04-01 09:02:27:014 310 sec: 2367312 operations; 7974.5 current ops/sec; est completion in 5 minutes [INSERT: Count=79745, Max=84351, Min=3506, Avg=12538, 90=17503, 99=35359, 99.9=57311, 99.99=66047] 
+2022-04-01 09:02:37:014 320 sec: 2449085 operations; 8177.3 current ops/sec; est completion in 5 minutes [INSERT: Count=81775, Max=60607, Min=3656, Avg=12227.28, 90=17231, 99=33983, 99.9=43455, 99.99=48383] 
+2022-04-01 09:02:47:014 330 sec: 2534219 operations; 8513.4 current ops/sec; est completion in 5 minutes [INSERT: Count=85132, Max=64319, Min=3208, Avg=11745.66, 90=16735, 99=33215, 99.9=49215, 99.99=61599] 
+2022-04-01 09:02:57:014 340 sec: 2619594 operations; 8537.5 current ops/sec; est completion in 5 minutes [INSERT: Count=85375, Max=69695, Min=3140, Avg=11712.82, 90=16879, 99=33247, 99.9=47519, 99.99=54431] 
+2022-04-01 09:03:07:014 350 sec: 2703362 operations; 8376.8 current ops/sec; est completion in 4 minutes [INSERT: Count=83768, Max=237439, Min=3364, Avg=11936.22, 90=16735, 99=33887, 99.9=197503, 99.99=231551] 
+2022-04-01 09:03:17:014 360 sec: 2788233 operations; 8487.1 current ops/sec; est completion in 4 minutes [INSERT: Count=84871, Max=57631, Min=3788, Avg=11781.48, 90=16751, 99=32415, 99.9=44223, 99.99=52895] 
+2022-04-01 09:03:27:014 370 sec: 2872152 operations; 8391.9 current ops/sec; est completion in 4 minutes [INSERT: Count=83919, Max=62367, Min=3098, Avg=11910.86, 90=17359, 99=33823, 99.9=44063, 99.99=53471] 
+2022-04-01 09:03:37:014 380 sec: 2959374 operations; 8722.2 current ops/sec; est completion in 4 minutes [INSERT: Count=87225, Max=55263, Min=3116, Avg=11466.09, 90=16199, 99=32239, 99.9=46239, 99.99=50975] 
+2022-04-01 09:03:47:014 390 sec: 3046243 operations; 8686.9 current ops/sec; est completion in 4 minutes [INSERT: Count=86870, Max=63615, Min=3066, Avg=11511.32, 90=16559, 99=33279, 99.9=50239, 99.99=57823] 
+2022-04-01 09:03:57:014 400 sec: 3135388 operations; 8914.5 current ops/sec; est completion in 3 minutes [INSERT: Count=89141, Max=55423, Min=2968, Avg=11195.96, 90=15815, 99=29647, 99.9=41247, 99.99=53151] 
+2022-04-01 09:04:07:014 410 sec: 3220205 operations; 8481.7 current ops/sec; est completion in 3 minutes [INSERT: Count=84817, Max=266751, Min=3478, Avg=11800.43, 90=16335, 99=31535, 99.9=223487, 99.99=265215] 
+2022-04-01 09:04:17:014 420 sec: 3302364 operations; 8215.9 current ops/sec; est completion in 3 minutes [INSERT: Count=82163, Max=356095, Min=3324, Avg=12180.24, 90=17759, 99=32335, 99.9=317439, 99.99=353791] 
+2022-04-01 09:04:27:014 430 sec: 3385542 operations; 8317.8 current ops/sec; est completion in 3 minutes [INSERT: Count=83175, Max=77247, Min=3128, Avg=12017.02, 90=16975, 99=36639, 99.9=53151, 99.99=61695] 
+2022-04-01 09:04:37:014 440 sec: 3470293 operations; 8475.1 current ops/sec; est completion in 3 minutes [INSERT: Count=84750, Max=65983, Min=2838, Avg=11798.76, 90=17071, 99=32927, 99.9=52927, 99.99=61695] 
+2022-04-01 09:04:47:014 450 sec: 3557433 operations; 8714 current ops/sec; est completion in 3 minutes [INSERT: Count=87141, Max=53663, Min=3252, Avg=11476.38, 90=16015, 99=32655, 99.9=45375, 99.99=51775] 
+2022-04-01 09:04:57:014 460 sec: 3638657 operations; 8122.4 current ops/sec; est completion in 2 minutes [INSERT: Count=81225, Max=337919, Min=3350, Avg=12307.55, 90=17087, 99=35135, 99.9=323327, 99.99=336127] 
+2022-04-01 09:05:07:014 470 sec: 3722126 operations; 8346.9 current ops/sec; est completion in 2 minutes [INSERT: Count=83468, Max=57887, Min=3088, Avg=11982.11, 90=17519, 99=35199, 99.9=46911, 99.99=53535] 
+2022-04-01 09:05:17:014 480 sec: 3806627 operations; 8450.1 current ops/sec; est completion in 2 minutes [INSERT: Count=84500, Max=69759, Min=3448, Avg=11825.36, 90=16895, 99=33311, 99.9=53087, 99.99=62783] 
+2022-04-01 09:05:27:014 490 sec: 3893116 operations; 8648.9 current ops/sec; est completion in 2 minutes [INSERT: Count=86491, Max=92415, Min=3300, Avg=11557.65, 90=16655, 99=34175, 99.9=58751, 99.99=80447] 
+2022-04-01 09:05:37:014 500 sec: 3976785 operations; 8366.9 current ops/sec; est completion in 2 minutes [INSERT: Count=83667, Max=73279, Min=3094, Avg=11955.26, 90=17471, 99=34911, 99.9=47487, 99.99=56735] 
+2022-04-01 09:05:47:014 510 sec: 4063182 operations; 8639.7 current ops/sec; est completion in 1 minute [INSERT: Count=86397, Max=67071, Min=3548, Avg=11573.94, 90=16703, 99=33791, 99.9=47423, 99.99=53055] 
+2022-04-01 09:05:57:014 520 sec: 4147590 operations; 8440.8 current ops/sec; est completion in 1 minute [INSERT: Count=84408, Max=63359, Min=3306, Avg=11845.9, 90=17327, 99=33919, 99.9=48223, 99.99=55679] 
+2022-04-01 09:06:07:014 530 sec: 4232651 operations; 8506.1 current ops/sec; est completion in 1 minute [INSERT: Count=85064, Max=69183, Min=3348, Avg=11750.85, 90=16879, 99=33663, 99.9=50495, 99.99=60415] 
+2022-04-01 09:06:17:014 540 sec: 4319182 operations; 8653.1 current ops/sec; est completion in 1 minute [CLEANUP: Count=6, Max=338, Min=127, Avg=217.33, 90=287, 99=338, 99.9=338, 99.99=338] [INSERT: Count=86529, Max=63263, Min=2834, Avg=11296.56, 90=16263, 99=32559, 99.9=48191, 99.99=56607] 
+2022-04-01 09:06:27:014 550 sec: 4401481 operations; 8229.9 current ops/sec; est completion in 1 minute [CLEANUP: Count=0, Max=0, Min=9223372036854775807, Avg=?, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=82305, Max=234367, Min=2884, Avg=11433.28, 90=16495, 99=34367, 99.9=192639, 99.99=230783] 
+2022-04-01 09:06:37:014 560 sec: 4487624 operations; 8614.3 current ops/sec; est completion in 1 minute [CLEANUP: Count=0, Max=0, Min=9223372036854775807, Avg=?, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=86146, Max=72127, Min=2612, Avg=10909.12, 90=15671, 99=31407, 99.9=47199, 99.99=58559] 
+2022-04-01 09:06:47:014 570 sec: 4573734 operations; 8611 current ops/sec; est completion in 54 seconds [CLEANUP: Count=0, Max=0, Min=9223372036854775807, Avg=?, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=86102, Max=60479, Min=2996, Avg=10895.63, 90=16063, 99=31519, 99.9=43423, 99.99=56415] 
+2022-04-01 09:06:57:014 580 sec: 4660659 operations; 8692.5 current ops/sec; est completion in 43 seconds [CLEANUP: Count=22, Max=453, Min=99, Avg=184.27, 90=291, 99=453, 99.9=453, 99.99=453] [INSERT: Count=86924, Max=55999, Min=2266, Avg=9856.58, 90=14671, 99=28735, 99.9=42495, 99.99=47455] 
+2022-04-01 09:07:07:014 590 sec: 4748981 operations; 8832.2 current ops/sec; est completion in 32 seconds [CLEANUP: Count=1, Max=114, Min=114, Avg=114, 90=114, 99=114, 99.9=114, 99.99=114] [INSERT: Count=88321, Max=42335, Min=1770, Avg=8039.17, 90=11991, 99=22447, 99.9=32719, 99.99=37087] 
+2022-04-01 09:07:17:014 600 sec: 4835373 operations; 8639.2 current ops/sec; est completion in 21 seconds [CLEANUP: Count=4, Max=287, Min=89, Avg=174.75, 90=287, 99=287, 99.9=287, 99.99=287] [INSERT: Count=86392, Max=50367, Min=1952, Avg=8211.81, 90=12191, 99=22735, 99.9=35487, 99.99=41279] 
+2022-04-01 09:07:27:014 610 sec: 4911193 operations; 7582 current ops/sec; est completion in 12 seconds [CLEANUP: Count=36, Max=334, Min=82, Avg=126.69, 90=139, 99=334, 99.9=334, 99.99=334] [INSERT: Count=75820, Max=223103, Min=1699, Avg=7428.53, 90=10951, 99=20639, 99.9=34719, 99.99=214143] 
+2022-04-01 09:07:37:014 620 sec: 4972805 operations; 6161.2 current ops/sec; est completion in 4 second [CLEANUP: Count=5, Max=184, Min=110, Avg=136, 90=184, 99=184, 99.9=184, 99.99=184] [INSERT: Count=61614, Max=48127, Min=1762, Avg=4835.78, 90=6443, 99=13039, 99.9=23343, 99.99=47071] 
+2022-04-01 09:07:43:070 626 sec: 5000000 operations; 4490.59 current ops/sec; [CLEANUP: Count=26, Max=193, Min=62, Avg=92.85, 90=116, 99=193, 99.9=193, 99.99=193] [INSERT: Count=27193, Max=25583, Min=1543, Avg=4443.58, 90=6015, 99=12159, 99.9=20719, 99.99=21695] 
+[OVERALL], RunTime(ms), 626056
+[OVERALL], Throughput(ops/sec), 7986.505999463307
+[TOTAL_GCS_PS_Scavenge], Count, 1356
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 1258
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.2009404909464968
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 1356
+[TOTAL_GC_TIME], Time(ms), 1258
+[TOTAL_GC_TIME_%], Time(%), 0.2009404909464968
+[CLEANUP], Operations, 100
+[CLEANUP], AverageLatency(us), 138.26
+[CLEANUP], MinLatency(us), 62
+[CLEANUP], MaxLatency(us), 453
+[CLEANUP], 95thPercentileLatency(us), 291
+[CLEANUP], 99thPercentileLatency(us), 338
+[INSERT], Operations, 5000000
+[INSERT], AverageLatency(us), 11886.0344944
+[INSERT], MinLatency(us), 1543
+[INSERT], MaxLatency(us), 439807
+[INSERT], 95thPercentileLatency(us), 23519
+[INSERT], 99thPercentileLatency(us), 38783
+[INSERT], Return=OK, 5000000

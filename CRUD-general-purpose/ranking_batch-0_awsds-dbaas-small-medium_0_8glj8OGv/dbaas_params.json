@@ -1,0 +1,39 @@
+{
+    "changed": false,
+    "description": "dbaas client access for preparation",
+    "failed": false,
+    "group_id": "sg-0ceb08df48dbf068c",
+    "group_name": "benchant-rds",
+    "ip_permissions": [
+        {
+            "from_port": 5432,
+            "ip_protocol": "tcp",
+            "ip_ranges": [
+                {
+                    "cidr_ip": "0.0.0.0/0",
+                    "description": "allow all on port 5432 for PostgreSQL"
+                }
+            ],
+            "ipv6_ranges": [],
+            "prefix_list_ids": [],
+            "to_port": 5432,
+            "user_id_group_pairs": []
+        }
+    ],
+    "ip_permissions_egress": [
+        {
+            "ip_protocol": "-1",
+            "ip_ranges": [
+                {
+                    "cidr_ip": "0.0.0.0/0"
+                }
+            ],
+            "ipv6_ranges": [],
+            "prefix_list_ids": [],
+            "user_id_group_pairs": []
+        }
+    ],
+    "owner_id": "584241909684",
+    "tags": {},
+    "vpc_id": "vpc-d58ed7be"
+}
