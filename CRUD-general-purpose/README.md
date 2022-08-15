@@ -73,3 +73,34 @@ DBMS-specific files are contained in each folder, e.g. `postgresql.conf` for Pos
 ## Contact
 
 In case of questions or feedback on the data feel free to reach out to info@benchant.com
+
+
+## Scientific References
+
+```latex
+
+@inproceedings{10.1145/3491086.3492473,
+author = {Seybold, Daniel and Domaschka, J\"{o}rg},
+title = {Benchmarking-as-a-Service for Cloud-Hosted DBMS},
+year = {2021},
+isbn = {9781450391542},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3491086.3492473},
+doi = {10.1145/3491086.3492473},
+booktitle = {Proceedings of the 22nd International Middleware Conference: Demos and Posters},
+pages = {12–13},
+numpages = {2},
+keywords = {cloud, DBMS, performance, scalability, benchmarking-as-a-service},
+location = {Virtual Event, Canada},
+series = {Middleware '21}
+}
+
+@phdthesis{seybold2021automation,
+  title={An automation-based approach for reproducible evaluations of distributed DBMS on elastic infrastructures},
+  author={Seybold, Daniel},
+  year={2021},
+  school={Universit{\"a}t Ulm}
+}
+
+```
