@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "userId": "benchANT",
+    "projectId": "ranking",
+    "batchId": "sysbench-batch",
+    "configurationId": "postgresql-13-vanilla-os-small-medium-ionoscloud-2022",
+    "configurationLabel": "postgresql-13-vanilla-os-small-medium-ionoscloud-2022",
+    "executions": 1,
+    "executionCounter": 1
+  },
+  "resourceProvider": {
+    "name": "IONOS",
+    "api": "IONOS"
+  },
+  "dbmsDeployment": {
+    "dbmsType": "POSTGRESQL",
+    "operationType": "DBMS",
+    "version": "13",
+    "DBMS": {
+      "dataNodes": {
+        "numberOfNodes": 1,
+        "resource": {
+          "costs": {
+            "storageCosts": 0.0533,
+            "vmCosts": 0.3136
+          },
+          "ionosVm": {
+            "location": "de/txl",
+            "availabilityZone": "ZONE_1",
+            "instanceName": "4cores_SKYLAKE_16GB",
+            "cores": 4,
+            "cpuFamiliy": "INTEL_SKYLAKE",
+            "ram": 16384,
+            "image": "ubuntu:20.04",
+            "diskType": "HDD",
+            "volumeSize": 100
+          }
+        },
+        "replicationFactor": 1,
+        "memoryAllocation": 0.75
+      }
+    }
+  },
+  "benchmarkDeployment": {
+    "benchmarkNodes": {
+      "numberOfNodes": 1,
+      "resource": {
+        "ionosVm": {
+          "location": "de/txl",
+          "availabilityZone": "ZONE_1",
+          "instanceName": "16cores_SKYLAKE_32GB",
+          "cores": 16,
+          "cpuFamiliy": "INTEL_SKYLAKE",
+          "ram": 32768,
+          "image": "ubuntu:20.04",
+          "diskType": "HDD",
+          "volumeSize": 100
+        }
+      }
+    }
+  },
+  "benchmark": {
+    "id": "SYSBENCH-oltp-mix-medium",
+    "distribution": "SYSBENCH",
+    "version": "master",
+    "sysbench": {
+      "executeLoadPhase": true,
+      "executeRunPhase": true,
+      "dbmsEndpoints": [],
+      "workload": {
+        "workloadPhase": "LOAD",
+        "workloadType": "oltp_read_write.lua",
+        "executionTime": 1800,
+        "threads": 100,
+        "transactionRate": 0,
+        "events": 0,
+        "percentile": 95,
+        "autoInc": true,
+        "createSecondary": true,
+        "deleteInserts": 1,
+        "distinctRanges": 1,
+        "indexUpdates": 1,
+        "mysqlStorageEngine": "innodb",
+        "nonIndexUpdates": 1,
+        "orderRanges": 1,
+        "pointSelects": 10,
+        "rangeSelects": true,
+        "rangeSize": 100,
+        "secondary": false,
+        "simpleRanges": 1,
+        "skipTrx": false,
+        "sumRanges": 1,
+        "tableSize": 1000000,
+        "tables": 100
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "userId": "benchANT",
+    "projectId": "ranking",
+    "batchId": "sysbench-batch",
+    "configurationId": "aws-awsrds-136-vanilla-dbaas-small-medium-awsec2-2022",
+    "configurationLabel": "aws-awsrds-136-vanilla-dbaas-small-medium-awsec2-2022",
+    "executions": 1,
+    "executionCounter": 1
+  },
+  "resourceProvider": {
+    "name": "EC2",
+    "api": "EC2"
+  },
+  "dbaasProvider": {
+    "name": "AWS",
+    "api": "AWSRDS"
+  },
+  "dbmsDeployment": {
+    "dbmsType": "POSTGRESQL",
+    "operationType": "DBAAS",
+    "version": "13.6",
+    "DBAAS": {
+      "costs": {
+        "storageCosts": 0.137,
+        "vmCosts": 0.43
+      },
+      "awsRdsInstance": {
+        "region": "eu-central-1",
+        "instanceType": "db.m5.xlarge",
+        "storageType": "STANDARD",
+        "storageSize": 100,
+        "multiAz": false
+      }
+    }
+  },
+  "benchmarkDeployment": {
+    "benchmarkNodes": {
+      "numberOfNodes": 1,
+      "resource": {
+        "ec2Vm": {
+          "regionName": "eu-central-1",
+          "instanceType": "c5.4xlarge",
+          "architecture": "x86_64",
+          "imageDistribution": "ubuntu",
+          "imageVersion": "20.04",
+          "volumeType": "GP2",
+          "volumeSize": 30,
+          "iops": 100
+        }
+      }
+    }
+  },
+  "benchmark": {
+    "id": "SYSBENCH-oltp-mix-medium",
+    "distribution": "SYSBENCH",
+    "version": "master",
+    "sysbench": {
+      "executeLoadPhase": true,
+      "executeRunPhase": true,
+      "dbmsEndpoints": [],
+      "workload": {
+        "workloadPhase": "LOAD",
+        "workloadType": "oltp_read_write.lua",
+        "executionTime": 1800,
+        "threads": 100,
+        "transactionRate": 0,
+        "events": 0,
+        "percentile": 95,
+        "autoInc": true,
+        "createSecondary": true,
+        "deleteInserts": 1,
+        "distinctRanges": 1,
+        "indexUpdates": 1,
+        "mysqlStorageEngine": "innodb",
+        "nonIndexUpdates": 1,
+        "orderRanges": 1,
+        "pointSelects": 10,
+        "rangeSelects": true,
+        "rangeSize": 100,
+        "secondary": false,
+        "simpleRanges": 1,
+        "skipTrx": false,
+        "sumRanges": 1,
+        "tableSize": 1000000,
+        "tables": 100
+      }
+    }
+  }
+}
