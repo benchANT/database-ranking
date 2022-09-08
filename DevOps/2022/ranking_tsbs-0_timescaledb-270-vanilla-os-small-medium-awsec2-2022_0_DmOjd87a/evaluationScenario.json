@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "userId": "benchANT",
+    "projectId": "ranking",
+    "batchId": "tsbs-0",
+    "configurationId": "timescaledb-270-vanilla-os-small-medium-awsec2-2022",
+    "configurationLabel": "timescaledb-270-vanilla-os-small-medium-awsec2-2022",
+    "executions": 1,
+    "executionCounter": 1
+  },
+  "resourceProvider": {
+    "name": "EC2",
+    "api": "EC2"
+  },
+  "dbmsDeployment": {
+    "dbmsType": "TIMESCALEDB",
+    "operationType": "DBMS",
+    "version": "2.7.0",
+    "DBMS": {
+      "dataNodes": {
+        "numberOfNodes": 1,
+        "resource": {
+          "costs": {
+            "storageCosts": 0.12,
+            "vmCosts": 0.23
+          },
+          "ec2Vm": {
+            "regionName": "eu-central-1",
+            "instanceType": "m5.xlarge",
+            "architecture": "x86_64",
+            "imageDistribution": "ubuntu",
+            "imageVersion": "20.04",
+            "volumeType": "GP2",
+            "volumeSize": 100,
+            "iops": 100
+          }
+        },
+        "replicationFactor": 1,
+        "memoryAllocation": 0.25,
+        "timescaledbConfiguration": {
+          "minWalSize": "4GB",
+          "maxWalSize": "16GB"
+        }
+      }
+    }
+  },
+  "benchmarkDeployment": {
+    "benchmarkNodes": {
+      "numberOfNodes": 1,
+      "resource": {
+        "ec2Vm": {
+          "regionName": "eu-central-1",
+          "instanceType": "c5.4xlarge",
+          "architecture": "x86_64",
+          "imageDistribution": "ubuntu",
+          "imageVersion": "20.04",
+          "volumeType": "GP2",
+          "volumeSize": 250,
+          "iops": 100
+        }
+      }
+    }
+  },
+  "benchmark": {
+    "id": "TSBS-devops-medium",
+    "distribution": "TSBS",
+    "version": "benchant",
+    "tsbs": {
+      "executeLoadPhase": true,
+      "executeRunPhase": true,
+      "dbmsEndpoints": [],
+      "workload": {
+        "workloadPhase": "LOAD",
+        "useCase": "devops",
+        "batchSize": 1000,
+        "seed": 123,
+        "scale": 1000,
+        "startTime": "2022-07-25T00:00:00Z",
+        "endTime": "2022-07-28T00:00:00Z",
+        "queries": 100000,
+        "queryType": "single-groupby-1-1-1",
+        "workers": 100,
+        "hashWorkers": false,
+        "initialScale": 0,
+        "hdrLatencies": "hdr",
+        "prewarmQueries": false
+      }
+    }
+  }
+}

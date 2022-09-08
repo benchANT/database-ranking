@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "userId": "benchANT",
+    "projectId": "ranking",
+    "batchId": "tsbs-0",
+    "configurationId": "questdb-643-vanilla-os-xsmall-small-awsec2-2022",
+    "configurationLabel": "questdb-643-vanilla-os-xsmall-small-awsec2-2022",
+    "executions": 1,
+    "executionCounter": 1
+  },
+  "resourceProvider": {
+    "name": "EC2",
+    "api": "EC2"
+  },
+  "dbmsDeployment": {
+    "dbmsType": "QUESTDB",
+    "operationType": "DBMS",
+    "version": "6.4.3",
+    "DBMS": {
+      "dataNodes": {
+        "numberOfNodes": 1,
+        "resource": {
+          "costs": {
+            "storageCosts": 0.12,
+            "vmCosts": 0.115
+          },
+          "ec2Vm": {
+            "regionName": "eu-central-1",
+            "instanceType": "m5.large",
+            "architecture": "x86_64",
+            "imageDistribution": "ubuntu",
+            "imageVersion": "20.04",
+            "volumeType": "GP2",
+            "volumeSize": 100,
+            "iops": 100
+          }
+        },
+        "replicationFactor": 1,
+        "memoryAllocation": 0.75
+      }
+    }
+  },
+  "benchmarkDeployment": {
+    "benchmarkNodes": {
+      "numberOfNodes": 1,
+      "resource": {
+        "ec2Vm": {
+          "regionName": "eu-central-1",
+          "instanceType": "c5.4xlarge",
+          "architecture": "x86_64",
+          "imageDistribution": "ubuntu",
+          "imageVersion": "20.04",
+          "volumeType": "GP2",
+          "volumeSize": 250,
+          "iops": 100
+        }
+      }
+    }
+  },
+  "benchmark": {
+    "id": "TSBS-devops-small",
+    "distribution": "TSBS",
+    "version": "benchant",
+    "tsbs": {
+      "executeLoadPhase": true,
+      "executeRunPhase": true,
+      "dbmsEndpoints": [],
+      "workload": {
+        "workloadPhase": "LOAD",
+        "useCase": "devops",
+        "batchSize": 1000,
+        "seed": 123,
+        "scale": 1000,
+        "startTime": "2022-07-25T00:00:00Z",
+        "endTime": "2022-07-28T00:00:00Z",
+        "queries": 100000,
+        "queryType": "single-groupby-1-1-1",
+        "workers": 50,
+        "hashWorkers": false,
+        "initialScale": 0,
+        "hdrLatencies": "hdr",
+        "prewarmQueries": false
+      }
+    }
+  }
+}
