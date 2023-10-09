@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "userId": "benchANT",
+    "projectId": "ranking",
+    "batchId": "batch-0",
+    "configurationId": "ferretdb-os-xsmall-small-1110",
+    "configurationLabel": "ferretdb-os-xsmall-small-1110",
+    "executions": 1,
+    "executionCounter": 1
+  },
+  "resourceProvider": {
+    "name": "TELEKOM",
+    "api": "OPENSTACK"
+  },
+  "dbmsDeployment": {
+    "dbmsType": "FERRETDB",
+    "operationType": "DBMS",
+    "version": "1.11.0",
+    "DBMS": {
+      "dataNodes": {
+        "numberOfNodes": 1,
+        "resource": {
+          "costs": {
+            "storageCosts": 0.12,
+            "vmCosts": 0.115
+          },
+          "openstackVm": {
+            "regionName": "eu-de",
+            "availabilityZone": "eu-de-02",
+            "image": "Standard_Ubuntu_20.04_latest",
+            "flavor": "s3.large.4",
+            "volumeSize": 50,
+            "volumeType": "SSD"
+          }
+        },
+        "replicationFactor": 1,
+        "memoryAllocation": 0.75
+      }
+    }
+  },
+  "benchmarkDeployment": {
+    "benchmarkNodes": {
+      "numberOfNodes": 1,
+      "resource": {
+        "openstackVm": {
+          "regionName": "eu-de",
+          "availabilityZone": "eu-de-02",
+          "image": "Standard_Ubuntu_20.04_latest",
+          "flavor": "s3.4xlarge.2",
+          "volumeSize": 50,
+          "volumeType": "SATA"
+        }
+      }
+    }
+  },
+  "benchmark": {
+    "id": "YCSB-GeneralPurpose-small",
+    "distribution": "YCSB",
+    "version": "benchant-master",
+    "ycsb": {
+      "executeLoadPhase": true,
+      "executeRunPhase": true,
+      "dbmsEndpoints": [],
+      "workload": {
+        "workloadType": "LOAD",
+        "workloadClass": "site.ycsb.workloads.CoreWorkload",
+        "maxExecutionTime": 1800,
+        "threadCount": 50,
+        "recordCount": 5000000,
+        "insertStart": 5000001,
+        "insertCount": 0,
+        "operations": 54000000,
+        "targetOps": 0,
+        "fieldCount": 10,
+        "fieldLength": 50,
+        "readAllFileds": true,
+        "readModifyWriteProportion": 0,
+        "requestdistribution": "ZIPFIAN",
+        "scanLengthDistribution": "UNIFORM",
+        "insertOrder": "ORDERED",
+        "readProportion": 0.5,
+        "updateProportion": 0.0,
+        "insertProportion": 0.5,
+        "scanProportion": 0.0,
+        "maxScanLength": 0,
+        "coreWorkloadInsertionRetryLimit": 3,
+        "coreWorkloadInsertionRetryInterval": 3,
+        "loadBatchSize": 1,
+        "runBatchSize": 1
+      }
+    }
+  }
+}
