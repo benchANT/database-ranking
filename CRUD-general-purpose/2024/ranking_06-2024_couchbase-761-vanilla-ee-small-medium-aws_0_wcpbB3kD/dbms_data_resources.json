@@ -1,0 +1,161 @@
+{
+    "data_results": [
+        {
+            "ami_launch_index": 0,
+            "architecture": "x86_64",
+            "block_device_mappings": [
+                {
+                    "device_name": "/dev/sda1",
+                    "ebs": {
+                        "attach_time": "2024-06-14T07:55:45+00:00",
+                        "delete_on_termination": true,
+                        "status": "attached",
+                        "volume_id": "vol-0e51908353ca8c714"
+                    }
+                }
+            ],
+            "capacity_reservation_specification": {
+                "capacity_reservation_preference": "open"
+            },
+            "client_token": "063ee446b21140d98c14eadf97931fa1",
+            "cpu_options": {
+                "core_count": 2,
+                "threads_per_core": 2
+            },
+            "current_instance_boot_mode": "legacy-bios",
+            "ebs_optimized": false,
+            "ena_support": true,
+            "enclave_options": {
+                "enabled": false
+            },
+            "hibernation_options": {
+                "configured": false
+            },
+            "hypervisor": "xen",
+            "image_id": "ami-04ea3eb49668266ba",
+            "instance_id": "i-0eed5274f24dcf474",
+            "instance_type": "m5.xlarge",
+            "key_name": "baas_dev",
+            "launch_time": "2024-06-14T07:55:44+00:00",
+            "maintenance_options": {
+                "auto_recovery": "default"
+            },
+            "metadata_options": {
+                "http_endpoint": "enabled",
+                "http_protocol_ipv6": "disabled",
+                "http_put_response_hop_limit": 1,
+                "http_tokens": "optional",
+                "instance_metadata_tags": "disabled",
+                "state": "applied"
+            },
+            "monitoring": {
+                "state": "disabled"
+            },
+            "network_interfaces": [
+                {
+                    "association": {
+                        "ip_owner_id": "amazon",
+                        "public_dns_name": "ec2-35-158-196-44.eu-central-1.compute.amazonaws.com",
+                        "public_ip": "35.158.196.44"
+                    },
+                    "attachment": {
+                        "attach_time": "2024-06-14T07:55:44+00:00",
+                        "attachment_id": "eni-attach-089df1b72b0e10d42",
+                        "delete_on_termination": true,
+                        "device_index": 0,
+                        "network_card_index": 0,
+                        "status": "attached"
+                    },
+                    "description": "",
+                    "groups": [
+                        {
+                            "group_id": "sg-3734875b",
+                            "group_name": "default"
+                        },
+                        {
+                            "group_id": "sg-070a926c34814caba",
+                            "group_name": "baas-dbms"
+                        },
+                        {
+                            "group_id": "sg-094cb4a4651310ea0",
+                            "group_name": "baas-ssh"
+                        }
+                    ],
+                    "interface_type": "interface",
+                    "ipv6_addresses": [],
+                    "mac_address": "02:bc:c2:08:c9:f7",
+                    "network_interface_id": "eni-0bf5163605eeea470",
+                    "owner_id": "584241909684",
+                    "private_dns_name": "ip-172-31-18-167.eu-central-1.compute.internal",
+                    "private_ip_address": "172.31.18.167",
+                    "private_ip_addresses": [
+                        {
+                            "association": {
+                                "ip_owner_id": "amazon",
+                                "public_dns_name": "ec2-35-158-196-44.eu-central-1.compute.amazonaws.com",
+                                "public_ip": "35.158.196.44"
+                            },
+                            "primary": true,
+                            "private_dns_name": "ip-172-31-18-167.eu-central-1.compute.internal",
+                            "private_ip_address": "172.31.18.167"
+                        }
+                    ],
+                    "source_dest_check": true,
+                    "status": "in-use",
+                    "subnet_id": "subnet-324f4259",
+                    "vpc_id": "vpc-d58ed7be"
+                }
+            ],
+            "placement": {
+                "availability_zone": "eu-central-1a",
+                "group_name": "",
+                "tenancy": "default"
+            },
+            "platform_details": "Linux/UNIX",
+            "private_dns_name": "ip-172-31-18-167.eu-central-1.compute.internal",
+            "private_dns_name_options": {
+                "enable_resource_name_dns_a_record": false,
+                "enable_resource_name_dns_aaaa_record": false,
+                "hostname_type": "ip-name"
+            },
+            "private_ip_address": "172.31.18.167",
+            "product_codes": [],
+            "public_dns_name": "ec2-35-158-196-44.eu-central-1.compute.amazonaws.com",
+            "public_ip_address": "35.158.196.44",
+            "root_device_name": "/dev/sda1",
+            "root_device_type": "ebs",
+            "security_groups": [
+                {
+                    "group_id": "sg-3734875b",
+                    "group_name": "default"
+                },
+                {
+                    "group_id": "sg-070a926c34814caba",
+                    "group_name": "baas-dbms"
+                },
+                {
+                    "group_id": "sg-094cb4a4651310ea0",
+                    "group_name": "baas-ssh"
+                }
+            ],
+            "source_dest_check": true,
+            "state": {
+                "code": 16,
+                "name": "running"
+            },
+            "state_transition_reason": "",
+            "subnet_id": "subnet-324f4259",
+            "tags": {
+                "Name": "BaaS-COUCHBASE-data-f682e340-73d6-59c4-b667-d0f54ef60928",
+                "configurationId": "couchbase-ee-small-medium",
+                "project": "ranking",
+                "service": "benchANT",
+                "type": "dbms"
+            },
+            "usage_operation": "RunInstances",
+            "usage_operation_update_time": "2024-06-14T07:55:44+00:00",
+            "virtualization_type": "hvm",
+            "vpc_id": "vpc-d58ed7be"
+        }
+    ]
+}
