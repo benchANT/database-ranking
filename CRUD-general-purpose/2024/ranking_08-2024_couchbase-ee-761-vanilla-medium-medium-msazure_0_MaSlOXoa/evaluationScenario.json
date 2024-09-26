@@ -1,0 +1,96 @@
+{
+  "metadata": {
+    "userId": "benchANT",
+    "projectId": "ranking",
+    "batchId": "08-2024",
+    "configurationId": "couchbase-ee-761-vanilla-medium-medium-msazure",
+    "configurationLabel": "couchbase-ee-761-vanilla-medium-medium-msazure",
+    "executions": 1,
+    "executionCounter": 1
+  },
+  "resourceProvider": {
+    "name": "AZURE",
+    "api": "AZURE"
+  },
+  "dbmsDeployment": {
+    "dbmsType": "COUCHBASE",
+    "operationType": "DBMS",
+    "version": "7.6.1",
+    "license": "ENTERPRISE",
+    "DBMS": {
+      "dataNodes": {
+        "numberOfNodes": 3,
+        "resource": {
+          "costs": {
+            "storageCosts": 0.075,
+            "vmCosts": 0.11
+          },
+          "azureVm": {
+            "region": "northeurope",
+            "imagePublisher": "Canonical",
+            "imageOffer": "0001-com-ubuntu-server-focal",
+            "imageSku": "20_04-lts",
+            "vmSize": "Standard_D4s_v4",
+            "diskType": "Standard_LRS",
+            "diskSize": 100
+          }
+        },
+        "replicationFactor": 3,
+        "memoryAllocation": 0.75
+      }
+    }
+  },
+  "benchmarkDeployment": {
+    "benchmarkNodes": {
+      "numberOfNodes": 1,
+      "resource": {
+        "azureVm": {
+          "region": "northeurope",
+          "imagePublisher": "Canonical",
+          "imageOffer": "0001-com-ubuntu-server-focal",
+          "imageSku": "20_04-lts",
+          "vmSize": "Standard_D32_v4",
+          "diskType": "Standard_LRS",
+          "diskSize": 50
+        }
+      }
+    }
+  },
+  "benchmark": {
+    "id": "YCSB-GeneralPurpose-medium",
+    "distribution": "YCSB",
+    "version": "benchant-master",
+    "ycsb": {
+      "executeLoadPhase": true,
+      "executeRunPhase": true,
+      "dbmsEndpoints": [],
+      "workload": {
+        "workloadType": "LOAD",
+        "workloadClass": "site.ycsb.workloads.CoreWorkload",
+        "maxExecutionTime": 1800,
+        "threadCount": 100,
+        "recordCount": 5000000,
+        "insertStart": 5000001,
+        "insertCount": 0,
+        "operations": 54000000,
+        "targetOps": 0,
+        "fieldCount": 10,
+        "fieldLength": 50,
+        "readAllFileds": true,
+        "readModifyWriteProportion": 0,
+        "requestdistribution": "ZIPFIAN",
+        "scanLengthDistribution": "UNIFORM",
+        "insertOrder": "ORDERED",
+        "readProportion": 0.5,
+        "updateProportion": 0.0,
+        "insertProportion": 0.5,
+        "scanProportion": 0.0,
+        "maxScanLength": 0,
+        "coreWorkloadInsertionRetryLimit": 3,
+        "coreWorkloadInsertionRetryInterval": 3,
+        "loadBatchSize": 1,
+        "runBatchSize": 1
+      }
+    }
+  }
+}
