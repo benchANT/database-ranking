@@ -1,0 +1,130 @@
+Current Mongosh Log ID:	674826ac910b9cbd23ae83d5
+Connecting to:		mongodb://10.10.0.24:27017/?directConnection=true&appName=mongosh+2.0.2
+Using MongoDB:		7.0.15
+Using Mongosh:		2.0.2
+mongosh 2.3.4 is available for download: https://www.mongodb.com/try/download/shell
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2024-11-28T08:15:04.083+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2024-11-28T08:15:04.825+00:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+   2024-11-28T08:15:04.825+00:00: /sys/kernel/mm/transparent_hugepage/enabled is 'always'. We suggest setting it to 'never' in this binary version
+   2024-11-28T08:15:04.825+00:00: Soft rlimits for open file descriptors too low
+------
+
+{
+  set: 'rs0',
+  date: ISODate("2024-11-28T08:15:41.012Z"),
+  myState: 1,
+  term: Long("1"),
+  syncSourceHost: '',
+  syncSourceId: -1,
+  heartbeatIntervalMillis: Long("2000"),
+  majorityVoteCount: 2,
+  writeMajorityCount: 2,
+  votingMembersCount: 3,
+  writableVotingMembersCount: 3,
+  optimes: {
+    lastCommittedOpTime: { ts: Timestamp({ t: 1732781733, i: 2 }), t: Long("1") },
+    lastCommittedWallTime: ISODate("2024-11-28T08:15:33.137Z"),
+    readConcernMajorityOpTime: { ts: Timestamp({ t: 1732781733, i: 2 }), t: Long("1") },
+    appliedOpTime: { ts: Timestamp({ t: 1732781733, i: 2 }), t: Long("1") },
+    durableOpTime: { ts: Timestamp({ t: 1732781733, i: 2 }), t: Long("1") },
+    lastAppliedWallTime: ISODate("2024-11-28T08:15:33.137Z"),
+    lastDurableWallTime: ISODate("2024-11-28T08:15:33.137Z")
+  },
+  lastStableRecoveryTimestamp: Timestamp({ t: 1732781721, i: 1 }),
+  electionCandidateMetrics: {
+    lastElectionReason: 'electionTimeout',
+    lastElectionDate: ISODate("2024-11-28T08:15:32.049Z"),
+    electionTerm: Long("1"),
+    lastCommittedOpTimeAtElection: { ts: Timestamp({ t: 1732781721, i: 1 }), t: Long("-1") },
+    lastSeenOpTimeAtElection: { ts: Timestamp({ t: 1732781721, i: 1 }), t: Long("-1") },
+    numVotesNeeded: 2,
+    priorityAtElection: 1,
+    electionTimeoutMillis: Long("10000"),
+    numCatchUpOps: Long("0"),
+    newTermStartDate: ISODate("2024-11-28T08:15:32.229Z"),
+    wMajorityWriteAvailabilityDate: ISODate("2024-11-28T08:15:32.750Z")
+  },
+  members: [
+    {
+      _id: 0,
+      name: '10.10.0.22:27017',
+      health: 1,
+      state: 2,
+      stateStr: 'SECONDARY',
+      uptime: 19,
+      optime: { ts: Timestamp({ t: 1732781733, i: 2 }), t: Long("1") },
+      optimeDurable: { ts: Timestamp({ t: 1732781733, i: 2 }), t: Long("1") },
+      optimeDate: ISODate("2024-11-28T08:15:33.000Z"),
+      optimeDurableDate: ISODate("2024-11-28T08:15:33.000Z"),
+      lastAppliedWallTime: ISODate("2024-11-28T08:15:33.137Z"),
+      lastDurableWallTime: ISODate("2024-11-28T08:15:33.137Z"),
+      lastHeartbeat: ISODate("2024-11-28T08:15:40.077Z"),
+      lastHeartbeatRecv: ISODate("2024-11-28T08:15:39.078Z"),
+      pingMs: Long("0"),
+      lastHeartbeatMessage: '',
+      syncSourceHost: '10.10.0.24:27017',
+      syncSourceId: 2,
+      infoMessage: '',
+      configVersion: 1,
+      configTerm: 1
+    },
+    {
+      _id: 1,
+      name: '10.10.0.23:27017',
+      health: 1,
+      state: 2,
+      stateStr: 'SECONDARY',
+      uptime: 19,
+      optime: { ts: Timestamp({ t: 1732781733, i: 2 }), t: Long("1") },
+      optimeDurable: { ts: Timestamp({ t: 1732781733, i: 2 }), t: Long("1") },
+      optimeDate: ISODate("2024-11-28T08:15:33.000Z"),
+      optimeDurableDate: ISODate("2024-11-28T08:15:33.000Z"),
+      lastAppliedWallTime: ISODate("2024-11-28T08:15:33.137Z"),
+      lastDurableWallTime: ISODate("2024-11-28T08:15:33.137Z"),
+      lastHeartbeat: ISODate("2024-11-28T08:15:40.089Z"),
+      lastHeartbeatRecv: ISODate("2024-11-28T08:15:39.088Z"),
+      pingMs: Long("0"),
+      lastHeartbeatMessage: '',
+      syncSourceHost: '10.10.0.24:27017',
+      syncSourceId: 2,
+      infoMessage: '',
+      configVersion: 1,
+      configTerm: 1
+    },
+    {
+      _id: 2,
+      name: '10.10.0.24:27017',
+      health: 1,
+      state: 1,
+      stateStr: 'PRIMARY',
+      uptime: 37,
+      optime: { ts: Timestamp({ t: 1732781733, i: 2 }), t: Long("1") },
+      optimeDate: ISODate("2024-11-28T08:15:33.000Z"),
+      lastAppliedWallTime: ISODate("2024-11-28T08:15:33.137Z"),
+      lastDurableWallTime: ISODate("2024-11-28T08:15:33.137Z"),
+      syncSourceHost: '',
+      syncSourceId: -1,
+      infoMessage: 'Could not find member to sync from',
+      electionTime: Timestamp({ t: 1732781732, i: 1 }),
+      electionDate: ISODate("2024-11-28T08:15:32.000Z"),
+      configVersion: 1,
+      configTerm: 1,
+      self: true,
+      lastHeartbeatMessage: ''
+    }
+  ],
+  ok: 1,
+  '$clusterTime': {
+    clusterTime: Timestamp({ t: 1732781733, i: 2 }),
+    signature: {
+      hash: Binary.createFromBase64("AAAAAAAAAAAAAAAAAAAAAAAAAAA=", 0),
+      keyId: Long("0")
+    }
+  },
+  operationTime: Timestamp({ t: 1732781733, i: 2 })
+}

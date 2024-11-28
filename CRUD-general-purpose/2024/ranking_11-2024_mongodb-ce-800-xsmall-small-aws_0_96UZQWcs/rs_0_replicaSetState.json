@@ -1,0 +1,91 @@
+Current Mongosh Log ID:	673eeb38af2b46b641f9589f
+Connecting to:		mongodb://172.31.22.132:27017/?directConnection=true&appName=mongosh+2.0.2
+Using MongoDB:		8.0.0
+Using Mongosh:		2.0.2
+mongosh 2.3.3 is available for download: https://www.mongodb.com/try/download/shell
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2024-11-21T08:11:15.792+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2024-11-21T08:11:16.457+00:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+   2024-11-21T08:11:16.458+00:00: For customers running the tcmalloc-google memory allocator, we suggest setting the contents of sysfsFile to 'always'
+   2024-11-21T08:11:16.458+00:00: For customers running the updated tcmalloc-google memory allocator, we suggest setting the contents of sysfsFile to 'defer+madvise'
+   2024-11-21T08:11:16.458+00:00: We suggest setting the contents of sysfsFile to 0.
+   2024-11-21T08:11:16.458+00:00: Soft rlimits for open file descriptors too low
+------
+
+{
+  set: 'rs0',
+  date: ISODate("2024-11-21T08:11:37.303Z"),
+  myState: 1,
+  term: Long("1"),
+  syncSourceHost: '',
+  syncSourceId: -1,
+  heartbeatIntervalMillis: Long("2000"),
+  majorityVoteCount: 1,
+  writeMajorityCount: 1,
+  votingMembersCount: 1,
+  writableVotingMembersCount: 1,
+  optimes: {
+    lastCommittedOpTime: { ts: Timestamp({ t: 1732176686, i: 17 }), t: Long("1") },
+    lastCommittedWallTime: ISODate("2024-11-21T08:11:26.401Z"),
+    readConcernMajorityOpTime: { ts: Timestamp({ t: 1732176686, i: 17 }), t: Long("1") },
+    appliedOpTime: { ts: Timestamp({ t: 1732176686, i: 17 }), t: Long("1") },
+    durableOpTime: { ts: Timestamp({ t: 1732176686, i: 17 }), t: Long("1") },
+    writtenOpTime: { ts: Timestamp({ t: 1732176686, i: 17 }), t: Long("1") },
+    lastAppliedWallTime: ISODate("2024-11-21T08:11:26.401Z"),
+    lastDurableWallTime: ISODate("2024-11-21T08:11:26.401Z"),
+    lastWrittenWallTime: ISODate("2024-11-21T08:11:26.401Z")
+  },
+  lastStableRecoveryTimestamp: Timestamp({ t: 1732176686, i: 1 }),
+  electionCandidateMetrics: {
+    lastElectionReason: 'electionTimeout',
+    lastElectionDate: ISODate("2024-11-21T08:11:26.151Z"),
+    electionTerm: Long("1"),
+    lastCommittedOpTimeAtElection: { ts: Timestamp({ t: 1732176686, i: 1 }), t: Long("-1") },
+    lastSeenWrittenOpTimeAtElection: { ts: Timestamp({ t: 1732176686, i: 1 }), t: Long("-1") },
+    lastSeenOpTimeAtElection: { ts: Timestamp({ t: 1732176686, i: 1 }), t: Long("-1") },
+    numVotesNeeded: 1,
+    priorityAtElection: 1,
+    electionTimeoutMillis: Long("10000"),
+    newTermStartDate: ISODate("2024-11-21T08:11:26.203Z"),
+    wMajorityWriteAvailabilityDate: ISODate("2024-11-21T08:11:26.279Z")
+  },
+  members: [
+    {
+      _id: 0,
+      name: '172.31.22.132:27017',
+      health: 1,
+      state: 1,
+      stateStr: 'PRIMARY',
+      uptime: 22,
+      optime: { ts: Timestamp({ t: 1732176686, i: 17 }), t: Long("1") },
+      optimeDate: ISODate("2024-11-21T08:11:26.000Z"),
+      optimeWritten: { ts: Timestamp({ t: 1732176686, i: 17 }), t: Long("1") },
+      optimeWrittenDate: ISODate("2024-11-21T08:11:26.000Z"),
+      lastAppliedWallTime: ISODate("2024-11-21T08:11:26.401Z"),
+      lastDurableWallTime: ISODate("2024-11-21T08:11:26.401Z"),
+      lastWrittenWallTime: ISODate("2024-11-21T08:11:26.401Z"),
+      syncSourceHost: '',
+      syncSourceId: -1,
+      infoMessage: 'Could not find member to sync from',
+      electionTime: Timestamp({ t: 1732176686, i: 2 }),
+      electionDate: ISODate("2024-11-21T08:11:26.000Z"),
+      configVersion: 1,
+      configTerm: 1,
+      self: true,
+      lastHeartbeatMessage: ''
+    }
+  ],
+  ok: 1,
+  '$clusterTime': {
+    clusterTime: Timestamp({ t: 1732176686, i: 17 }),
+    signature: {
+      hash: Binary.createFromBase64("AAAAAAAAAAAAAAAAAAAAAAAAAAA=", 0),
+      keyId: Long("0")
+    }
+  },
+  operationTime: Timestamp({ t: 1732176686, i: 17 })
+}
