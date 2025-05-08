@@ -1,0 +1,121 @@
+{
+  "metadata": {
+    "userId": "benchANT",
+    "projectId": "ranking",
+    "batchId": "tsbs-0",
+    "configurationId": "iotdb-1343-tuned-ee-small-medium-awsec2-2025",
+    "configurationLabel": "iotdb-1343-tuned-ee-small-medium-awsec2-2025",
+    "executions": 1,
+    "executionCounter": 1
+  },
+  "resourceProvider": {
+    "name": "EC2",
+    "api": "EC2"
+  },
+  "dbmsDeployment": {
+    "dbmsType": "IOTDB",
+    "operationType": "DBMS",
+    "version": "1.3.4.3",
+    "license": "ENTERPRISE",
+    "DBMS": {
+      "dataNodes": {
+        "numberOfNodes": 1,
+        "resource": {
+          "costs": {
+            "storageCosts": 0.0,
+            "vmCosts": 178.0
+          },
+          "ec2Vm": {
+            "regionName": "eu-central-1",
+            "instanceType": "m5.xlarge",
+            "architecture": "x86_64",
+            "imageDistribution": "ubuntu",
+            "imageVersion": "20.04",
+            "volumeType": "GP2",
+            "volumeSize": 100
+          }
+        },
+        "replicationFactor": 1,
+        "memoryAllocation": 0.75,
+        "iotdbConfiguration": {
+          "iotdbServerConfiguration": {
+            "configNodeConsensusProtocolClass": "org.apache.iotdb.consensus.simple.SimpleConsensus",
+            "dataRegionConsensusProtocolClass": "org.apache.iotdb.consensus.simple.SimpleConsensus",
+            "dataRegionGroupExtensionPolicy": "CUSTOM",
+            "defaultDataRegionGroupNumPerDatabase": 1,
+            "degreeOfQueryParallelism": 1,
+            "dnMetricLevel": "OFF",
+            "enableAutoRepairCompaction": false,
+            "enableCrossSpaceCompaction": false,
+            "enableLastCache": false,
+            "enableSeqSpaceCompaction": false,
+            "enableUnseqSpaceCompaction": false,
+            "heapNewsizeConfig": "1G",
+            "heapNewsizeData": "2G",
+            "iotdbJmxOpts": "$IOTDB_JMX_OPTS -XX:+UseParallelGC",
+            "maxHeapSizeConfig": "1G",
+            "maxHeapSizeData": "12G",
+            "maxNumberOfPointsInPage": 360,
+            "maxTsblockLineNumber": 360,
+            "maxWalNodesNum": 9,
+            "schemaRegionConsensusProtocolClass": "org.apache.iotdb.consensus.simple.SimpleConsensus",
+            "walAsyncModeFsyncDelayInMs": 3000,
+            "walBufferQueueCapacity": 5000,
+            "walMode": "ASYNC"
+          },
+          "iotdbClientConfiguration": {
+            "useGroupBy": true,
+            "channelCapacity": 50,
+            "alignedTimeSeries": false,
+            "tabletSize": 5000,
+            "flowControl": false,
+            "sessionPoolSize": 40,
+            "warmupPhases": 4
+          }
+        }
+      }
+    }
+  },
+  "benchmarkDeployment": {
+    "benchmarkNodes": {
+      "numberOfNodes": 1,
+      "resource": {
+        "ec2Vm": {
+          "regionName": "eu-central-1",
+          "instanceType": "c5.4xlarge",
+          "architecture": "x86_64",
+          "imageDistribution": "ubuntu",
+          "imageVersion": "20.04",
+          "volumeType": "GP2",
+          "volumeSize": 250
+        }
+      }
+    }
+  },
+  "benchmark": {
+    "id": "TSBS-devops-medium",
+    "distribution": "TSBS",
+    "version": "benchant",
+    "tsbs": {
+      "executeLoadPhase": true,
+      "executeRunPhase": true,
+      "dbmsEndpoints": [],
+      "workload": {
+        "workloadPhase": "LOAD",
+        "useCase": "devops",
+        "batchSize": 1000,
+        "seed": 123,
+        "scale": 1000,
+        "startTime": "2022-07-25T00:00:00Z",
+        "endTime": "2022-07-28T00:00:00Z",
+        "queries": 100000,
+        "queryType": "single-groupby-1-1-1",
+        "workers": 100,
+        "hashWorkers": true,
+        "initialScale": 0,
+        "hdrLatencies": "hdr",
+        "prewarmQueries": false
+      }
+    }
+  }
+}
