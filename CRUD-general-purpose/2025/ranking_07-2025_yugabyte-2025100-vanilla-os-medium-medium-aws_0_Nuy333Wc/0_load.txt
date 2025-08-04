@@ -1,0 +1,275 @@
+bin/ycsb load jdbc -s -jvm-args=-XX:MaxRAMPercentage=85.0  -p db.url="jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true" -p  db.user=benchant -p  db.passwd=Performance99 -p  db.driver=com.yugabyte.Driver -p workload=site.ycsb.workloads.CoreWorkload -threads 100 -p recordcount=5000000 -p operationcount=54000000 -p fieldcount=10 -p fieldlength=50 -p requestdistribution=zipfian -p insertorder=ordered -p readproportion=0.5 -p updateproportion=0.0 -p insertproportion=0.5 -p scanproportion=0.0 -p scanlengthdistribution=uniform -p core_workload_insertion_retry_limit=3 -p core_workload_insertion_retry_interval=3 -p insertstart=0  -p hdrhistogram.percentiles=50,90,95,99,99.99,99.99999 
+/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/java -XX:MaxRAMPercentage=85.0 -cp /binary/ycsb/jdbc-binding/conf:/binary/ycsb/conf:/binary/ycsb/lib/core-0.18.0-SNAPSHOT.jar:/binary/ycsb/lib/HdrHistogram-2.1.4.jar:/binary/ycsb/lib/htrace-core4-4.1.0-incubating.jar:/binary/ycsb/lib/jackson-mapper-asl-1.9.4.jar:/binary/ycsb/lib/jackson-core-asl-1.9.4.jar:/binary/ycsb/jdbc-binding/lib/commons-collections-3.2.1.jar:/binary/ycsb/jdbc-binding/lib/openjpa-lib-2.1.1.jar:/binary/ycsb/jdbc-binding/lib/openjpa-kernel-2.1.1.jar:/binary/ycsb/jdbc-binding/lib/mysql-connector-java-5.1.47.jar:/binary/ycsb/jdbc-binding/lib/crate-jdbc-standalone-2.6.0.jar:/binary/ycsb/jdbc-binding/lib/geronimo-jms_1.1_spec-1.1.1.jar:/binary/ycsb/jdbc-binding/lib/postgresql-42.2.5.jar:/binary/ycsb/jdbc-binding/lib/mariadb-java-client-3.0.5.jar:/binary/ycsb/jdbc-binding/lib/openjpa-jdbc-2.1.1.jar:/binary/ycsb/jdbc-binding/lib/jdbc-yugabytedb-42.7.3-yb-3.jar:/binary/ycsb/jdbc-binding/lib/commons-pool-1.5.4.jar:/binary/ycsb/jdbc-binding/lib/geronimo-jta_1.1_spec-1.1.1.jar:/binary/ycsb/jdbc-binding/lib/commons-lang-2.4.jar:/binary/ycsb/jdbc-binding/lib/serp-1.13.1.jar:/binary/ycsb/jdbc-binding/lib/mariadb-java-client-2.7.3.jar:/binary/ycsb/jdbc-binding/lib/jdbc-binding-0.18.0-SNAPSHOT.jar:/binary/ycsb/jdbc-binding/lib/mysql-connector-java-5.1.47/mysql-connector-java-5.1.47-bin.jar:/binary/ycsb/jdbc-binding/lib/mysql-connector-java-5.1.47/src/lib/slf4j-api-1.6.1.jar:/binary/ycsb/jdbc-binding/lib/mysql-connector-java-5.1.47/src/lib/jboss-common-jdbc-wrapper.jar:/binary/ycsb/jdbc-binding/lib/mysql-connector-java-5.1.47/src/lib/jboss-common-jdbc-wrapper-src.jar:/binary/ycsb/jdbc-binding/lib/mysql-connector-java-5.1.47/src/lib/c3p0-0.9.1-pre6.jar site.ycsb.Client -db site.ycsb.db.JdbcDBClient -s -p db.url=jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true -p db.user=benchant -p db.passwd=Performance99 -p db.driver=com.yugabyte.Driver -p workload=site.ycsb.workloads.CoreWorkload -threads 100 -p recordcount=5000000 -p operationcount=54000000 -p fieldcount=10 -p fieldlength=50 -p requestdistribution=zipfian -p insertorder=ordered -p readproportion=0.5 -p updateproportion=0.0 -p insertproportion=0.5 -p scanproportion=0.0 -p scanlengthdistribution=uniform -p core_workload_insertion_retry_limit=3 -p core_workload_insertion_retry_interval=3 -p insertstart=0 -p hdrhistogram.percentiles=50,90,95,99,99.99,99.99999 -load
+Command line: -db site.ycsb.db.JdbcDBClient -s -p db.url=jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true -p db.user=benchant -p db.passwd=Performance99 -p db.driver=com.yugabyte.Driver -p workload=site.ycsb.workloads.CoreWorkload -threads 100 -p recordcount=5000000 -p operationcount=54000000 -p fieldcount=10 -p fieldlength=50 -p requestdistribution=zipfian -p insertorder=ordered -p readproportion=0.5 -p updateproportion=0.0 -p insertproportion=0.5 -p scanproportion=0.0 -p scanlengthdistribution=uniform -p core_workload_insertion_retry_limit=3 -p core_workload_insertion_retry_interval=3 -p insertstart=0 -p hdrhistogram.percentiles=50,90,95,99,99.99,99.99999 -load
+YCSB Client 0.18.0-SNAPSHOT
+
+Loading workload...
+insertstart, insertcount, recordcount: 0, 5000000, 5000000
+CoreWorkload init --- orderedinserts: true
+Starting test.
+2025-07-24 12:37:26:240 0 sec: 0 operations; est completion in 0 second 
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.18.15:5432,172.31.31.145:5432,172.31.27.173:5432/benchantdb?sslmode=allow&load-balance=true
+Using shards: 1, batchSize:-1, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+2025-07-24 12:37:36:223 10 sec: 158547 operations; 15853.11 current ops/sec; est completion in 5 minutes [INSERT: Count=158554, Max=179327, Min=983, Avg=5804.19, 90=8391, 99=13359, 99.9=44063, 99.99=95103] 
+2025-07-24 12:37:46:223 20 sec: 333384 operations; 17483.7 current ops/sec; est completion in 4 minutes [INSERT: Count=174831, Max=22783, Min=1070, Avg=5718.49, 90=8327, 99=11183, 99.9=14207, 99.99=17599] 
+2025-07-24 12:37:56:223 30 sec: 501920 operations; 16853.6 current ops/sec; est completion in 4 minutes [INSERT: Count=168537, Max=20975, Min=1038, Avg=5931.28, 90=8783, 99=11535, 99.9=14199, 99.99=17967] 
+2025-07-24 12:38:06:223 40 sec: 672124 operations; 17020.4 current ops/sec; est completion in 4 minutes [INSERT: Count=170208, Max=31295, Min=1172, Avg=5874.21, 90=8687, 99=11887, 99.9=15647, 99.99=19871] 
+2025-07-24 12:38:16:223 50 sec: 844204 operations; 17208 current ops/sec; est completion in 4 minutes [INSERT: Count=172083, Max=21295, Min=1230, Avg=5810.36, 90=8431, 99=11311, 99.9=14079, 99.99=18111] 
+2025-07-24 12:38:26:223 60 sec: 980005 operations; 13580.1 current ops/sec; est completion in 4 minutes [INSERT: Count=135792, Max=790015, Min=951, Avg=6859.19, 90=9663, 99=18383, 99.9=28943, 99.99=778751] 
+2025-07-24 12:38:36:223 70 sec: 1111713 operations; 13170.8 current ops/sec; est completion in 4 minutes [INSERT: Count=131716, Max=3123199, Min=1031, Avg=8110.25, 90=9519, 99=12519, 99.9=19007, 99.99=3078143] 
+2025-07-24 12:38:46:223 80 sec: 1279728 operations; 16801.5 current ops/sec; est completion in 3 minutes [INSERT: Count=168017, Max=24767, Min=990, Avg=5950.89, 90=9911, 99=12863, 99.9=16431, 99.99=21935] 
+2025-07-24 12:38:56:223 90 sec: 1446288 operations; 16656 current ops/sec; est completion in 3 minutes [INSERT: Count=166553, Max=28415, Min=976, Avg=6001.47, 90=10023, 99=13231, 99.9=16367, 99.99=19759] 
+2025-07-24 12:39:06:223 100 sec: 1613402 operations; 16711.4 current ops/sec; est completion in 3 minutes [INSERT: Count=167112, Max=28831, Min=947, Avg=5983.73, 90=9911, 99=12943, 99.9=16375, 99.99=20207] 
+2025-07-24 12:39:16:223 110 sec: 1777471 operations; 16406.9 current ops/sec; est completion in 3 minutes [INSERT: Count=164070, Max=34335, Min=954, Avg=6092.84, 90=10151, 99=13167, 99.9=16431, 99.99=20687] 
+2025-07-24 12:39:26:223 120 sec: 1938124 operations; 16065.3 current ops/sec; est completion in 3 minutes [INSERT: Count=160654, Max=28783, Min=922, Avg=6222.28, 90=10903, 99=14463, 99.9=18191, 99.99=21791] 
+2025-07-24 12:39:36:223 130 sec: 2104544 operations; 16642 current ops/sec; est completion in 2 minutes [INSERT: Count=166420, Max=24671, Min=1031, Avg=6009.07, 90=10183, 99=13455, 99.9=17727, 99.99=21327] 
+2025-07-24 12:39:46:223 140 sec: 2262176 operations; 15763.2 current ops/sec; est completion in 2 minutes [INSERT: Count=157634, Max=27823, Min=1003, Avg=6342.9, 90=10871, 99=13999, 99.9=16895, 99.99=20863] 
+2025-07-24 12:39:56:223 150 sec: 2413360 operations; 15118.4 current ops/sec; est completion in 2 minutes [INSERT: Count=151184, Max=24543, Min=961, Avg=6612.12, 90=11879, 99=15191, 99.9=17887, 99.99=21423] 
+2025-07-24 12:40:06:223 160 sec: 2577760 operations; 16440 current ops/sec; est completion in 2 minutes [INSERT: Count=164401, Max=27119, Min=959, Avg=6082.06, 90=10047, 99=13143, 99.9=17039, 99.99=21551] 
+2025-07-24 12:40:16:223 170 sec: 2730863 operations; 15310.3 current ops/sec; est completion in 2 minutes [INSERT: Count=153099, Max=26959, Min=958, Avg=6529.72, 90=11703, 99=14927, 99.9=17775, 99.99=21647] 
+2025-07-24 12:40:26:223 180 sec: 2897363 operations; 16650 current ops/sec; est completion in 2 minutes [INSERT: Count=166513, Max=26303, Min=1010, Avg=6005.43, 90=10135, 99=13191, 99.9=16271, 99.99=19855] 
+2025-07-24 12:40:36:223 190 sec: 3060649 operations; 16328.6 current ops/sec; est completion in 2 minutes [INSERT: Count=163275, Max=28863, Min=947, Avg=6123.02, 90=10023, 99=13047, 99.9=17247, 99.99=22671] 
+2025-07-24 12:40:46:223 200 sec: 3222878 operations; 16222.9 current ops/sec; est completion in 1 minute [INSERT: Count=162229, Max=24239, Min=956, Avg=6163.18, 90=10591, 99=14143, 99.9=17679, 99.99=20687] 
+2025-07-24 12:40:56:223 210 sec: 3389081 operations; 16620.3 current ops/sec; est completion in 1 minute [INSERT: Count=166202, Max=22943, Min=966, Avg=6015.38, 90=10223, 99=13303, 99.9=16863, 99.99=20367] 
+2025-07-24 12:41:06:223 220 sec: 3545221 operations; 15614 current ops/sec; est completion in 1 minute [INSERT: Count=156141, Max=25615, Min=978, Avg=6403.1, 90=10511, 99=14151, 99.9=18719, 99.99=23695] 
+2025-07-24 12:41:16:223 230 sec: 3711188 operations; 16596.7 current ops/sec; est completion in 1 minute [INSERT: Count=165972, Max=32799, Min=915, Avg=6023.98, 90=10287, 99=13463, 99.9=17743, 99.99=22095] 
+2025-07-24 12:41:26:223 240 sec: 3873368 operations; 16218 current ops/sec; est completion in 1 minute [INSERT: Count=162175, Max=33311, Min=905, Avg=6164.52, 90=10663, 99=14279, 99.9=17503, 99.99=23039] 
+2025-07-24 12:41:36:223 250 sec: 4022495 operations; 14912.7 current ops/sec; est completion in 1 minute [INSERT: Count=149126, Max=26735, Min=957, Avg=6704.24, 90=11887, 99=14887, 99.9=17983, 99.99=22639] 
+2025-07-24 12:41:46:223 260 sec: 4184938 operations; 16244.3 current ops/sec; est completion in 51 seconds [INSERT: Count=162442, Max=28207, Min=953, Avg=6156.04, 90=10655, 99=14823, 99.9=19023, 99.99=21599] 
+2025-07-24 12:41:56:223 270 sec: 4350796 operations; 16585.8 current ops/sec; est completion in 41 seconds [INSERT: Count=165858, Max=22911, Min=1014, Avg=6027.92, 90=10215, 99=13183, 99.9=16327, 99.99=19359] 
+2025-07-24 12:42:06:223 280 sec: 4515983 operations; 16518.7 current ops/sec; est completion in 31 seconds [INSERT: Count=165189, Max=27487, Min=957, Avg=6052.3, 90=9999, 99=13263, 99.9=18047, 99.99=23295] 
+2025-07-24 12:42:16:223 290 sec: 4683489 operations; 16750.6 current ops/sec; est completion in 20 seconds [INSERT: Count=167508, Max=24447, Min=1000, Avg=5968.7, 90=9991, 99=12703, 99.9=15791, 99.99=20335] 
+2025-07-24 12:42:26:223 300 sec: 4839047 operations; 15555.8 current ops/sec; est completion in 10 seconds [CLEANUP: Count=33, Max=264, Min=45, Avg=73.67, 90=89, 99=264, 99.9=264, 99.99=264] [INSERT: Count=155559, Max=26895, Min=1038, Avg=5367.78, 90=9047, 99=12399, 99.9=16327, 99.99=21199] 
+2025-07-24 12:42:36:223 310 sec: 4987514 operations; 14846.7 current ops/sec; est completion in 1 second [CLEANUP: Count=12, Max=102, Min=45, Avg=68.92, 90=88, 99=102, 99.9=102, 99.99=102] [INSERT: Count=148460, Max=19743, Min=1231, Avg=4486.53, 90=6191, 99=8527, 99.9=10911, 99.99=14311] 
+2025-07-24 12:42:37:874 311 sec: 5000000 operations; 7562.69 current ops/sec; [CLEANUP: Count=55, Max=68, Min=38, Avg=44.38, 90=54, 99=60, 99.9=68, 99.99=68] [INSERT: Count=12486, Max=15919, Min=874, Avg=3210.53, 90=4843, 99=9103, 99.9=14271, 99.99=15919] 
+[OVERALL], RunTime(ms), 311651
+[OVERALL], Throughput(ops/sec), 16043.587217753191
+[TOTAL_GCS_PS_Scavenge], Count, 1276
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 1391
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.4463325963978938
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 1276
+[TOTAL_GC_TIME], Time(ms), 1391
+[TOTAL_GC_TIME_%], Time(%), 0.4463325963978938
+[CLEANUP], Operations, 100
+[CLEANUP], AverageLatency(us), 56.99
+[CLEANUP], MinLatency(us), 38
+[CLEANUP], MaxLatency(us), 264
+[CLEANUP], 50thPercentileLatency(us), 48
+[CLEANUP], 90thPercentileLatency(us), 79
+[CLEANUP], 95thPercentileLatency(us), 88
+[CLEANUP], 99thPercentileLatency(us), 102
+[CLEANUP], 99.99PercentileLatency(us), 264
+[CLEANUP], 99.99999PercentileLatency(us), 264
+[INSERT], Operations, 5000000
+[INSERT], AverageLatency(us), 6091.1588864
+[INSERT], MinLatency(us), 874
+[INSERT], MaxLatency(us), 3123199
+[INSERT], 50thPercentileLatency(us), 5495
+[INSERT], 90thPercentileLatency(us), 10127
+[INSERT], 95thPercentileLatency(us), 11271
+[INSERT], 99thPercentileLatency(us), 13687
+[INSERT], 99.99PercentileLatency(us), 28079
+[INSERT], 99.99999PercentileLatency(us), 3123199
+[INSERT], Return=OK, 5000000
