@@ -36,13 +36,16 @@ For each DBaaS, benchANT specifies a vanilla configuration as a baseline compari
 
 ### Benchmark Specification
 
-| Benchmark Parameter | Description                                                                 | Value     |
-|----------------------|------------------------------------------------------------------------------|-----------|
-| Benchmark Suite      | BenchBase by CMU                                                             | BenchBase |
-| Workload             | TPC-C implementation of BenchBase                                            | TPC-C     |
-| ScaleFactor          | The applied scale factor to determine the number of warehouses               | 150       |
-| Terminals            | The number of terminals used to execute concurrent requests                  | 75        |
-| Runtime              | The runtime of the workload in minutes; workloads are always run during daytime business hours | 30        |
+| Benchmark Parameter | Description                                                                 | Value                |
+|----------------------|------------------------------------------------------------------------------|----------------------|
+| Cloud                | The target cloud to run the benchmark VM                                    | same as DBaaS        |
+| Region               | The target cloud region to run the benchmark VM                             | same as DBaaS        |
+| VM Type              | The target VM type to run the benchmark                                     | 16 Cores / 32 GB RAM |
+| Benchmark Suite      | BenchBase by CMU                                                            | BenchBase            |
+| Workload             | TPC-C implementation of BenchBase                                           | TPC-C                |
+| ScaleFactor          | The applied scale factor to determine the number of warehouses              | 150                  |
+| Terminals            | The number of terminals used to execute concurrent requests                 | 75                   |
+| Runtime              | The runtime of the workload in minutes; workloads are always run during daytime business hours | 30                   |
 
 
 ## Scaling Size Medium
