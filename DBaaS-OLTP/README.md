@@ -19,6 +19,7 @@ For each DBaaS, benchANT specifies a vanilla configuration as a baseline compari
 | Replication Mode      | The PostgreSQL replication mode                                  | provider default  | yes      |
 | Read Replicas         | Usage of additional nodes as read replicas                       | no                | no       |
 | Connection Pooling    | Usage of additional connection pooling services such as pgBouncer | no                | yes      |
+| Encryption    | Apply data encryption                                                      | provider default                | yes      |
 
 
 ### Cloud Infrastructure Specification
@@ -40,6 +41,7 @@ For each DBaaS, benchANT specifies a vanilla configuration as a baseline compari
 |----------------------|------------------------------------------------------------------------------|----------------------|
 | Cloud                | The target cloud to run the benchmark VM                                    | same as DBaaS        |
 | Region               | The target cloud region to run the benchmark VM                             | same as DBaaS        |
+| Availability Zone    | The target availability zone to deploy the benchmark VM                     | random or identical to the DBaaS if specified for the DBaaS        |
 | VM Type              | The target VM type to run the benchmark                                     | 16 Cores / 32 GB RAM |
 | Benchmark Suite      | BenchBase by CMU                                                            | BenchBase            |
 | Workload             | TPC-C implementation of BenchBase                                           | TPC-C                |
