@@ -1,0 +1,62 @@
+bin/ycsb load cassandra4-cql -s -jvm-args=-XX:MaxRAMPercentage=85.0  -p hosts=172.31.20.63,172.31.16.178,172.31.19.32,172.31.16.181,172.31.26.99,172.31.25.28,172.31.30.169,172.31.18.46,172.31.27.60 -p cassandra.keyspace=ycsb -p cassandra.username=benchant -p cassandra.password=Performance99! -p cassandra.initDefaultTable=false -p cassandra.useSecureBundle=false -p workload=site.ycsb.workloads.CoreWorkload -threads 600 -p recordcount=5000000 -p operationcount=54000000 -p fieldcount=10 -p fieldlength=50 -p requestdistribution=zipfian -p insertorder=ordered -p readproportion=0.5 -p updateproportion=0.0 -p insertproportion=0.5 -p scanproportion=0.0 -p scanlengthdistribution=uniform -p core_workload_insertion_retry_limit=3 -p core_workload_insertion_retry_interval=3 -p insertstart=0  -p hdrhistogram.percentiles=50,90,95,99,99.99,99.99999 
+/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/java -XX:MaxRAMPercentage=85.0 -cp /binary/ycsb/cassandra4-binding/conf:/binary/ycsb/conf:/binary/ycsb/lib/HdrHistogram-2.1.4.jar:/binary/ycsb/lib/jackson-mapper-asl-1.9.4.jar:/binary/ycsb/lib/core-0.18.0-SNAPSHOT.jar:/binary/ycsb/lib/jackson-core-asl-1.9.4.jar:/binary/ycsb/lib/htrace-core4-4.1.0-incubating.jar:/binary/ycsb/cassandra4-binding/lib/asm-util-9.1.jar:/binary/ycsb/cassandra4-binding/lib/HdrHistogram-2.1.12.jar:/binary/ycsb/cassandra4-binding/lib/jsr305-3.0.2.jar:/binary/ycsb/cassandra4-binding/lib/config-1.4.1.jar:/binary/ycsb/cassandra4-binding/lib/jffi-1.3.1.jar:/binary/ycsb/cassandra4-binding/lib/jnr-a64asm-1.0.0.jar:/binary/ycsb/cassandra4-binding/lib/slf4j-api-1.7.25.jar:/binary/ycsb/cassandra4-binding/lib/jffi-1.3.1-native.jar:/binary/ycsb/cassandra4-binding/lib/jackson-core-2.12.2.jar:/binary/ycsb/cassandra4-binding/lib/asm-tree-9.1.jar:/binary/ycsb/cassandra4-binding/lib/spotbugs-annotations-3.1.12.jar:/binary/ycsb/cassandra4-binding/lib/netty-codec-4.1.60.Final.jar:/binary/ycsb/cassandra4-binding/lib/jcip-annotations-1.0-1.jar:/binary/ycsb/cassandra4-binding/lib/asm-analysis-9.1.jar:/binary/ycsb/cassandra4-binding/lib/jackson-annotations-2.12.2.jar:/binary/ycsb/cassandra4-binding/lib/jnr-posix-3.1.5.jar:/binary/ycsb/cassandra4-binding/lib/json-20090211.jar:/binary/ycsb/cassandra4-binding/lib/jackson-core-asl-1.9.4.jar:/binary/ycsb/cassandra4-binding/lib/netty-handler-4.1.60.Final.jar:/binary/ycsb/cassandra4-binding/lib/jnr-x86asm-1.0.2.jar:/binary/ycsb/cassandra4-binding/lib/java-driver-shaded-guava-25.1-jre-graal-sub-1.jar:/binary/ycsb/cassandra4-binding/lib/esri-geometry-api-1.2.1.jar:/binary/ycsb/cassandra4-binding/lib/native-protocol-1.5.0.jar:/binary/ycsb/cassandra4-binding/lib/netty-resolver-4.1.60.Final.jar:/binary/ycsb/cassandra4-binding/lib/metrics-core-4.1.18.jar:/binary/ycsb/cassandra4-binding/lib/netty-common-4.1.60.Final.jar:/binary/ycsb/cassandra4-binding/lib/netty-transport-4.1.60.Final.jar:/binary/ycsb/cassandra4-binding/lib/reactive-streams-1.0.3.jar:/binary/ycsb/cassandra4-binding/lib/java-driver-core-4.13.0.jar:/binary/ycsb/cassandra4-binding/lib/jnr-constants-0.10.1.jar:/binary/ycsb/cassandra4-binding/lib/asm-9.1.jar:/binary/ycsb/cassandra4-binding/lib/netty-buffer-4.1.60.Final.jar:/binary/ycsb/cassandra4-binding/lib/cassandra4-binding-0.18.0-SNAPSHOT.jar:/binary/ycsb/cassandra4-binding/lib/jnr-ffi-2.2.2.jar:/binary/ycsb/cassandra4-binding/lib/slf4j-simple-1.7.21.jar:/binary/ycsb/cassandra4-binding/lib/jackson-databind-2.12.2.jar:/binary/ycsb/cassandra4-binding/lib/asm-commons-9.1.jar:/binary/ycsb/cassandra4-binding/lib/java-driver-query-builder-4.13.0.jar site.ycsb.Client -db site.ycsb.db.cassandra4.CassandraCQLClient -s -p hosts=172.31.20.63,172.31.16.178,172.31.19.32,172.31.16.181,172.31.26.99,172.31.25.28,172.31.30.169,172.31.18.46,172.31.27.60 -p cassandra.keyspace=ycsb -p cassandra.username=benchant -p cassandra.password=Performance99! -p cassandra.initDefaultTable=false -p cassandra.useSecureBundle=false -p workload=site.ycsb.workloads.CoreWorkload -threads 600 -p recordcount=5000000 -p operationcount=54000000 -p fieldcount=10 -p fieldlength=50 -p requestdistribution=zipfian -p insertorder=ordered -p readproportion=0.5 -p updateproportion=0.0 -p insertproportion=0.5 -p scanproportion=0.0 -p scanlengthdistribution=uniform -p core_workload_insertion_retry_limit=3 -p core_workload_insertion_retry_interval=3 -p insertstart=0 -p hdrhistogram.percentiles=50,90,95,99,99.99,99.99999 -load
+Command line: -db site.ycsb.db.cassandra4.CassandraCQLClient -s -p hosts=172.31.20.63,172.31.16.178,172.31.19.32,172.31.16.181,172.31.26.99,172.31.25.28,172.31.30.169,172.31.18.46,172.31.27.60 -p cassandra.keyspace=ycsb -p cassandra.username=benchant -p cassandra.password=Performance99! -p cassandra.initDefaultTable=false -p cassandra.useSecureBundle=false -p workload=site.ycsb.workloads.CoreWorkload -threads 600 -p recordcount=5000000 -p operationcount=54000000 -p fieldcount=10 -p fieldlength=50 -p requestdistribution=zipfian -p insertorder=ordered -p readproportion=0.5 -p updateproportion=0.0 -p insertproportion=0.5 -p scanproportion=0.0 -p scanlengthdistribution=uniform -p core_workload_insertion_retry_limit=3 -p core_workload_insertion_retry_interval=3 -p insertstart=0 -p hdrhistogram.percentiles=50,90,95,99,99.99,99.99999 -load
+YCSB Client 0.18.0-SNAPSHOT
+
+Loading workload...
+insertstart, insertcount, recordcount: 0, 5000000, 5000000
+CoreWorkload init --- orderedinserts: true
+Starting test.
+2026-02-03 15:58:15:998 0 sec: 0 operations; est completion in 0 second 
+[Thread-35] INFO site.ycsb.db.cassandra4.CassandraCQLClient - setting read (and default) Consistency to 'QUORUM'
+[Thread-35] INFO site.ycsb.db.cassandra4.CassandraCQLClient - setting write Consistency to 'QUORUM'
+[Thread-35] INFO com.datastax.oss.driver.internal.core.DefaultMavenCoordinates - DataStax Java driver for Apache Cassandra(R) (com.datastax.oss:java-driver-core) version 4.13.0
+[s0-admin-0] INFO com.datastax.oss.driver.internal.core.time.Clock - Using native clock for microsecond precision
+[s0-io-2] WARN com.datastax.oss.driver.api.core.auth.PlainTextAuthProviderBase - [] /172.31.20.63:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+[s0-io-3] WARN com.datastax.oss.driver.api.core.auth.PlainTextAuthProviderBase - [] /172.31.16.181:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+[s0-io-4] WARN com.datastax.oss.driver.api.core.auth.PlainTextAuthProviderBase - [] /172.31.20.63:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+[s0-io-5] WARN com.datastax.oss.driver.api.core.auth.PlainTextAuthProviderBase - [] /172.31.19.32:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+[s0-io-6] WARN com.datastax.oss.driver.api.core.auth.PlainTextAuthProviderBase - [] /172.31.18.46:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+[s0-io-7] WARN com.datastax.oss.driver.api.core.auth.PlainTextAuthProviderBase - [] /172.31.26.99:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+[s0-io-9] WARN com.datastax.oss.driver.api.core.auth.PlainTextAuthProviderBase - [] /172.31.30.169:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+[s0-io-8] WARN com.datastax.oss.driver.api.core.auth.PlainTextAuthProviderBase - [] /172.31.27.60:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+[s0-io-11] WARN com.datastax.oss.driver.api.core.auth.PlainTextAuthProviderBase - [] /172.31.16.178:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+[s0-io-10] WARN com.datastax.oss.driver.api.core.auth.PlainTextAuthProviderBase - [] /172.31.25.28:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+[Thread-35] INFO site.ycsb.db.cassandra4.CassandraCQLClient - Connected to cluster: Optional[benchANT Cluster]
+
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+2026-02-03 15:58:25:981 10 sec: 925133 operations; 92513.3 current ops/sec; est completion in 45 seconds [INSERT: Count=925196, Max=306431, Min=708, Avg=5717.91, 90=8703, 99=16463, 99.9=57183, 99.99=145663] 
+2026-02-03 15:58:35:982 20 sec: 3157247 operations; 223211.4 current ops/sec; est completion in 12 seconds [INSERT: Count=2232166, Max=51871, Min=517, Avg=2686.21, 90=4567, 99=9295, 99.9=15415, 99.99=26255] 
+2026-02-03 15:58:44:852 28 sec: 5000000 operations; 207727.76 current ops/sec; [CLEANUP: Count=600, Max=2024447, Min=0, Avg=3374.84, 90=2, 99=10, 99.9=287, 99.99=2024447] [INSERT: Count=1842638, Max=35871, Min=352, Avg=2181.91, 90=2963, 99=8199, 99.9=17743, 99.99=30543] 
+[OVERALL], RunTime(ms), 28868
+[OVERALL], Throughput(ops/sec), 173202.1615629763
+[TOTAL_GCS_PS_Scavenge], Count, 47
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 240
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.8313703755022862
+[TOTAL_GCS_PS_MarkSweep], Count, 1
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 25
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.08660108078148816
+[TOTAL_GCs], Count, 48
+[TOTAL_GC_TIME], Time(ms), 265
+[TOTAL_GC_TIME_%], Time(%), 0.9179714562837744
+[CLEANUP], Operations, 600
+[CLEANUP], AverageLatency(us), 3374.8366666666666
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 2024447
+[CLEANUP], 50thPercentileLatency(us), 0
+[CLEANUP], 90thPercentileLatency(us), 2
+[CLEANUP], 95thPercentileLatency(us), 2
+[CLEANUP], 99thPercentileLatency(us), 10
+[CLEANUP], 99.99PercentileLatency(us), 2024447
+[CLEANUP], 99.99999PercentileLatency(us), 2024447
+[INSERT], Operations, 5000000
+[INSERT], AverageLatency(us), 3061.3417436
+[INSERT], MinLatency(us), 352
+[INSERT], MaxLatency(us), 306431
+[INSERT], 50thPercentileLatency(us), 2249
+[INSERT], 90thPercentileLatency(us), 5735
+[INSERT], 95thPercentileLatency(us), 7295
+[INSERT], 99thPercentileLatency(us), 11407
+[INSERT], 99.99PercentileLatency(us), 83839
+[INSERT], 99.99999PercentileLatency(us), 306431
+[INSERT], Return=OK, 5000000

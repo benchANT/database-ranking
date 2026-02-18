@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "userId": "benchANT",
+    "projectId": "ranking",
+    "batchId": "02-2026",
+    "configurationId": "cassandra-506-tuned-os-small-medium-aws",
+    "configurationLabel": "cassandra-506-tuned-os-small-medium-aws",
+    "executions": 1,
+    "executionCounter": 1
+  },
+  "resourceProvider": {
+    "name": "EC2",
+    "api": "EC2"
+  },
+  "dbmsDeployment": {
+    "dbmsType": "CASSANDRA",
+    "operationType": "DBMS",
+    "version": "5.0.6",
+    "DBMS": {
+      "dataNodes": {
+        "numberOfNodes": 1,
+        "resource": {
+          "costs": {
+            "storageCosts": 0.39,
+            "vmCosts": 0.23
+          },
+          "ec2Vm": {
+            "regionName": "eu-central-1",
+            "instanceType": "m5.xlarge",
+            "architecture": "x86_64",
+            "imageDistribution": "ubuntu",
+            "imageVersion": "22.04",
+            "volumeType": "GP2",
+            "volumeSize": 100
+          }
+        },
+        "replicationFactor": 1,
+        "memoryAllocation": 0.75,
+        "cassandraConfiguration": {
+          "cassandraServerConfiguration": {
+            "compactionStrategy": "UnifiedCompactionStrategy",
+            "sstableFormat": "bti",
+            "memtable": "TrieMemtable",
+            "javaConfig": {
+              "version": 17,
+              "garbageCollector": "ZGC"
+            }
+          }
+        }
+      }
+    }
+  },
+  "benchmarkDeployment": {
+    "benchmarkNodes": {
+      "numberOfNodes": 1,
+      "resource": {
+        "ec2Vm": {
+          "regionName": "eu-central-1",
+          "instanceType": "c5.4xlarge",
+          "architecture": "x86_64",
+          "imageDistribution": "ubuntu",
+          "imageVersion": "22.04",
+          "volumeType": "GP2",
+          "volumeSize": 30
+        }
+      }
+    }
+  },
+  "benchmark": {
+    "id": "YCSB-GeneralPurpose-medium",
+    "distribution": "YCSB",
+    "version": "benchant-master",
+    "ycsb": {
+      "executeLoadPhase": true,
+      "executeRunPhase": true,
+      "dbmsEndpoints": [],
+      "workload": {
+        "workloadType": "LOAD",
+        "workloadClass": "site.ycsb.workloads.CoreWorkload",
+        "maxExecutionTime": 1800,
+        "threadCount": 100,
+        "loadThreadCount": 1,
+        "recordCount": 5000000,
+        "insertStart": 5000001,
+        "insertCount": 0,
+        "operations": 54000000,
+        "targetOps": 0,
+        "fieldCount": 10,
+        "fieldLength": 50,
+        "readAllFields": true,
+        "readModifyWriteProportion": 0,
+        "requestdistribution": "ZIPFIAN",
+        "scanLengthDistribution": "UNIFORM",
+        "insertOrder": "ORDERED",
+        "readProportion": 0.5,
+        "updateProportion": 0.0,
+        "insertProportion": 0.5,
+        "scanProportion": 0.0,
+        "maxScanLength": 0,
+        "coreWorkloadInsertionRetryLimit": 3,
+        "coreWorkloadInsertionRetryInterval": 3,
+        "loadBatchSize": 1,
+        "runBatchSize": 1
+      }
+    }
+  }
+}
