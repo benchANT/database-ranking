@@ -10,7 +10,7 @@ For each DBMS, benchANT specifies a vanilla configuration as a baseline comparis
 ## Scaling Size XSMALL 
 
 ### DBMS Specification
-| PostgreSQL Parameter | Description                                                      | Vanilla Value     | Tunable |
+| DBMS Parameter | Description                                                      | Vanilla Value     | Tunable |
 |-----------------------|------------------------------------------------------------------|-------------------|----------|
 | DBMS Version          | The DBMS version                                     | as specified          | yes      |
 | DBMS Configuration    | DBMS server configuration | provider default  | yes      |
@@ -54,7 +54,7 @@ For each DBMS, benchANT specifies a vanilla configuration as a baseline comparis
 ## Scaling Size SMALL 
 
 ### DBMS Specification
-| PostgreSQL Parameter | Description                                                      | Vanilla Value     | Tunable |
+| DBMS Parameter | Description                                                      | Vanilla Value     | Tunable |
 |-----------------------|------------------------------------------------------------------|-------------------|----------|
 | DBMS Version          | The DBMS version                                     | as specified          | yes      |
 | DBMS Configuration    | DBMS server configuration | provider default  | yes      |
@@ -98,7 +98,7 @@ For each DBMS, benchANT specifies a vanilla configuration as a baseline comparis
 ## Scaling Size MEDIUM 
 
 ### DBMS Specification
-| PostgreSQL Parameter | Description                                                      | Vanilla Value     | Tunable |
+| DBMS Parameter | Description                                                      | Vanilla Value     | Tunable |
 |-----------------------|------------------------------------------------------------------|-------------------|----------|
 | DBMS Version          | The DBMS version                                     | as specified          | yes      |
 | DBMS Configuration    | DBMS server configuration | provider default  | yes      |
@@ -142,7 +142,7 @@ For each DBMS, benchANT specifies a vanilla configuration as a baseline comparis
 ## Scaling Size LARGE 
 
 ### DBMS Specification
-| PostgreSQL Parameter | Description                                                      | Vanilla Value     | Tunable |
+| DBMS Parameter | Description                                                      | Vanilla Value     | Tunable |
 |-----------------------|------------------------------------------------------------------|-------------------|----------|
 | DBMS Version          | The DBMS version                                     | as specified          | yes      |
 | DBMS Configuration    | DBMS server configuration | provider default  | yes      |
@@ -185,7 +185,7 @@ For each DBMS, benchANT specifies a vanilla configuration as a baseline comparis
 ## Scaling Size XLARGE 
 
 ### DBMS Specification
-| PostgreSQL Parameter | Description                                                      | Vanilla Value     | Tunable |
+| DBMS Parameter | Description                                                      | Vanilla Value     | Tunable |
 |-----------------------|------------------------------------------------------------------|-------------------|----------|
 | DBMS Version          | The DBMS version                                     | as specified          | yes      |
 | DBMS Configuration    | DBMS server configuration | provider default  | yes      |

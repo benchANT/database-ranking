@@ -69,7 +69,7 @@ DBMS-specific files are contained in each folder, e.g. `postgresql.conf` for Pos
 
 *** 
 
-## Benchmark Specification
+## DBMS Deployment, Cloud infrastructure and Benchmark Specification
 
 The following tables show the specifications on DBMS, cloud infrastructure and benchmark level to ensure transparency, comparability and reproducibility. 
 
