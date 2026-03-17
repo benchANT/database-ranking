@@ -69,6 +69,98 @@ DBMS-specific files are contained in each folder, e.g. `postgresql.conf` for Pos
 
 *** 
 
+## Benchmark Specification
+
+The following tables show the specifications on DBMS, cloud infrastructure and benchmark level to ensure transparency, comparability and reproducibility. 
+
+For each DBMS, benchANT specifies a vanilla configuration as a baseline comparison and there is the option to tune specific DBMS and cloud infrastructure parameters.
+
+
+## Scaling Size XSMALL 
+
+### DBMS Specification
+| DBMS Deployment Parameter | Description                                                      | Vanilla Value     | Tunable |
+|-----------------------|------------------------------------------------------------------|-------------------|----------|
+| DBMS Version          | The DBMS version                                     | as specified          | yes      |
+| DBMS Configuration    | DBMS server configuration | provider default  | yes      |
+| Cluster Size          | number of nodes for this scaling size                             | 1                 | no      |
+| Replication Factor     | Replication factor per data item                                          | 1               | no      |
+
+
+
+### Cloud Infrastructure Specification
+
+| Cloud Infrastructure Parameter | Description                                                                                       | Vanilla Value           | Tunable |
+|--------------------------------|---------------------------------------------------------------------------------------------------|--------------------------|----------|
+| Region                         | The target region to deploy the DBMS instance         | Frankfurt                | yes      |
+| Availability Zone              | The target availability zone(s) to deploy the DBMS instances                                     |  not specified       | yes      |
+| instance type                         | The VM instance type                             | general purpose                    | yes       |
+| vCores                         | The  number of vCores to be used for this specific scaling size                            | 2                        | no       |
+| Memory                         | The  amount of RAM to be used for this specific scaling size (in GiB)                      | 8                       | no      |
+| Storage Size                   | The storage size per node for this specific scaling size (in GB)                                  | 100                      | no      |
+| Storage Type                   | The storage type per node for this specific scaling size; the minimal considered type is SSD       | SSD (cheapest option as specified)     | yes      |
+
+
+### Benchmark Specification
+
+| Benchmark Parameter | Description                                                                 | Value                | Tunable |
+|----------------------|------------------------------------------------------------------------------|----------------------|---------|
+| Cloud                | The target cloud to run the benchmark VM                                    | same as DBMS        | no      |
+| Region               | The target cloud region to run the benchmark VM                             | same as DBMS        | no      |
+| Availability Zone    | The target availability zone to deploy the benchmark VM                     | not specified or identical to the DBMS if specified for the DBMS        | no      |
+| VM Type              | The target VM type to run the benchmark                                     | 16 Cores / 32 GB RAM | no      |
+| Benchmark Suite      | Time Series Benchmark Suite (TSBS)                                          | TSBS                 | no      |
+| Workload             | TSBS DevOps workload                                                        | devops               | no      |
+| Threads              | The applied number of threads for this scaling size                         | 50                   | no      |
+| Time Range           | The time range of the time-series data initially loaded into the DBMS       | 3 days               | no      |
+| Scale                | The scale (granularity) of the time-series data                             | 1000                 | no      |
+| Queries              | The number of queries to be executed                                        | 100.000              | no      |
+| Batch Size           | The batch size for loading the data                                         | 1000                 | no      |
+| Hash Workers         | During loading the data, whether to consistently hash insert data to the same workers (i.e., the data for a particular host always goes to the same worker) | false | yes     |
+
+
+## Scaling Size SMALL 
+
+### DBMS Specification
+| DBMS Deployment Parameter | Description                                                      | Vanilla Value     | Tunable |
+|-----------------------|------------------------------------------------------------------|-------------------|----------|
+| DBMS Version          | The DBMS version                                     | as specified          | yes      |
+| DBMS Configuration    | DBMS server configuration | provider default  | yes      |
+| Cluster Size          | number of nodes for this scaling size                             | 1                 | no      |
+| Replication Factor     | Replication factor per data item                                          | 1               | no      |
+
+
+
+### Cloud Infrastructure Specification
+
+| Cloud Infrastructure Parameter | Description                                                                                       | Vanilla Value           | Tunable |
+|--------------------------------|---------------------------------------------------------------------------------------------------|--------------------------|----------|
+| Region                         | The target region to deploy the DBMS instance         | Frankfurt                | yes      |
+| Availability Zone              | The target availability zone(s) to deploy the DBMS instances                                     |  not specified       | yes      |
+| instance type                         | The VM instance type                             | general purpose                    | yes       |
+| vCores                         | The  number of vCores to be used for this specific scaling size                            | 4                        | no       |
+| Memory                         | The  amount of RAM to be used for this specific scaling size (in GiB)                      | 16                       | no      |
+| Storage Size                   | The storage size per node for this specific scaling size (in GB)                                  | 100                      | no      |
+| Storage Type                   | The storage type per node for this specific scaling size; the minimal considered type is SSD       | SSD (cheapest option as specified)     | yes      |
+
+
+### Benchmark Specification
+
+| Benchmark Parameter | Description                                                                 | Value                | Tunable |
+|----------------------|------------------------------------------------------------------------------|----------------------|---------|
+| Cloud                | The target cloud to run the benchmark VM                                    | same as DBMS        | no      |
+| Region               | The target cloud region to run the benchmark VM                             | same as DBMS        | no      |
+| Availability Zone    | The target availability zone to deploy the benchmark VM                     | not specified or identical to the DBMS if specified for the DBMS        | no      |
+| VM Type              | The target VM type to run the benchmark                                     | 16 Cores / 32 GB RAM | no      |
+| Benchmark Suite      | Time Series Benchmark Suite (TSBS)                                          | TSBS                 | no      |
+| Workload             | TSBS DevOps workload                                                        | devops               | no      |
+| Threads              | The applied number of threads for this scaling size                         | 100                   | no      |
+| Time Range           | The time range of the time-series data initially loaded into the DBMS       | 3 days               | no      |
+| Scale                | The scale (granularity) of the time-series data                             | 1000                 | no      |
+| Queries              | The number of queries to be executed                                        | 100.000              | no      |
+| Batch Size           | The batch size for loading the data                                         | 1000                 | no      |
+| Hash Workers         | During loading the data, whether to consistently hash insert data to the same workers (i.e., the data for a particular host always goes to the same worker) | false | yes     |
+
 
 ## Contact
 

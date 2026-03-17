@@ -1,7 +1,7 @@
 # Tuning Details
 
 This document describes the tuning parameters applied to the DBMS and cloud infrastructure configuration for this evaluation scenario.
-For the vanilla (baseline) configuration, refer to the [CRUD General Purpose Ranking README](../../../README.md).
+For the vanilla (baseline) configuration, refer to the [CRUD General Purpose Ranking README](../../README.md).
 
 ## DBMS Tuning
 
