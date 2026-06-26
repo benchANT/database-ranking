@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "userId": "benchANT",
+    "projectId": "performance-ranking",
+    "batchId": "tpc-c",
+    "configurationId": "aws-m9g-postgresql-17-small",
+    "executions": 1,
+    "executionCounter": 1
+  },
+  "resourceProvider": {
+    "name": "EC2",
+    "api": "EC2"
+  },
+  "dbaasProvider": {
+    "name": "AWS",
+    "api": "AWSRDS"
+  },
+  "dbmsDeployment": {
+    "dbmsType": "POSTGRESQL",
+    "operationType": "DBAAS",
+    "version": "17.5",
+    "DBAAS": {
+		"costs": {
+		  "onDemand": 1482
+		},
+      "awsRdsInstance": {
+        "region": "eu-central-1",
+        "instanceType": "db.m9g.2xlarge",
+        "storageType": "GP2",
+        "storageSize": 500,
+        "multiAz": true
+      }
+    }
+  },
+  "benchmarkDeployment": {
+    "benchmarkNodes": {
+      "numberOfNodes": 1,
+      "resource": {
+        "ec2Vm": {
+          "regionName": "eu-central-1",
+          "instanceType": "c6i.4xlarge",
+          "architecture": "x86_64",
+          "imageDistribution": "ubuntu",
+          "imageVersion": "22.04",
+          "volumeType": "GP2",
+          "volumeSize": 50
+        }
+      }
+    }
+  },
+  "benchmark": {
+    "id": "tpc-c",
+    "distribution": "BENCHBASETPCC",
+    "version": "master",
+    "benchbaseTPCC": {
+      "dbmsEndpoints": [],
+      "workload": {
+        "workloadPhase": "LOAD",
+        "runtime": 1800,
+        "terminals": 75,
+        "intervalMonitor": 1000,
+        "sample": 10,
+        "isolation": "TRANSACTION_SERIALIZABLE",
+        "batchSize": 1024,
+        "scaleFactor": 150.0
+      }
+    }
+  }
+}

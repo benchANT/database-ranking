@@ -1,0 +1,26 @@
+/binary/jdk/bin/java -XX:MaxRAMPercentage=85.0 -jar /binary/benchbase/postgresql/benchbase.jar -c /binary/benchbase/postgresql/config/postgres/sample_tpcc_config.xml -b tpcc --load=true --create=true --sample 10 --interval-monitor 1000 --directory /home/developer/results
+[INFO ] 2026-05-04 12:56:11,580 [main]  com.oltpbenchmark.DBWorkload main - ======================================================================
+
+Benchmark:                       TPCC {com.oltpbenchmark.benchmarks.tpcc.TPCCBenchmark}
+Configuration:                   /binary/benchbase/postgresql/config/postgres/sample_tpcc_config.xml
+Type:                            POSTGRES
+Driver:                          org.postgresql.Driver
+URL:                             jdbc:postgresql://benchant-rds-postgresql-4096.cawy0mrifex0.eu-central-1.rds.amazonaws.com:5432/benchantdb?sslmode=allow&ApplicationName=tpcc&reWriteBatchedInserts=true
+Isolation:                       TRANSACTION_SERIALIZABLE
+Batch Size:                      1024
+DDL Path:                        null
+Loader Threads:                  16
+Session Setup File:              null
+Scale Factor:                    150.0
+Terminals:                       75
+New Connection Per Txn:          false
+Reconnect on Connection Failure: true
+
+[INFO ] 2026-05-04 12:56:11,581 [main]  com.oltpbenchmark.DBWorkload main - ======================================================================
+[INFO ] 2026-05-04 12:56:11,608 [main]  com.oltpbenchmark.DBWorkload main - Creating new TPCC database...
+[INFO ] 2026-05-04 12:56:11,956 [main]  com.oltpbenchmark.DBWorkload main - Finished creating new TPCC database...
+[INFO ] 2026-05-04 12:56:12,079 [main]  com.oltpbenchmark.DBWorkload main - Loading data into TPCC database...
+[INFO ] 2026-05-04 12:56:12,081 [main]  com.oltpbenchmark.util.ThreadUtil runLoaderThreads - Creating a Thread Pool with a size of 16 to run 151 Loader Threads.  135 threads will be queued.
+[INFO ] 2026-05-04 13:03:04,556 [main]  com.oltpbenchmark.util.ThreadUtil runLoaderThreads - Finished executing 151 Loader Threads [time=412.47s]
+[INFO ] 2026-05-04 13:03:04,556 [main]  com.oltpbenchmark.DBWorkload main - Finished loading data into TPCC database...
+[INFO ] 2026-05-04 13:03:04,556 [main]  com.oltpbenchmark.DBWorkload main - Skipping benchmark workload execution

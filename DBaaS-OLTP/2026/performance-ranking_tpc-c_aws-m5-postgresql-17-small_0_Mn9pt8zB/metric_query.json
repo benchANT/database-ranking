@@ -1,0 +1,40 @@
+{
+    "MetricDataQueries": [
+        {
+            "Id": "cpu",
+            "MetricStat": {
+                "Metric": {
+                    "Dimensions": [
+                        {
+                            "Name": "DBInstanceIdentifier",
+                            "Value": "benchant-rds-postgresql-1771"
+                        }
+                    ],
+                    "MetricName": "CPUUtilization",
+                    "Namespace": "RDSOSMetrics"
+                },
+                "Period": 60,
+                "Stat": "Average",
+                "Unit": "Percent"
+            }
+        },
+        {
+            "Id": "mem",
+            "MetricStat": {
+                "Metric": {
+                    "Dimensions": [
+                        {
+                            "Name": "DBInstanceIdentifier",
+                            "Value": "benchant-rds-postgresql-1771"
+                        }
+                    ],
+                    "MetricName": "FreeableMemory",
+                    "Namespace": "AWS/RDS"
+                },
+                "Period": 60,
+                "Stat": "Average",
+                "Unit": "Bytes"
+            }
+        }
+    ]
+}

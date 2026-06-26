@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "userId": "benchANT",
+    "projectId": "performance-ranking",
+    "batchId": "tpc-c",
+    "configurationId": "azure-postgresql-small",
+    "configurationLabel": "azure-postgresql-small",
+    "executions": 1,
+    "executionCounter": 1
+  },
+  "resourceProvider": {
+    "name": "AZURE",
+    "api": "AZURE"
+  },
+  "dbaasProvider": {
+    "name": "AZUREPOSTGRESQL",
+    "api": "AZUREPOSTGRESQL"
+  },
+  "dbmsDeployment": {
+    "dbmsType": "POSTGRESQL",
+    "operationType": "DBAAS",
+    "version": "17",
+    "DBAAS": {
+      "costs": {
+		  "onDemand": 1302
+		},
+      "azurePostgresqlInstance": {
+        "region": "northeurope",
+        "skuName": "Standard_D8ds_v5",
+        "skuTier": "GeneralPurpose",
+        "storageSize": 512,
+        "highAvailability": "SameZone",
+        "performanceTier": "P20",
+        "storageType": "Premium_LRS",
+        "iops": 3000,
+        "throughput": 125
+      }
+    }
+  },
+  "benchmarkDeployment": {
+    "benchmarkNodes": {
+      "numberOfNodes": 1,
+      "resource": {
+        "azureVm": {
+          "region": "northeurope",
+          "imagePublisher": "Canonical",
+          "imageOffer": "0001-com-ubuntu-server-focal",
+          "imageSku": "20_04-lts",
+          "vmSize": "Standard_D16s_v4",
+          "diskType": "Standard_LRS",
+          "diskSize": 50
+        }
+      }
+    }
+  },
+  "benchmark": {
+    "id": "tpc-c",
+    "distribution": "BENCHBASETPCC",
+    "version": "master",
+    "benchbaseTPCC": {
+      "executeLoadPhase": true,
+      "executeRunPhase": true,
+      "dbmsEndpoints": [],
+      "workload": {
+        "workloadPhase": "LOAD",
+        "runtime": 1800,
+        "terminals": 75,
+        "intervalMonitor": 1000,
+        "sample": 10,
+        "isolation": "TRANSACTION_SERIALIZABLE",
+        "batchSize": 1024,
+        "scaleFactor": 150.0
+      }
+    }
+  }
+}

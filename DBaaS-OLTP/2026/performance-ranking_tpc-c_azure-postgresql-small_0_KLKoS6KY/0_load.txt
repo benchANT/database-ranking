@@ -1,0 +1,22 @@
+/binary/jdk-17/bin/java -XX:MaxRAMPercentage=85.0 -jar /binary/benchbase/postgresql/benchbase.jar -c /binary/benchbase/postgresql/config/postgres/sample_tpcc_config.xml -b tpcc --load=true --create=true --sample 10 --interval-monitor 1000 --directory /home/developer/results
+[INFO ] 2025-07-09 12:53:57,067 [main]  com.oltpbenchmark.DBWorkload main - ======================================================================
+
+Benchmark:              TPCC {com.oltpbenchmark.benchmarks.tpcc.TPCCBenchmark}
+Configuration:          /binary/benchbase/postgresql/config/postgres/sample_tpcc_config.xml
+Type:                   POSTGRES
+Driver:                 org.postgresql.Driver
+URL:                    jdbc:postgresql://benchant-8ba889e5-390f-5c4e-bd15-cebd756e98ba.postgres.database.azure.com:5432/benchantdb?sslmode=allow&ApplicationName=tpcc&reWriteBatchedInserts=true
+Isolation:              TRANSACTION_SERIALIZABLE
+Batch Size:             1024
+Scale Factor:           150.0
+Terminals:              75
+New Connection Per Txn: false
+
+[INFO ] 2025-07-09 12:53:57,068 [main]  com.oltpbenchmark.DBWorkload main - ======================================================================
+[INFO ] 2025-07-09 12:53:57,094 [main]  com.oltpbenchmark.DBWorkload main - Creating new TPCC database...
+[INFO ] 2025-07-09 12:53:57,494 [main]  com.oltpbenchmark.DBWorkload main - Finished creating new TPCC database...
+[INFO ] 2025-07-09 12:53:57,672 [main]  com.oltpbenchmark.DBWorkload main - Loading data into TPCC database...
+[INFO ] 2025-07-09 12:53:57,674 [main]  com.oltpbenchmark.util.ThreadUtil runLoaderThreads - Creating a Thread Pool with a size of 16 to run 151 Loader Threads.  135 threads will be queued.
+[INFO ] 2025-07-09 13:08:29,053 [main]  com.oltpbenchmark.util.ThreadUtil runLoaderThreads - Finished executing 151 Loader Threads [time=871.38s]
+[INFO ] 2025-07-09 13:08:29,053 [main]  com.oltpbenchmark.DBWorkload main - Finished loading data into TPCC database...
+[INFO ] 2025-07-09 13:08:29,053 [main]  com.oltpbenchmark.DBWorkload main - Skipping benchmark workload execution

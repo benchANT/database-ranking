@@ -28,9 +28,9 @@ For each DBaaS, benchANT specifies a vanilla configuration as a baseline compari
 |--------------------------------|---------------------------------------------------------------------------------------------------|--------------------------|----------|
 | Region                         | The target region to deploy the DBaaS instance, preferably Frankfurt or another EU region         | Frankfurt                | yes      |
 | Availability Zone              | The target availability zone(s) to deploy the DBaaS instances                                     | provider specified        | yes      |
-| vCores                         | The maximum number of vCores to be used for this specific scaling size                            | 8                        | no       |
+| vCores                         | The maximum number of vCores to be used for this specific scaling size                            | 8                        | yes       |
 | CPU Type                       | The CPU type to be used for this specific scaling size, e.g., Intel, Arm, Graviton, etc.          | Intel                    | yes      |
-| Memory                         | The maximum amount of RAM to be used for this specific scaling size (in GiB)                      | 32                       | yes      |
+| Memory                         | The maximum amount of RAM to be used for this specific scaling size (in GiB)                      | 32                       | no      |
 | Storage Size                   | The storage size per node for this specific scaling size (in GB)                                  | 500                      | yes      |
 | Storage Type                   | The storage type per node for this specific scaling size; the minimal considered type is SSD       | SSD (cheapest option)     | yes      |
 
