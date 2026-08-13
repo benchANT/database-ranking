@@ -1,0 +1,109 @@
+bin/ycsb run couchbase3 -s -jvm-args=-XX:MaxRAMPercentage=85.0  -p couchbase.host=10.10.0.11,10.10.0.12,10.10.0.13,10.10.0.14,10.10.0.15,10.10.0.16,10.10.0.17,10.10.0.18,10.10.0.19 -p couchbase.bucket=benchantdb -p couchbase.password=Performance99 -p couchbase.username=benchant -p workload=site.ycsb.workloads.CoreWorkload -p maxexecutiontime=1800 -threads 600 -p recordcount=5000000 -p operationcount=54000000 -p fieldcount=10 -p fieldlength=50 -p requestdistribution=zipfian -p insertorder=ordered -p readproportion=0.5 -p updateproportion=0.0 -p insertproportion=0.5 -p scanproportion=0.0 -p scanlengthdistribution=uniform -p core_workload_insertion_retry_limit=3 -p core_workload_insertion_retry_interval=3 -p insertstart=5000000 -p hdrhistogram.percentiles=50,90,95,99,99.99,99.99999 
+/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/java -XX:MaxRAMPercentage=85.0 -cp /binary/ycsb/couchbase3-binding/conf:/binary/ycsb/conf:/binary/ycsb/lib/htrace-core4-4.1.0-incubating.jar:/binary/ycsb/lib/jackson-core-asl-1.9.4.jar:/binary/ycsb/lib/jackson-mapper-asl-1.9.4.jar:/binary/ycsb/lib/HdrHistogram-2.1.12.jar:/binary/ycsb/lib/core-0.18.0-SNAPSHOT.jar:/binary/ycsb/couchbase3-binding/lib/rxjava-1.2.2.jar:/binary/ycsb/couchbase3-binding/lib/logback-classic-1.2.11.jar:/binary/ycsb/couchbase3-binding/lib/reactor-adapter-3.4.8.jar:/binary/ycsb/couchbase3-binding/lib/core-io-2.4.6.jar:/binary/ycsb/couchbase3-binding/lib/slf4j-api-1.7.25.jar:/binary/ycsb/couchbase3-binding/lib/reactor-extra-3.4.8.jar:/binary/ycsb/couchbase3-binding/lib/java-client-3.4.6.jar:/binary/ycsb/couchbase3-binding/lib/couchbase3-binding-0.18.0-SNAPSHOT.jar:/binary/ycsb/couchbase3-binding/lib/logback-core-1.2.11.jar:/binary/ycsb/couchbase3-binding/lib/couchbase-transactions-1.2.4.jar:/binary/ycsb/couchbase3-binding/lib/reactive-streams-1.0.3.jar:/binary/ycsb/couchbase3-binding/lib/rxjava-reactive-streams-1.2.1.jar:/binary/ycsb/couchbase3-binding/lib/reactor-core-3.4.18.jar site.ycsb.Client -db site.ycsb.db.couchbase3.Couchbase3Client -s -p couchbase.host=10.10.0.11,10.10.0.12,10.10.0.13,10.10.0.14,10.10.0.15,10.10.0.16,10.10.0.17,10.10.0.18,10.10.0.19 -p couchbase.bucket=benchantdb -p couchbase.password=Performance99 -p couchbase.username=benchant -p workload=site.ycsb.workloads.CoreWorkload -p maxexecutiontime=1800 -threads 600 -p recordcount=5000000 -p operationcount=54000000 -p fieldcount=10 -p fieldlength=50 -p requestdistribution=zipfian -p insertorder=ordered -p readproportion=0.5 -p updateproportion=0.0 -p insertproportion=0.5 -p scanproportion=0.0 -p scanlengthdistribution=uniform -p core_workload_insertion_retry_limit=3 -p core_workload_insertion_retry_interval=3 -p insertstart=5000000 -p hdrhistogram.percentiles=50,90,95,99,99.99,99.99999 -t
+Command line: -db site.ycsb.db.couchbase3.Couchbase3Client -s -p couchbase.host=10.10.0.11,10.10.0.12,10.10.0.13,10.10.0.14,10.10.0.15,10.10.0.16,10.10.0.17,10.10.0.18,10.10.0.19 -p couchbase.bucket=benchantdb -p couchbase.password=Performance99 -p couchbase.username=benchant -p workload=site.ycsb.workloads.CoreWorkload -p maxexecutiontime=1800 -threads 600 -p recordcount=5000000 -p operationcount=54000000 -p fieldcount=10 -p fieldlength=50 -p requestdistribution=zipfian -p insertorder=ordered -p readproportion=0.5 -p updateproportion=0.0 -p insertproportion=0.5 -p scanproportion=0.0 -p scanlengthdistribution=uniform -p core_workload_insertion_retry_limit=3 -p core_workload_insertion_retry_interval=3 -p insertstart=5000000 -p hdrhistogram.percentiles=50,90,95,99,99.99,99.99999 -t
+YCSB Client 0.18.0-SNAPSHOT
+
+Loading workload...
+insertstart, insertcount, recordcount: 5000000, 0, 5000000
+CoreWorkload init --- orderedinserts: true
+Starting test.
+2026-08-12 14:21:58:704 0 sec: 0 operations; est completion in 0 second 
+Maximum execution time specified as: 1800 secs
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+2026-08-12 14:22:13:003 10 sec: 182 operations; 18.19 current ops/sec; est completion in 34 days 8 hours [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=199, Max=17530879, Min=1645, Avg=8080741.4, 50=9396223, 90=11976703, 99=17530879, 99.9=17530879, 99.99=17530879] 
+2026-08-12 14:22:19:201 20 sec: 365 operations; 18.3 current ops/sec; est completion in 34 days 6 hours [READ: Count=6, Max=4661247, Min=496896, Avg=2384362.67, 50=1008127, 90=4661247, 99=4661247, 99.9=4661247, 99.99=4661247] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=270, Max=20070399, Min=762, Avg=8972511.68, 50=8048639, 90=19775487, 99=20054015, 99.9=20070399, 99.99=20070399] 
+2026-08-12 14:22:28:715 30 sec: 1030 operations; 66.47 current ops/sec; est completion in 18 days 5 hours [READ: Count=239, Max=6242303, Min=851, Avg=454670.31, 50=9007, 90=1242111, 99=4767743, 99.9=6242303, 99.99=6242303] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=318, Max=20365311, Min=416, Avg=2324834.7, 50=5539, 90=20332543, 99=20348927, 99.9=20365311, 99.99=20365311] 
+2026-08-12 14:22:38:714 40 sec: 1663 operations; 63.31 current ops/sec; est completion in 15 days [READ: Count=295, Max=4759551, Min=844, Avg=579452.98, 50=133631, 90=1809407, 99=4497407, 99.9=4759551, 99.99=4759551] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=336, Max=2508799, Min=446, Avg=176541.34, 50=5979, 90=666623, 99=1694719, 99.9=2508799, 99.99=2508799] 
+2026-08-12 14:22:48:718 50 sec: 2704 operations; 104.06 current ops/sec; est completion in 11 days 13 hours [READ: Count=513, Max=1550335, Min=403, Avg=106461.66, 50=6763, 90=454655, 99=1290239, 99.9=1550335, 99.99=1550335] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=509, Max=1705983, Min=369, Avg=46258.82, 50=2993, 90=11927, 99=1145855, 99.9=1705983, 99.99=1705983] [INSERT-FAILED: Count=22, Max=43220991, Min=24788992, Avg=31891083.64, 50=28557311, 90=42303487, 99=43220991, 99.9=43220991, 99.99=43220991] 
+2026-08-12 14:22:58:742 60 sec: 10773 operations; 804.97 current ops/sec; est completion in 3 days 11 hours [READ: Count=4031, Max=1937407, Min=322, Avg=156390.99, 50=12439, 90=472063, 99=1544191, 99.9=1751039, 99.99=1937407] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=4071, Max=1954815, Min=309, Avg=78247.34, 50=5067, 90=202623, 99=1189887, 99.9=1619967, 99.99=1954815] [INSERT-FAILED: Count=4, Max=25378815, Min=24641536, Avg=25116672, 50=25133055, 90=25378815, 99=25378815, 99.9=25378815, 99.99=25378815] 
+2026-08-12 14:23:08:708 70 sec: 64065 operations; 5346.84 current ops/sec; est completion in 16 hours 22 minutes [READ: Count=26720, Max=4177919, Min=221, Avg=86708.07, 50=8799, 90=68159, 99=2185215, 99.9=3553279, 99.99=3678207] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=26652, Max=4161535, Min=234, Avg=22446.8, 50=3297, 90=10535, 99=645119, 99.9=2240511, 99.99=2404351] [INSERT-FAILED: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] 
+2026-08-12 14:23:18:710 80 sec: 284721 operations; 22063.39 current ops/sec; est completion in 4 hours 11 minutes [READ: Count=110443, Max=4591615, Min=209, Avg=37594.86, 50=10015, 90=26847, 99=925695, 99.9=3082239, 99.99=4464639] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=110751, Max=4147199, Min=240, Avg=12051.26, 50=6183, 90=19327, 99=79231, 99.9=805887, 99.99=3471359] [INSERT-FAILED: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] 
+2026-08-12 14:23:28:704 90 sec: 1318020 operations; 103391.94 current ops/sec; est completion in 59 minutes [READ: Count=516754, Max=139775, Min=227, Avg=5640.98, 50=4057, 90=12039, 99=25119, 99.9=50431, 99.99=86463] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=516744, Max=139903, Min=244, Avg=5222.89, 50=3703, 90=11191, 99=23759, 99.9=49599, 99.99=85823] [INSERT-FAILED: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] 
+2026-08-12 14:23:38:704 100 sec: 3580001 operations; 226198.1 current ops/sec; est completion in 23 minutes [READ: Count=1130944, Max=30479, Min=203, Avg=2581.42, 50=1509, 90=5975, 99=14759, 99.9=22447, 99.99=27791] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=1130663, Max=30511, Min=227, Avg=2621.95, 50=1513, 90=6099, 99=15151, 99.9=23231, 99.99=28655] [INSERT-FAILED: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] 
+2026-08-12 14:23:48:704 110 sec: 6111468 operations; 253146.7 current ops/sec; est completion in 14 minutes [READ: Count=1265668, Max=40287, Min=202, Avg=2361.94, 50=1215, 90=5907, 99=13911, 99.9=20079, 99.99=30831] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=1266473, Max=40831, Min=221, Avg=2361.83, 50=1211, 90=5875, 99=14223, 99.9=20351, 99.99=31999] [INSERT-FAILED: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] 
+2026-08-12 14:23:58:704 120 sec: 8562358 operations; 245089 current ops/sec; est completion in 10 minutes [READ: Count=1225253, Max=33695, Min=177, Avg=2424.18, 50=1196, 90=6083, 99=14671, 99.9=20687, 99.99=24831] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=1225096, Max=33663, Min=229, Avg=2459.67, 50=1221, 90=6183, 99=14703, 99.9=20479, 99.99=24623] [INSERT-FAILED: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] 
+2026-08-12 14:24:08:703 130 sec: 11057675 operations; 249531.7 current ops/sec; est completion in 8 minutes [READ: Count=1248692, Max=33983, Min=184, Avg=2368.44, 50=1212, 90=5719, 99=14471, 99.9=21871, 99.99=25919] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=1246427, Max=33983, Min=223, Avg=2430.18, 50=1249, 90=5875, 99=14623, 99.9=22015, 99.99=26703] [INSERT-FAILED: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] 
+2026-08-12 14:24:18:704 140 sec: 13474884 operations; 241720.9 current ops/sec; est completion in 7 minutes [READ: Count=1209634, Max=33023, Min=196, Avg=2421.74, 50=1068, 90=6191, 99=16119, 99.9=25823, 99.99=28655] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=1207561, Max=33119, Min=218, Avg=2532.14, 50=1119, 90=6519, 99=16591, 99.9=26271, 99.99=28735] [INSERT-FAILED: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] 
+2026-08-12 14:24:28:704 150 sec: 15926919 operations; 245203.5 current ops/sec; est completion in 5 minutes [READ: Count=1225332, Max=36703, Min=196, Avg=2392.91, 50=1084, 90=6143, 99=16223, 99.9=24335, 99.99=33567] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=1226879, Max=37151, Min=225, Avg=2494.54, 50=1133, 90=6479, 99=16543, 99.9=24415, 99.99=33727] [INSERT-FAILED: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] 
+2026-08-12 14:24:38:703 160 sec: 18425183 operations; 249826.4 current ops/sec; est completion in 5 minutes [READ: Count=1249971, Max=41727, Min=206, Avg=2377.55, 50=1133, 90=5895, 99=16039, 99.9=24335, 99.99=35743] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=1248060, Max=41695, Min=224, Avg=2417.91, 50=1161, 90=5995, 99=16175, 99.9=24447, 99.99=37055] [INSERT-FAILED: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] 
+2026-08-12 14:24:48:704 170 sec: 20874236 operations; 244905.3 current ops/sec; est completion in 4 minutes [READ: Count=1225228, Max=38623, Min=187, Avg=2455.44, 50=1086, 90=6443, 99=15599, 99.9=24287, 99.99=33759] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=1223929, Max=38591, Min=223, Avg=2437.9, 50=1087, 90=6351, 99=15591, 99.9=24383, 99.99=33983] [INSERT-FAILED: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] 
+2026-08-12 14:24:58:704 180 sec: 23292062 operations; 241782.6 current ops/sec; est completion in 3 minutes [READ: Count=1208352, Max=32831, Min=191, Avg=2470.92, 50=1144, 90=6547, 99=15543, 99.9=20671, 99.99=26239] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=1209318, Max=32831, Min=217, Avg=2483.89, 50=1158, 90=6535, 99=15671, 99.9=20959, 99.99=27071] [INSERT-FAILED: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] 
+2026-08-12 14:25:08:704 190 sec: 25754791 operations; 246272.9 current ops/sec; est completion in 3 minutes [READ: Count=1232215, Max=41119, Min=202, Avg=2432.2, 50=1196, 90=6203, 99=14815, 99.9=20751, 99.99=35903] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=1230679, Max=41119, Min=229, Avg=2434.08, 50=1174, 90=6311, 99=14823, 99.9=20095, 99.99=35871] [INSERT-FAILED: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] 
+2026-08-12 14:25:18:703 200 sec: 28214881 operations; 246009 current ops/sec; est completion in 3 minutes [READ: Count=1230406, Max=36863, Min=202, Avg=2433.76, 50=1166, 90=6391, 99=14455, 99.9=20287, 99.99=27567] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=1229612, Max=33407, Min=214, Avg=2437.19, 50=1139, 90=6499, 99=14711, 99.9=20719, 99.99=28255] [INSERT-FAILED: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] 
+2026-08-12 14:25:28:704 210 sec: 30661311 operations; 244643 current ops/sec; est completion in 2 minutes [READ: Count=1224553, Max=33279, Min=191, Avg=2447.43, 50=1194, 90=6159, 99=15191, 99.9=22015, 99.99=30559] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=1221915, Max=33951, Min=218, Avg=2451.19, 50=1176, 90=6207, 99=15191, 99.9=21583, 99.99=30511] [INSERT-FAILED: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] 
+2026-08-12 14:25:38:704 220 sec: 33086955 operations; 242564.4 current ops/sec; est completion in 2 minutes [READ: Count=1213103, Max=35359, Min=191, Avg=2470.52, 50=1120, 90=6431, 99=15735, 99.9=23215, 99.99=30799] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=1212510, Max=35391, Min=225, Avg=2470.99, 50=1110, 90=6443, 99=15839, 99.9=23039, 99.99=30687] [INSERT-FAILED: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] 
+2026-08-12 14:25:48:704 230 sec: 35539793 operations; 245283.8 current ops/sec; est completion in 2 minutes [READ: Count=1227434, Max=30927, Min=193, Avg=2435.13, 50=1143, 90=6327, 99=15055, 99.9=20527, 99.99=27279] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=1225316, Max=30943, Min=217, Avg=2449.98, 50=1139, 90=6387, 99=15183, 99.9=20671, 99.99=27327] [INSERT-FAILED: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] 
+2026-08-12 14:25:58:704 240 sec: 37989099 operations; 244930.6 current ops/sec; est completion in 1 minute [READ: Count=1225334, Max=26799, Min=200, Avg=2435.16, 50=1219, 90=5975, 99=15295, 99.9=19775, 99.99=25711] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=1224042, Max=26399, Min=223, Avg=2458.9, 50=1211, 90=6071, 99=15375, 99.9=19839, 99.99=25551] [INSERT-FAILED: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] 
+2026-08-12 14:26:08:703 250 sec: 40490438 operations; 250133.9 current ops/sec; est completion in 1 minute [READ: Count=1249638, Max=28111, Min=197, Avg=2356.12, 50=1208, 90=5767, 99=14551, 99.9=20655, 99.99=24831] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=1251718, Max=28079, Min=229, Avg=2434.81, 50=1204, 90=6079, 99=14927, 99.9=21007, 99.99=25119] [INSERT-FAILED: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] 
+2026-08-12 14:26:18:703 260 sec: 43019156 operations; 252871.8 current ops/sec; est completion in 1 minute [READ: Count=1264468, Max=35327, Min=183, Avg=2338.25, 50=1220, 90=5639, 99=14735, 99.9=23215, 99.99=29007] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=1264167, Max=35359, Min=211, Avg=2401.08, 50=1219, 90=5859, 99=15359, 99.9=23775, 99.99=29903] [INSERT-FAILED: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] 
+2026-08-12 14:26:28:704 270 sec: 45482260 operations; 246310.4 current ops/sec; est completion in 51 seconds [READ: Count=1231285, Max=35935, Min=190, Avg=2388.3, 50=1158, 90=5755, 99=16527, 99.9=24959, 99.99=33887] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=1231961, Max=35967, Min=223, Avg=2477.78, 50=1171, 90=6091, 99=16943, 99.9=25343, 99.99=34175] [INSERT-FAILED: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] 
+2026-08-12 14:26:38:703 280 sec: 48012655 operations; 253039.5 current ops/sec; est completion in 35 seconds [READ: Count=1264879, Max=34943, Min=189, Avg=2322.89, 50=1255, 90=5595, 99=14455, 99.9=21823, 99.99=31743] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=1265840, Max=33823, Min=227, Avg=2413.33, 50=1274, 90=5927, 99=14839, 99.9=22127, 99.99=31743] [INSERT-FAILED: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] 
+2026-08-12 14:26:48:704 290 sec: 50541299 operations; 252864.4 current ops/sec; est completion in 20 seconds [READ: Count=1263707, Max=29679, Min=207, Avg=2327.17, 50=1265, 90=5415, 99=14807, 99.9=19855, 99.99=24207] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=1264486, Max=29711, Min=232, Avg=2412.46, 50=1284, 90=5743, 99=15135, 99.9=19855, 99.99=25135] [INSERT-FAILED: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] 
+2026-08-12 14:26:58:704 300 sec: 52978920 operations; 243762.1 current ops/sec; est completion in 6 second [READ: Count=1219006, Max=41311, Min=198, Avg=2404.11, 50=1204, 90=5887, 99=15159, 99.9=24959, 99.99=31727] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=1218642, Max=41311, Min=225, Avg=2512.95, 50=1247, 90=6215, 99=15639, 99.9=25343, 99.99=31727] [INSERT-FAILED: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] 
+Could not wait until max specified time, TerminatorThread interrupted.
+2026-08-12 14:27:03:441 304 sec: 54000000 operations; 215508.65 current ops/sec; [READ: Count=510121, Max=37151, Min=194, Avg=2195.29, 50=1059, 90=5339, 99=15615, 99.9=25871, 99.99=31599] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [CLEANUP: Count=600, Max=61, Min=0, Avg=1.11, 50=0, 90=2, 99=9, 99.9=61, 99.99=61] [INSERT: Count=510606, Max=37343, Min=220, Avg=2297.43, 50=1093, 90=5675, 99=16031, 99.9=26559, 99.99=33311] [INSERT-FAILED: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] 
+[OVERALL], RunTime(ms), 304736
+[OVERALL], Throughput(ops/sec), 177202.5622177885
+[TOTAL_GCS_PS_Scavenge], Count, 513
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 2263
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.7426099968497323
+[TOTAL_GCS_PS_MarkSweep], Count, 1
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 24
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.007875669431901712
+[TOTAL_GCs], Count, 514
+[TOTAL_GC_TIME], Time(ms), 2287
+[TOTAL_GC_TIME_%], Time(%), 0.7504856662816339
+[READ], Operations, 27004224
+[READ], AverageLatency(us), 2731.2957358078497
+[READ], MinLatency(us), 177
+[READ], MaxLatency(us), 6242303
+[READ], 50thPercentileLatency(us), 1218
+[READ], 90thPercentileLatency(us), 6307
+[READ], 95thPercentileLatency(us), 9439
+[READ], 99thPercentileLatency(us), 15959
+[READ], 99.99PercentileLatency(us), 627711
+[READ], 99.99999PercentileLatency(us), 4767743
+[READ], Return=OK, 27004224
+[NEXT-KEYGEN], Operations, 0
+[NEXT-KEYGEN], AverageLatency(us), 0.0
+[NEXT-KEYGEN], MinLatency(us), 0
+[NEXT-KEYGEN], MaxLatency(us), 0
+[NEXT-KEYGEN], 50thPercentileLatency(us), 0
+[NEXT-KEYGEN], 90thPercentileLatency(us), 0
+[NEXT-KEYGEN], 95thPercentileLatency(us), 0
+[NEXT-KEYGEN], 99thPercentileLatency(us), 0
+[NEXT-KEYGEN], 99.99PercentileLatency(us), 0
+[NEXT-KEYGEN], 99.99999PercentileLatency(us), 0
+[NEXT-KEYGEN], Return=Loop, 1294735962
+[CLEANUP], Operations, 600
+[CLEANUP], AverageLatency(us), 1.1116666666666666
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 61
+[CLEANUP], 50thPercentileLatency(us), 0
+[CLEANUP], 90thPercentileLatency(us), 2
+[CLEANUP], 95thPercentileLatency(us), 3
+[CLEANUP], 99thPercentileLatency(us), 9
+[CLEANUP], 99.99PercentileLatency(us), 61
+[CLEANUP], 99.99999PercentileLatency(us), 61
+[INSERT], Operations, 26995750
+[INSERT], AverageLatency(us), 2755.867564375874
+[INSERT], MinLatency(us), 211
+[INSERT], MaxLatency(us), 20365311
+[INSERT], 50thPercentileLatency(us), 1225
+[INSERT], 90thPercentileLatency(us), 6383
+[INSERT], 95thPercentileLatency(us), 9487
+[INSERT], 99thPercentileLatency(us), 15839
+[INSERT], 99.99PercentileLatency(us), 97151
+[INSERT], 99.99999PercentileLatency(us), 20348927
+[INSERT], Return=OK, 26995750
+[INSERT], Return=ERROR, 26
+[INSERT-FAILED], Operations, 26
+[INSERT-FAILED], AverageLatency(us), 3.084886646153846E7
+[INSERT-FAILED], MinLatency(us), 24641536
+[INSERT-FAILED], MaxLatency(us), 43220991
+[INSERT-FAILED], 50thPercentileLatency(us), 27099135
+[INSERT-FAILED], 90thPercentileLatency(us), 42303487
+[INSERT-FAILED], 95thPercentileLatency(us), 42303487
+[INSERT-FAILED], 99thPercentileLatency(us), 43220991
+[INSERT-FAILED], 99.99PercentileLatency(us), 43220991
+[INSERT-FAILED], 99.99999PercentileLatency(us), 43220991

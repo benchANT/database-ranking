@@ -1,0 +1,51 @@
+bin/ycsb load couchbase3 -s -jvm-args=-XX:MaxRAMPercentage=85.0  -p couchbase.host=172.31.26.207,172.31.22.20,172.31.19.161 -p couchbase.bucket=benchantdb -p couchbase.password=Performance99 -p couchbase.username=benchant -p workload=site.ycsb.workloads.CoreWorkload -threads 200 -p recordcount=5000000 -p fieldcount=10 -p fieldlength=50 -p insertorder=ordered -p core_workload_insertion_retry_limit=3 -p core_workload_insertion_retry_interval=3 -p insertstart=0  -p hdrhistogram.percentiles=50,90,95,99,99.99,99.99999 
+/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/java -XX:MaxRAMPercentage=85.0 -cp /binary/ycsb/couchbase3-binding/conf:/binary/ycsb/conf:/binary/ycsb/lib/jackson-mapper-asl-1.9.4.jar:/binary/ycsb/lib/htrace-core4-4.1.0-incubating.jar:/binary/ycsb/lib/jackson-core-asl-1.9.4.jar:/binary/ycsb/lib/core-0.18.0-SNAPSHOT.jar:/binary/ycsb/lib/HdrHistogram-2.1.12.jar:/binary/ycsb/couchbase3-binding/lib/reactor-adapter-3.4.8.jar:/binary/ycsb/couchbase3-binding/lib/couchbase-transactions-1.2.4.jar:/binary/ycsb/couchbase3-binding/lib/rxjava-reactive-streams-1.2.1.jar:/binary/ycsb/couchbase3-binding/lib/rxjava-1.2.2.jar:/binary/ycsb/couchbase3-binding/lib/core-io-2.4.6.jar:/binary/ycsb/couchbase3-binding/lib/slf4j-api-1.7.25.jar:/binary/ycsb/couchbase3-binding/lib/logback-core-1.2.11.jar:/binary/ycsb/couchbase3-binding/lib/reactor-extra-3.4.8.jar:/binary/ycsb/couchbase3-binding/lib/couchbase3-binding-0.18.0-SNAPSHOT.jar:/binary/ycsb/couchbase3-binding/lib/logback-classic-1.2.11.jar:/binary/ycsb/couchbase3-binding/lib/reactor-core-3.4.18.jar:/binary/ycsb/couchbase3-binding/lib/java-client-3.4.6.jar:/binary/ycsb/couchbase3-binding/lib/reactive-streams-1.0.3.jar site.ycsb.Client -db site.ycsb.db.couchbase3.Couchbase3Client -s -p couchbase.host=172.31.26.207,172.31.22.20,172.31.19.161 -p couchbase.bucket=benchantdb -p couchbase.password=Performance99 -p couchbase.username=benchant -p workload=site.ycsb.workloads.CoreWorkload -threads 200 -p recordcount=5000000 -p fieldcount=10 -p fieldlength=50 -p insertorder=ordered -p core_workload_insertion_retry_limit=3 -p core_workload_insertion_retry_interval=3 -p insertstart=0 -p hdrhistogram.percentiles=50,90,95,99,99.99,99.99999 -load
+Command line: -db site.ycsb.db.couchbase3.Couchbase3Client -s -p couchbase.host=172.31.26.207,172.31.22.20,172.31.19.161 -p couchbase.bucket=benchantdb -p couchbase.password=Performance99 -p couchbase.username=benchant -p workload=site.ycsb.workloads.CoreWorkload -threads 200 -p recordcount=5000000 -p fieldcount=10 -p fieldlength=50 -p insertorder=ordered -p core_workload_insertion_retry_limit=3 -p core_workload_insertion_retry_interval=3 -p insertstart=0 -p hdrhistogram.percentiles=50,90,95,99,99.99,99.99999 -load
+YCSB Client 0.18.0-SNAPSHOT
+
+Loading workload...
+insertstart, insertcount, recordcount: 0, 5000000, 5000000
+CoreWorkload init --- orderedinserts: true
+Starting test.
+2026-08-12 11:13:17:029 0 sec: 0 operations; est completion in 0 second 
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+2026-08-12 11:13:27:028 10 sec: 624089 operations; 62408.9 current ops/sec; est completion in 1 minute [INSERT: Count=624122, Max=392191, Min=312, Avg=3031.53, 50=1509, 90=7131, 99=8847, 99.9=11087, 99.99=383999] 
+2026-08-12 11:13:37:028 20 sec: 1267890 operations; 64380.1 current ops/sec; est completion in 59 seconds [INSERT: Count=643799, Max=11591, Min=313, Avg=3105.16, 50=1080, 90=7983, 99=9327, 99.9=10351, 99.99=10999] 
+2026-08-12 11:13:47:028 30 sec: 1914750 operations; 64686 current ops/sec; est completion in 49 seconds [INSERT: Count=646843, Max=16943, Min=313, Avg=3090.46, 50=988, 90=8019, 99=9087, 99.9=9943, 99.99=16095] 
+2026-08-12 11:13:57:028 40 sec: 2600170 operations; 68542 current ops/sec; est completion in 37 seconds [INSERT: Count=685424, Max=11367, Min=313, Avg=2916.97, 50=1139, 90=7287, 99=9039, 99.9=10343, 99.99=11039] 
+2026-08-12 11:14:07:028 50 sec: 3243872 operations; 64370.2 current ops/sec; est completion in 28 seconds [INSERT: Count=643706, Max=11359, Min=317, Avg=3105.37, 50=1039, 90=8047, 99=9423, 99.9=10351, 99.99=10951] 
+2026-08-12 11:14:17:028 60 sec: 3895434 operations; 65156.2 current ops/sec; est completion in 18 seconds [INSERT: Count=651559, Max=11143, Min=314, Avg=3068.06, 50=1272, 90=7755, 99=8903, 99.9=9727, 99.99=10319] 
+2026-08-12 11:14:27:028 70 sec: 4563345 operations; 66791.1 current ops/sec; est completion in 7 second [INSERT: Count=667917, Max=10687, Min=316, Avg=2992.78, 50=1487, 90=7379, 99=8463, 99.9=9143, 99.99=9895] 
+2026-08-12 11:14:34:133 77 sec: 5000000 operations; 61457.42 current ops/sec; [CLEANUP: Count=200, Max=1661, Min=0, Avg=8.69, 50=0, 90=1, 99=5, 99.9=1661, 99.99=1661] [INSERT: Count=436630, Max=11199, Min=320, Avg=3095.79, 50=960, 90=8183, 99=9151, 99.9=9959, 99.99=10479] 
+[OVERALL], RunTime(ms), 77104
+[OVERALL], Throughput(ops/sec), 64847.478730026975
+[TOTAL_GCS_PS_Scavenge], Count, 202
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 360
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.46690184685619424
+[TOTAL_GCS_PS_MarkSweep], Count, 1
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 15
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.019454243619008094
+[TOTAL_GCs], Count, 203
+[TOTAL_GC_TIME], Time(ms), 375
+[TOTAL_GC_TIME_%], Time(%), 0.48635609047520234
+[CLEANUP], Operations, 200
+[CLEANUP], AverageLatency(us), 8.69
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 1661
+[CLEANUP], 50thPercentileLatency(us), 0
+[CLEANUP], 90thPercentileLatency(us), 1
+[CLEANUP], 95thPercentileLatency(us), 1
+[CLEANUP], 99thPercentileLatency(us), 5
+[CLEANUP], 99.99PercentileLatency(us), 1661
+[CLEANUP], 99.99999PercentileLatency(us), 1661
+[INSERT], Operations, 5000000
+[INSERT], AverageLatency(us), 3047.630648
+[INSERT], MinLatency(us), 312
+[INSERT], MaxLatency(us), 392191
+[INSERT], 50thPercentileLatency(us), 1140
+[INSERT], 90thPercentileLatency(us), 7767
+[INSERT], 95thPercentileLatency(us), 8279
+[INSERT], 99thPercentileLatency(us), 9103
+[INSERT], 99.99PercentileLatency(us), 13607
+[INSERT], 99.99999PercentileLatency(us), 392191
+[INSERT], Return=OK, 5000000

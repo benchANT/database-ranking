@@ -1,0 +1,51 @@
+bin/ycsb load couchbase3 -s -jvm-args=-XX:MaxRAMPercentage=85.0  -p couchbase.host=172.31.29.164 -p couchbase.bucket=benchantdb -p couchbase.password=Performance99 -p couchbase.username=benchant -p workload=site.ycsb.workloads.CoreWorkload -threads 100 -p recordcount=5000000 -p fieldcount=10 -p fieldlength=50 -p insertorder=ordered -p core_workload_insertion_retry_limit=3 -p core_workload_insertion_retry_interval=3 -p insertstart=0  -p hdrhistogram.percentiles=50,90,95,99,99.99,99.99999 
+/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/java -XX:MaxRAMPercentage=85.0 -cp /binary/ycsb/couchbase3-binding/conf:/binary/ycsb/conf:/binary/ycsb/lib/jackson-mapper-asl-1.9.4.jar:/binary/ycsb/lib/htrace-core4-4.1.0-incubating.jar:/binary/ycsb/lib/jackson-core-asl-1.9.4.jar:/binary/ycsb/lib/core-0.18.0-SNAPSHOT.jar:/binary/ycsb/lib/HdrHistogram-2.1.12.jar:/binary/ycsb/couchbase3-binding/lib/reactor-adapter-3.4.8.jar:/binary/ycsb/couchbase3-binding/lib/couchbase-transactions-1.2.4.jar:/binary/ycsb/couchbase3-binding/lib/rxjava-reactive-streams-1.2.1.jar:/binary/ycsb/couchbase3-binding/lib/rxjava-1.2.2.jar:/binary/ycsb/couchbase3-binding/lib/core-io-2.4.6.jar:/binary/ycsb/couchbase3-binding/lib/slf4j-api-1.7.25.jar:/binary/ycsb/couchbase3-binding/lib/logback-core-1.2.11.jar:/binary/ycsb/couchbase3-binding/lib/reactor-extra-3.4.8.jar:/binary/ycsb/couchbase3-binding/lib/couchbase3-binding-0.18.0-SNAPSHOT.jar:/binary/ycsb/couchbase3-binding/lib/logback-classic-1.2.11.jar:/binary/ycsb/couchbase3-binding/lib/reactor-core-3.4.18.jar:/binary/ycsb/couchbase3-binding/lib/java-client-3.4.6.jar:/binary/ycsb/couchbase3-binding/lib/reactive-streams-1.0.3.jar site.ycsb.Client -db site.ycsb.db.couchbase3.Couchbase3Client -s -p couchbase.host=172.31.29.164 -p couchbase.bucket=benchantdb -p couchbase.password=Performance99 -p couchbase.username=benchant -p workload=site.ycsb.workloads.CoreWorkload -threads 100 -p recordcount=5000000 -p fieldcount=10 -p fieldlength=50 -p insertorder=ordered -p core_workload_insertion_retry_limit=3 -p core_workload_insertion_retry_interval=3 -p insertstart=0 -p hdrhistogram.percentiles=50,90,95,99,99.99,99.99999 -load
+Command line: -db site.ycsb.db.couchbase3.Couchbase3Client -s -p couchbase.host=172.31.29.164 -p couchbase.bucket=benchantdb -p couchbase.password=Performance99 -p couchbase.username=benchant -p workload=site.ycsb.workloads.CoreWorkload -threads 100 -p recordcount=5000000 -p fieldcount=10 -p fieldlength=50 -p insertorder=ordered -p core_workload_insertion_retry_limit=3 -p core_workload_insertion_retry_interval=3 -p insertstart=0 -p hdrhistogram.percentiles=50,90,95,99,99.99,99.99999 -load
+YCSB Client 0.18.0-SNAPSHOT
+
+Loading workload...
+insertstart, insertcount, recordcount: 0, 5000000, 5000000
+CoreWorkload init --- orderedinserts: true
+Starting test.
+2026-08-12 08:52:08:738 0 sec: 0 operations; est completion in 0 second 
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+2026-08-12 08:52:18:738 10 sec: 599438 operations; 59943.8 current ops/sec; est completion in 1 minute [INSERT: Count=599478, Max=385023, Min=489, Avg=1572.55, 50=1474, 90=1813, 99=2189, 99.9=6067, 99.99=378111] 
+2026-08-12 08:52:28:737 20 sec: 1272087 operations; 67264.9 current ops/sec; est completion in 59 seconds [INSERT: Count=672632, Max=4191, Min=621, Avg=1485.32, 50=1475, 90=1826, 99=2083, 99.9=3093, 99.99=3931] 
+2026-08-12 08:52:38:737 30 sec: 1940726 operations; 66863.9 current ops/sec; est completion in 48 seconds [INSERT: Count=668639, Max=3797, Min=513, Avg=1494.3, 50=1478, 90=1863, 99=2177, 99.9=2825, 99.99=3515] 
+2026-08-12 08:52:48:737 40 sec: 2632366 operations; 69164 current ops/sec; est completion in 36 seconds [INSERT: Count=691640, Max=3747, Min=505, Avg=1444.54, 50=1423, 90=1779, 99=2051, 99.9=2989, 99.99=3423] 
+2026-08-12 08:52:58:737 50 sec: 3268783 operations; 63641.7 current ops/sec; est completion in 27 seconds [INSERT: Count=636419, Max=4611, Min=499, Avg=1569.99, 50=1552, 90=1875, 99=2203, 99.9=3169, 99.99=3883] 
+2026-08-12 08:53:08:737 60 sec: 3953613 operations; 68483 current ops/sec; est completion in 16 seconds [INSERT: Count=684823, Max=4073, Min=496, Avg=1458.9, 50=1434, 90=1794, 99=2205, 99.9=3183, 99.99=3625] 
+2026-08-12 08:53:18:737 70 sec: 4626896 operations; 67328.3 current ops/sec; est completion in 6 second [INSERT: Count=673282, Max=3857, Min=479, Avg=1483.88, 50=1482, 90=1834, 99=2145, 99.9=3143, 99.99=3487] 
+2026-08-12 08:53:24:094 75 sec: 5000000 operations; 69647.94 current ops/sec; [CLEANUP: Count=100, Max=6, Min=0, Avg=0.25, 50=0, 90=1, 99=4, 99.9=6, 99.99=6] [INSERT: Count=373087, Max=3547, Min=205, Avg=1433.41, 50=1395, 90=1779, 99=2177, 99.9=3087, 99.99=3377] 
+[OVERALL], RunTime(ms), 75357
+[OVERALL], Throughput(ops/sec), 66350.83668405059
+[TOTAL_GCS_PS_Scavenge], Count, 213
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 341
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.45251270618522504
+[TOTAL_GCS_PS_MarkSweep], Count, 1
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 14
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.018578234271534166
+[TOTAL_GCs], Count, 214
+[TOTAL_GC_TIME], Time(ms), 355
+[TOTAL_GC_TIME_%], Time(%), 0.47109094045675914
+[CLEANUP], Operations, 100
+[CLEANUP], AverageLatency(us), 0.25
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 6
+[CLEANUP], 50thPercentileLatency(us), 0
+[CLEANUP], 90thPercentileLatency(us), 1
+[CLEANUP], 95thPercentileLatency(us), 1
+[CLEANUP], 99thPercentileLatency(us), 4
+[CLEANUP], 99.99PercentileLatency(us), 6
+[CLEANUP], 99.99999PercentileLatency(us), 6
+[INSERT], Operations, 5000000
+[INSERT], AverageLatency(us), 1494.4282844
+[INSERT], MinLatency(us), 205
+[INSERT], MaxLatency(us), 385023
+[INSERT], 50thPercentileLatency(us), 1471
+[INSERT], 90thPercentileLatency(us), 1826
+[INSERT], 95thPercentileLatency(us), 1920
+[INSERT], 99thPercentileLatency(us), 2153
+[INSERT], 99.99PercentileLatency(us), 6695
+[INSERT], 99.99999PercentileLatency(us), 385023
+[INSERT], Return=OK, 5000000
