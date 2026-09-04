@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "userId": "benchANT",
+    "projectId": "performance-ranking",
+    "batchId": "tpc-c",
+    "configurationId": "gcp-n4-postgresql-small",
+    "executions": 1,
+    "executionCounter": 1
+  },
+  "resourceProvider": {
+    "name": "GCP",
+    "api": "GCP"
+  },
+  "dbaasProvider": {
+    "name": "GCP",
+    "api": "CLOUDSQL"
+  },
+  "dbmsDeployment": {
+    "dbmsType": "POSTGRESQL",
+    "operationType": "DBAAS",
+    "version": "17",
+    "DBAAS": {
+      "costs": {
+		  "onDemand": 1302
+	  },
+      "cloudSqlInstance": {
+        "edition": "enterprise",
+        "region": "europe-west3",
+        "cpu": 8,
+        "cpuType": "n4",
+        "memory": 32,
+        "storageSize": 500,
+        "storageType": "HYPERDISK_BALANCED",
+		"iops": 7000, 
+		"storageThroughput": 240,
+        "dataCache": false,
+        "replicaNodes": 0,
+        "availabilityType": "regional"
+      }
+    }
+  },
+  "benchmarkDeployment": {
+    "benchmarkNodes": {
+      "numberOfNodes": 1,
+      "resource": {
+        "gcpVm": {
+          "zones": [
+            "europe-west3-a"
+          ],
+          "diskType": "STANDARD",
+          "diskSize": 50,
+          "machineType": "e2-standard-16",
+          "image": "ubuntu-2204-lts"
+        }
+      }
+    }
+  },
+  "benchmark": {
+    "id": "tpc-c",
+    "distribution": "BENCHBASETPCC",
+    "version": "master",
+    "benchbaseTPCC": {
+      "dbmsEndpoints": [],
+      "workload": {
+        "workloadPhase": "LOAD",
+        "runtime": 1800,
+        "terminals": 75,
+        "intervalMonitor": 1000,
+        "sample": 10,
+        "isolation": "TRANSACTION_SERIALIZABLE",
+        "batchSize": 1024,
+        "scaleFactor": 150.0
+      }
+    }
+  }
+}
