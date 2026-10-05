@@ -1,0 +1,613 @@
+bin/ycsb run jdbc -s -jvm-args=-XX:MaxRAMPercentage=85.0  -p db.url="jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true" -p  db.user=benchant -p  db.passwd=Performance99 -p  db.driver=com.yugabyte.Driver -p workload=site.ycsb.workloads.CoreWorkload -p maxexecutiontime=1800 -threads 200 -p recordcount=5000000 -p operationcount=54000000 -p fieldcount=10 -p fieldlength=50 -p requestdistribution=zipfian -p insertorder=ordered -p readproportion=0.5 -p updateproportion=0.0 -p insertproportion=0.5 -p scanproportion=0.0 -p scanlengthdistribution=uniform -p core_workload_insertion_retry_limit=3 -p core_workload_insertion_retry_interval=3 -p hdrhistogram.percentiles=50,90,95,99,99.99,99.99999 
+/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/java -XX:MaxRAMPercentage=85.0 -cp /binary/ycsb/jdbc-binding/conf:/binary/ycsb/conf:/binary/ycsb/lib/jackson-core-asl-1.9.4.jar:/binary/ycsb/lib/jackson-mapper-asl-1.9.4.jar:/binary/ycsb/lib/HdrHistogram-2.1.12.jar:/binary/ycsb/lib/core-0.18.0-SNAPSHOT.jar:/binary/ycsb/lib/htrace-core4-4.1.0-incubating.jar:/binary/ycsb/jdbc-binding/lib/postgresql-42.2.5.jar:/binary/ycsb/jdbc-binding/lib/serp-1.13.1.jar:/binary/ycsb/jdbc-binding/lib/jdbc-binding-0.18.0-SNAPSHOT.jar:/binary/ycsb/jdbc-binding/lib/jdbc-yugabytedb-42.7.3-yb-3.jar:/binary/ycsb/jdbc-binding/lib/commons-lang-2.4.jar:/binary/ycsb/jdbc-binding/lib/openjpa-lib-2.1.1.jar:/binary/ycsb/jdbc-binding/lib/openjpa-kernel-2.1.1.jar:/binary/ycsb/jdbc-binding/lib/commons-pool-1.5.4.jar:/binary/ycsb/jdbc-binding/lib/openjpa-jdbc-2.1.1.jar:/binary/ycsb/jdbc-binding/lib/commons-collections-3.2.1.jar:/binary/ycsb/jdbc-binding/lib/geronimo-jms_1.1_spec-1.1.1.jar:/binary/ycsb/jdbc-binding/lib/geronimo-jta_1.1_spec-1.1.1.jar site.ycsb.Client -db site.ycsb.db.JdbcDBClient -s -p db.url=jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true -p db.user=benchant -p db.passwd=Performance99 -p db.driver=com.yugabyte.Driver -p workload=site.ycsb.workloads.CoreWorkload -p maxexecutiontime=1800 -threads 200 -p recordcount=5000000 -p operationcount=54000000 -p fieldcount=10 -p fieldlength=50 -p requestdistribution=zipfian -p insertorder=ordered -p readproportion=0.5 -p updateproportion=0.0 -p insertproportion=0.5 -p scanproportion=0.0 -p scanlengthdistribution=uniform -p core_workload_insertion_retry_limit=3 -p core_workload_insertion_retry_interval=3 -p hdrhistogram.percentiles=50,90,95,99,99.99,99.99999 -t
+Command line: -db site.ycsb.db.JdbcDBClient -s -p db.url=jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true -p db.user=benchant -p db.passwd=Performance99 -p db.driver=com.yugabyte.Driver -p workload=site.ycsb.workloads.CoreWorkload -p maxexecutiontime=1800 -threads 200 -p recordcount=5000000 -p operationcount=54000000 -p fieldcount=10 -p fieldlength=50 -p requestdistribution=zipfian -p insertorder=ordered -p readproportion=0.5 -p updateproportion=0.0 -p insertproportion=0.5 -p scanproportion=0.0 -p scanlengthdistribution=uniform -p core_workload_insertion_retry_limit=3 -p core_workload_insertion_retry_interval=3 -p hdrhistogram.percentiles=50,90,95,99,99.99,99.99999 -t
+YCSB Client 0.18.0-SNAPSHOT
+
+Loading workload...
+insertstart, insertcount, recordcount: 0, 5000000, 5000000
+CoreWorkload init --- orderedinserts: true
+Starting test.
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Maximum execution time specified as: 1800 secsAdding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+
+2026-09-21 18:24:15:192 0 sec: 0 operations; est completion in 0 second 
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Adding shard node URL: jdbc:yugabytedb://172.31.28.139:5432,172.31.20.156:5432,172.31.20.100:5432/benchantdb?sslmode=allow&load-balance=true
+Using shards: 1, batchSize:-1, fetchSize: -1
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+Using shards: 1, batchSize:-1, fetchSize: -1
+2026-09-21 18:24:25:177 10 sec: 349328 operations; 34932.8 current ops/sec; est completion in 25 minutes [READ: Count=174331, Max=761343, Min=406, Avg=2801.06, 50=2193, 90=3747, 99=5767, 99.9=162303, 99.99=596991] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=175216, Max=205055, Min=1309, Avg=7732.12, 50=7463, 90=10391, 99=14159, 99.9=25231, 99.99=137855] 
+2026-09-21 18:24:35:177 20 sec: 743310 operations; 39398.2 current ops/sec; est completion in 23 minutes [READ: Count=196835, Max=23279, Min=398, Avg=2340.38, 50=2197, 90=3769, 99=5547, 99.9=7599, 99.99=15471] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=197015, Max=29967, Min=1781, Avg=7804, 50=7583, 90=10503, 99=14055, 99.9=20367, 99.99=26751] 
+2026-09-21 18:24:45:177 30 sec: 1145307 operations; 40199.7 current ops/sec; est completion in 23 minutes [READ: Count=201202, Max=12903, Min=392, Avg=2342.23, 50=2207, 90=3753, 99=5499, 99.9=7319, 99.99=10151] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=200755, Max=21407, Min=2026, Avg=7608.49, 50=7419, 90=10215, 99=13303, 99.9=16415, 99.99=19311] 
+2026-09-21 18:24:55:177 40 sec: 1542887 operations; 39758 current ops/sec; est completion in 22 minutes [READ: Count=199260, Max=12591, Min=387, Avg=2334.86, 50=2197, 90=3751, 99=5475, 99.9=7375, 99.99=9647] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=198322, Max=30367, Min=1920, Avg=7734.34, 50=7523, 90=10447, 99=13783, 99.9=16943, 99.99=28287] 
+2026-09-21 18:25:05:177 50 sec: 1922600 operations; 37971.3 current ops/sec; est completion in 22 minutes [READ: Count=189878, Max=23679, Min=392, Avg=2322.89, 50=2169, 90=3769, 99=5623, 99.9=7751, 99.99=11903] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=189817, Max=33759, Min=1354, Avg=8203.14, 50=7759, 90=11255, 99=18543, 99.9=24431, 99.99=27663] 
+2026-09-21 18:25:15:177 60 sec: 2243087 operations; 32048.7 current ops/sec; est completion in 23 minutes [READ: Count=159816, Max=14695, Min=321, Avg=2202.95, 50=1954, 90=3807, 99=6071, 99.9=8471, 99.99=11303] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=160668, Max=44287, Min=1936, Avg=10257.92, 50=9119, 90=16655, 99=24719, 99.9=29151, 99.99=34687] 
+2026-09-21 18:25:25:177 70 sec: 2633845 operations; 39075.8 current ops/sec; est completion in 22 minutes [READ: Count=195662, Max=11319, Min=356, Avg=2300.94, 50=2171, 90=3681, 99=5355, 99.9=7107, 99.99=8911] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=195115, Max=145663, Min=1236, Avg=7938.37, 50=7619, 90=10607, 99=16463, 99.9=21967, 99.99=24847] 
+2026-09-21 18:25:35:177 80 sec: 3040000 operations; 40615.5 current ops/sec; est completion in 22 minutes [READ: Count=202934, Max=10711, Min=384, Avg=2278.3, 50=2163, 90=3613, 99=5167, 99.9=6667, 99.99=8183] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=203204, Max=34495, Min=1648, Avg=7562.31, 50=7403, 90=9943, 99=12679, 99.9=15807, 99.99=31055] 
+2026-09-21 18:25:45:177 90 sec: 3440043 operations; 40004.3 current ops/sec; est completion in 22 minutes [READ: Count=200553, Max=15831, Min=373, Avg=2326.54, 50=2193, 90=3725, 99=5415, 99.9=7279, 99.99=10191] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=199569, Max=27951, Min=1778, Avg=7681.36, 50=7459, 90=10239, 99=13815, 99.9=19711, 99.99=22975] 
+2026-09-21 18:25:55:177 100 sec: 3850940 operations; 41089.7 current ops/sec; est completion in 21 minutes [READ: Count=205458, Max=10895, Min=386, Avg=2294.73, 50=2175, 90=3647, 99=5215, 99.9=6779, 99.99=8911] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=205410, Max=29759, Min=1622, Avg=7435.4, 50=7275, 90=9783, 99=12663, 99.9=15943, 99.99=27071] 
+2026-09-21 18:26:05:177 110 sec: 4257481 operations; 40654.1 current ops/sec; est completion in 21 minutes [READ: Count=202924, Max=15407, Min=398, Avg=2286.17, 50=2159, 90=3643, 99=5271, 99.9=7115, 99.99=10687] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=203595, Max=28847, Min=1377, Avg=7539.69, 50=7347, 90=10063, 99=13199, 99.9=17503, 99.99=25615] 
+2026-09-21 18:26:15:177 120 sec: 4648186 operations; 39070.5 current ops/sec; est completion in 21 minutes [READ: Count=195240, Max=12783, Min=394, Avg=2333.88, 50=2185, 90=3755, 99=5563, 99.9=7531, 99.99=9567] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=195470, Max=31903, Min=1745, Avg=7896.76, 50=7595, 90=10711, 99=15543, 99.9=23695, 99.99=28367] 
+2026-09-21 18:26:25:177 130 sec: 5055828 operations; 40764.2 current ops/sec; est completion in 20 minutes [READ: Count=203694, Max=13479, Min=389, Avg=2313.35, 50=2191, 90=3665, 99=5295, 99.9=7059, 99.99=9487] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=203934, Max=27935, Min=1900, Avg=7491.67, 50=7319, 90=9919, 99=12847, 99.9=15807, 99.99=25247] 
+2026-09-21 18:26:35:177 140 sec: 5462132 operations; 40630.4 current ops/sec; est completion in 20 minutes [READ: Count=202980, Max=14279, Min=376, Avg=2301.22, 50=2171, 90=3673, 99=5267, 99.9=7079, 99.99=11015] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=203334, Max=31183, Min=1154, Avg=7534.78, 50=7367, 90=10015, 99=12903, 99.9=16367, 99.99=28175] 
+2026-09-21 18:26:45:177 150 sec: 5852214 operations; 39008.2 current ops/sec; est completion in 20 minutes [READ: Count=194791, Max=37055, Min=334, Avg=2353.85, 50=2197, 90=3793, 99=5639, 99.9=8423, 99.99=25487] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=195276, Max=57023, Min=848, Avg=7889.42, 50=7607, 90=10631, 99=15167, 99.9=34271, 99.99=51999] 
+2026-09-21 18:26:55:179 160 sec: 6258409 operations; 40611.38 current ops/sec; est completion in 20 minutes [READ: Count=203212, Max=12127, Min=415, Avg=2350.07, 50=2219, 90=3751, 99=5419, 99.9=7207, 99.99=9391] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=202960, Max=32751, Min=1966, Avg=7499.17, 50=7319, 90=9983, 99=12935, 99.9=16143, 99.99=30175] 
+2026-09-21 18:27:05:177 170 sec: 6661431 operations; 40310.26 current ops/sec; est completion in 20 minutes [READ: Count=201541, Max=12151, Min=401, Avg=2334.85, 50=2199, 90=3741, 99=5427, 99.9=7155, 99.99=9167] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=201485, Max=22575, Min=1581, Avg=7584.68, 50=7407, 90=10111, 99=13159, 99.9=16767, 99.99=20191] 
+2026-09-21 18:27:15:177 180 sec: 7064756 operations; 40332.5 current ops/sec; est completion in 19 minutes [READ: Count=201914, Max=16511, Min=377, Avg=2312.15, 50=2179, 90=3683, 99=5359, 99.9=7371, 99.99=10687] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=201427, Max=25183, Min=1894, Avg=7607.7, 50=7427, 90=10143, 99=13087, 99.9=16071, 99.99=20687] 
+2026-09-21 18:27:25:177 190 sec: 7396254 operations; 33149.8 current ops/sec; est completion in 19 minutes [READ: Count=165750, Max=15831, Min=357, Avg=2269.62, 50=2034, 90=3893, 99=6139, 99.9=8751, 99.99=11495] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=165733, Max=38399, Min=1585, Avg=9781.73, 50=8855, 90=15239, 99=23087, 99.9=28415, 99.99=33983] 
+2026-09-21 18:27:35:177 200 sec: 7716178 operations; 31992.4 current ops/sec; est completion in 20 minutes [READ: Count=160226, Max=14111, Min=350, Avg=2178.52, 50=1917, 90=3775, 99=6115, 99.9=8495, 99.99=11743] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=159710, Max=96063, Min=1040, Avg=10345.7, 50=9151, 90=16847, 99=24943, 99.9=66175, 99.99=93439] 
+2026-09-21 18:27:45:177 210 sec: 8034800 operations; 31862.2 current ops/sec; est completion in 20 minutes [READ: Count=159201, Max=16655, Min=336, Avg=2201.59, 50=1934, 90=3823, 99=6243, 99.9=8727, 99.99=12223] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=159405, Max=38207, Min=1353, Avg=10341.94, 50=9263, 90=16703, 99=23967, 99.9=28143, 99.99=31599] 
+2026-09-21 18:27:55:177 220 sec: 8352514 operations; 31771.4 current ops/sec; est completion in 20 minutes [READ: Count=159194, Max=33279, Min=301, Avg=2195.34, 50=1940, 90=3793, 99=6191, 99.9=8727, 99.99=13743] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=158540, Max=160127, Min=1051, Avg=10407.39, 50=9159, 90=16639, 99=24703, 99.9=126335, 99.99=158079] 
+2026-09-21 18:28:05:177 230 sec: 8701842 operations; 34932.8 current ops/sec; est completion in 19 minutes [READ: Count=174377, Max=14199, Min=326, Avg=2276.62, 50=2071, 90=3809, 99=5975, 99.9=8415, 99.99=10791] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=175016, Max=36575, Min=1568, Avg=9159.44, 50=8247, 90=14095, 99=22479, 99.9=28975, 99.99=32831] 
+2026-09-21 18:28:15:177 240 sec: 9109066 operations; 40722.4 current ops/sec; est completion in 19 minutes [READ: Count=203727, Max=9927, Min=393, Avg=2306.66, 50=2187, 90=3655, 99=5263, 99.9=6951, 99.99=8855] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=203426, Max=23007, Min=1939, Avg=7515.19, 50=7351, 90=9919, 99=12887, 99.9=15551, 99.99=18383] 
+2026-09-21 18:28:25:177 250 sec: 9518672 operations; 40960.6 current ops/sec; est completion in 19 minutes [READ: Count=204638, Max=11535, Min=353, Avg=2279.51, 50=2153, 90=3623, 99=5235, 99.9=6843, 99.99=9183] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=204979, Max=21887, Min=1658, Avg=7477.51, 50=7319, 90=9887, 99=12559, 99.9=14999, 99.99=16959] 
+2026-09-21 18:28:35:177 260 sec: 9923151 operations; 40447.9 current ops/sec; est completion in 19 minutes [READ: Count=201774, Max=12439, Min=384, Avg=2293.82, 50=2169, 90=3641, 99=5319, 99.9=7051, 99.99=9271] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=202691, Max=20511, Min=1896, Avg=7580.1, 50=7391, 90=10063, 99=13151, 99.9=16047, 99.99=18127] 
+2026-09-21 18:28:45:177 270 sec: 10336837 operations; 41368.6 current ops/sec; est completion in 19 minutes [READ: Count=207143, Max=13887, Min=337, Avg=2279.62, 50=2155, 90=3623, 99=5215, 99.9=6871, 99.99=8775] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=206534, Max=21359, Min=1706, Avg=7393.09, 50=7231, 90=9799, 99=12599, 99.9=15287, 99.99=17551] 
+2026-09-21 18:28:55:177 280 sec: 10740875 operations; 40403.8 current ops/sec; est completion in 18 minutes [READ: Count=201760, Max=11847, Min=385, Avg=2299.67, 50=2163, 90=3691, 99=5379, 99.9=7075, 99.99=9399] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=202275, Max=23103, Min=1421, Avg=7589.33, 50=7375, 90=10271, 99=13823, 99.9=16671, 99.99=19855] 
+2026-09-21 18:29:05:177 290 sec: 11136103 operations; 39522.8 current ops/sec; est completion in 18 minutes [READ: Count=197763, Max=11799, Min=411, Avg=2344.15, 50=2201, 90=3779, 99=5523, 99.9=7303, 99.99=9135] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=197474, Max=23247, Min=1598, Avg=7777.42, 50=7539, 90=10567, 99=14167, 99.9=17423, 99.99=20191] 
+2026-09-21 18:29:15:177 300 sec: 11542594 operations; 40649.1 current ops/sec; est completion in 18 minutes [READ: Count=202958, Max=12951, Min=404, Avg=2338.51, 50=2203, 90=3743, 99=5431, 99.9=7259, 99.99=9159] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=203533, Max=21023, Min=1690, Avg=7490.95, 50=7323, 90=9983, 99=12751, 99.9=15807, 99.99=18607] 
+2026-09-21 18:29:25:177 310 sec: 11947694 operations; 40510 current ops/sec; est completion in 18 minutes [READ: Count=202407, Max=12831, Min=390, Avg=2315.32, 50=2189, 90=3679, 99=5347, 99.9=7171, 99.99=9231] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=202706, Max=24959, Min=1927, Avg=7550.82, 50=7367, 90=10079, 99=13167, 99.9=16127, 99.99=19055] 
+2026-09-21 18:29:35:178 320 sec: 12348710 operations; 40101.6 current ops/sec; est completion in 18 minutes [READ: Count=200825, Max=11495, Min=383, Avg=2313.45, 50=2183, 90=3687, 99=5367, 99.9=7103, 99.99=8919] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=200224, Max=20751, Min=1680, Avg=7666.06, 50=7483, 90=10239, 99=13271, 99.9=15655, 99.99=17727] 
+2026-09-21 18:29:45:177 330 sec: 12672267 operations; 32355.7 current ops/sec; est completion in 17 minutes [READ: Count=162130, Max=13591, Min=296, Avg=2241.11, 50=1987, 90=3873, 99=6183, 99.9=8551, 99.99=10855] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=161359, Max=39679, Min=1481, Avg=10135.02, 50=9047, 90=16271, 99=25055, 99.9=31359, 99.99=35487] 
+2026-09-21 18:29:55:177 340 sec: 13046793 operations; 37452.6 current ops/sec; est completion in 17 minutes [READ: Count=187270, Max=126719, Min=309, Avg=2270.76, 50=2111, 90=3703, 99=5547, 99.9=7611, 99.99=10303] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=187287, Max=31359, Min=1838, Avg=8407.16, 50=7811, 90=11895, 99=19887, 99.9=24879, 99.99=27679] 
+2026-09-21 18:30:05:177 350 sec: 13445731 operations; 39893.8 current ops/sec; est completion in 17 minutes [READ: Count=199514, Max=12623, Min=388, Avg=2327.55, 50=2195, 90=3713, 99=5399, 99.9=7131, 99.99=8879] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=199406, Max=21119, Min=2080, Avg=7697.01, 50=7535, 90=10191, 99=13063, 99.9=15743, 99.99=18287] 
+2026-09-21 18:30:15:177 360 sec: 13843216 operations; 39748.5 current ops/sec; est completion in 17 minutes [READ: Count=199508, Max=15071, Min=366, Avg=2354.51, 50=2211, 90=3779, 99=5547, 99.9=7431, 99.99=9919] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=197987, Max=22463, Min=1841, Avg=7725.74, 50=7479, 90=10479, 99=14215, 99.9=17663, 99.99=19839] 
+2026-09-21 18:30:25:177 370 sec: 14247865 operations; 40464.9 current ops/sec; est completion in 17 minutes [READ: Count=202471, Max=13447, Min=372, Avg=2341.72, 50=2203, 90=3739, 99=5483, 99.9=7463, 99.99=10135] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=202182, Max=24879, Min=1964, Avg=7543.51, 50=7335, 90=10199, 99=13511, 99.9=16543, 99.99=19087] 
+2026-09-21 18:30:35:177 380 sec: 14649442 operations; 40157.7 current ops/sec; est completion in 17 minutes [READ: Count=201050, Max=12639, Min=371, Avg=2330.52, 50=2201, 90=3717, 99=5375, 99.9=7115, 99.99=8703] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=200531, Max=22447, Min=1676, Avg=7633.94, 50=7459, 90=10151, 99=13015, 99.9=15567, 99.99=19183] 
+2026-09-21 18:30:45:177 390 sec: 15041852 operations; 39241 current ops/sec; est completion in 16 minutes [READ: Count=196461, Max=12327, Min=391, Avg=2361.87, 50=2223, 90=3781, 99=5503, 99.9=7395, 99.99=9367] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=195923, Max=26927, Min=1844, Avg=7835.08, 50=7651, 90=10447, 99=13591, 99.9=16751, 99.99=22959] 
+2026-09-21 18:30:55:177 400 sec: 15440887 operations; 39903.5 current ops/sec; est completion in 16 minutes [READ: Count=199792, Max=16383, Min=386, Avg=2378.81, 50=2251, 90=3769, 99=5475, 99.9=7567, 99.99=12479] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=199251, Max=22527, Min=1951, Avg=7649.6, 50=7503, 90=10063, 99=12767, 99.9=15431, 99.99=18223] 
+2026-09-21 18:31:05:177 410 sec: 15840952 operations; 40006.5 current ops/sec; est completion in 16 minutes [READ: Count=199318, Max=13135, Min=389, Avg=2336.2, 50=2211, 90=3707, 99=5351, 99.9=7007, 99.99=9087] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=200752, Max=22735, Min=2046, Avg=7639.59, 50=7479, 90=10071, 99=12887, 99.9=15703, 99.99=18831] 
+2026-09-21 18:31:15:177 420 sec: 16236573 operations; 39562.1 current ops/sec; est completion in 16 minutes [READ: Count=198104, Max=12583, Min=358, Avg=2340.62, 50=2201, 90=3741, 99=5451, 99.9=7295, 99.99=9775] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=197518, Max=29919, Min=1242, Avg=7773.97, 50=7539, 90=10439, 99=14135, 99.9=17791, 99.99=27359] 
+2026-09-21 18:31:25:177 430 sec: 16620468 operations; 38389.5 current ops/sec; est completion in 16 minutes [READ: Count=191635, Max=15335, Min=354, Avg=2430.18, 50=2273, 90=3919, 99=5835, 99.9=7859, 99.99=10103] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=192282, Max=216191, Min=1523, Avg=7977.22, 50=7687, 90=10999, 99=15047, 99.9=20159, 99.99=30271] 
+2026-09-21 18:31:35:177 440 sec: 17018020 operations; 39755.2 current ops/sec; est completion in 15 minutes [READ: Count=199206, Max=12167, Min=380, Avg=2362.51, 50=2217, 90=3775, 99=5635, 99.9=7835, 99.99=9879] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=198324, Max=24831, Min=1902, Avg=7706.81, 50=7475, 90=10407, 99=14183, 99.9=19663, 99.99=22847] 
+2026-09-21 18:31:45:177 450 sec: 17411819 operations; 39379.9 current ops/sec; est completion in 15 minutes [READ: Count=197322, Max=18271, Min=405, Avg=2359.95, 50=2215, 90=3771, 99=5615, 99.9=7847, 99.99=12079] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=196491, Max=33663, Min=1719, Avg=7805.8, 50=7567, 90=10551, 99=14527, 99.9=19167, 99.99=22735] 
+2026-09-21 18:31:55:177 460 sec: 17766823 operations; 35500.4 current ops/sec; est completion in 15 minutes [READ: Count=177714, Max=19471, Min=364, Avg=2362.26, 50=2163, 90=3935, 99=6111, 99.9=8607, 99.99=11519] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=177286, Max=32479, Min=1657, Avg=8910.21, 50=8187, 90=13015, 99=22143, 99.9=26559, 99.99=29599] 
+2026-09-21 18:32:05:177 470 sec: 18084091 operations; 31726.8 current ops/sec; est completion in 15 minutes [READ: Count=158084, Max=14567, Min=370, Avg=2276.95, 50=2005, 90=3965, 99=6395, 99.9=8647, 99.99=11511] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=159173, Max=43455, Min=1288, Avg=10299.33, 50=9239, 90=16607, 99=24207, 99.9=30479, 99.99=38207] 
+2026-09-21 18:32:15:177 480 sec: 18396981 operations; 31289 current ops/sec; est completion in 15 minutes [READ: Count=156702, Max=15727, Min=317, Avg=2265.47, 50=2005, 90=3911, 99=6311, 99.9=8799, 99.99=11303] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=156191, Max=113855, Min=844, Avg=10529.41, 50=9359, 90=16767, 99=25183, 99.9=79551, 99.99=110783] 
+2026-09-21 18:32:25:177 490 sec: 18778190 operations; 38120.9 current ops/sec; est completion in 15 minutes [READ: Count=191128, Max=13295, Min=377, Avg=2329.05, 50=2177, 90=3757, 99=5591, 99.9=7615, 99.99=9823] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=190083, Max=32431, Min=1868, Avg=8176.22, 50=7799, 90=11327, 99=17167, 99.9=22751, 99.99=26191] 
+2026-09-21 18:32:35:177 500 sec: 19172281 operations; 39409.1 current ops/sec; est completion in 15 minutes [READ: Count=197105, Max=15327, Min=363, Avg=2369.6, 50=2225, 90=3799, 99=5579, 99.9=7627, 99.99=10479] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=196974, Max=22719, Min=1880, Avg=7779.41, 50=7531, 90=10551, 99=14391, 99.9=17903, 99.99=20207] 
+2026-09-21 18:32:45:177 510 sec: 19574385 operations; 40210.4 current ops/sec; est completion in 14 minutes [READ: Count=201270, Max=12799, Min=376, Avg=2334.86, 50=2201, 90=3727, 99=5411, 99.9=7323, 99.99=10039] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=200837, Max=21087, Min=1884, Avg=7614.5, 50=7411, 90=10271, 99=13663, 99.9=16831, 99.99=19391] 
+2026-09-21 18:32:55:177 520 sec: 19972592 operations; 39820.7 current ops/sec; est completion in 14 minutes [READ: Count=198968, Max=15991, Min=392, Avg=2331.51, 50=2187, 90=3743, 99=5507, 99.9=7455, 99.99=10895] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=199242, Max=27119, Min=1787, Avg=7706.4, 50=7423, 90=10655, 99=14775, 99.9=18623, 99.99=23519] 
+2026-09-21 18:33:05:177 530 sec: 20366028 operations; 39343.6 current ops/sec; est completion in 14 minutes [READ: Count=196694, Max=14615, Min=382, Avg=2369.1, 50=2225, 90=3801, 99=5579, 99.9=7563, 99.99=10263] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=196750, Max=23695, Min=2058, Avg=7794.27, 50=7583, 90=10503, 99=13687, 99.9=17071, 99.99=20767] 
+2026-09-21 18:33:15:177 540 sec: 20768744 operations; 40271.6 current ops/sec; est completion in 14 minutes [READ: Count=201017, Max=15103, Min=381, Avg=2359.22, 50=2227, 90=3761, 99=5467, 99.9=7539, 99.99=10887] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=201709, Max=22847, Min=1655, Avg=7561.36, 50=7395, 90=10047, 99=12943, 99.9=16015, 99.99=19295] 
+2026-09-21 18:33:25:177 550 sec: 21166768 operations; 39802.4 current ops/sec; est completion in 14 minutes [READ: Count=199375, Max=13183, Min=375, Avg=2342.77, 50=2215, 90=3727, 99=5431, 99.9=7207, 99.99=9615] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=198630, Max=20623, Min=2068, Avg=7713.48, 50=7543, 90=10231, 99=13127, 99.9=15575, 99.99=18095] 
+2026-09-21 18:33:35:177 560 sec: 21559878 operations; 39311 current ops/sec; est completion in 14 minutes [READ: Count=196402, Max=14591, Min=414, Avg=2367.71, 50=2225, 90=3795, 99=5639, 99.9=7611, 99.99=10007] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=196723, Max=23887, Min=2156, Avg=7800.25, 50=7615, 90=10399, 99=13527, 99.9=17039, 99.99=20591] 
+2026-09-21 18:33:45:177 570 sec: 21956287 operations; 39640.9 current ops/sec; est completion in 13 minutes [READ: Count=198143, Max=13303, Min=389, Avg=2370.56, 50=2225, 90=3797, 99=5655, 99.9=7547, 99.99=10199] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=198248, Max=25151, Min=1989, Avg=7715.45, 50=7487, 90=10407, 99=13943, 99.9=17487, 99.99=21999] 
+2026-09-21 18:33:55:177 580 sec: 22358298 operations; 40201.1 current ops/sec; est completion in 13 minutes [READ: Count=201254, Max=14655, Min=372, Avg=2344.33, 50=2209, 90=3745, 99=5447, 99.9=7439, 99.99=10063] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=200785, Max=24447, Min=1980, Avg=7608.33, 50=7407, 90=10239, 99=13423, 99.9=16527, 99.99=19439] 
+2026-09-21 18:34:05:177 590 sec: 22757741 operations; 39944.3 current ops/sec; est completion in 13 minutes [READ: Count=200103, Max=12031, Min=413, Avg=2334.86, 50=2199, 90=3731, 99=5431, 99.9=7279, 99.99=9575] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=199315, Max=22031, Min=2005, Avg=7686.13, 50=7467, 90=10343, 99=13895, 99.9=17135, 99.99=20047] 
+2026-09-21 18:34:15:177 600 sec: 23102729 operations; 34498.8 current ops/sec; est completion in 13 minutes [READ: Count=172302, Max=13695, Min=351, Avg=2303.8, 50=2095, 90=3869, 99=6059, 99.9=8335, 99.99=10383] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=172689, Max=34975, Min=1319, Avg=9278.2, 50=8391, 90=14031, 99=23327, 99.9=28975, 99.99=32031] 
+2026-09-21 18:34:25:177 610 sec: 23454626 operations; 35189.7 current ops/sec; est completion in 13 minutes [READ: Count=175974, Max=15583, Min=314, Avg=2275.17, 50=2069, 90=3821, 99=5971, 99.9=8295, 99.99=11191] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=175952, Max=55071, Min=1825, Avg=9090.24, 50=8327, 90=13823, 99=21279, 99.9=26735, 99.99=31887] 
+2026-09-21 18:34:35:177 620 sec: 23859925 operations; 40529.9 current ops/sec; est completion in 13 minutes [READ: Count=202665, Max=20223, Min=374, Avg=2312.22, 50=2173, 90=3705, 99=5395, 99.9=7195, 99.99=9831] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=202626, Max=25327, Min=1708, Avg=7554.43, 50=7359, 90=10159, 99=13223, 99.9=16719, 99.99=19599] 
+2026-09-21 18:34:45:177 630 sec: 24256952 operations; 39702.7 current ops/sec; est completion in 12 minutes [READ: Count=198912, Max=12607, Min=384, Avg=2345.79, 50=2199, 90=3779, 99=5579, 99.9=7439, 99.99=9223] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=198125, Max=22959, Min=1653, Avg=7736.67, 50=7515, 90=10471, 99=13935, 99.9=17007, 99.99=19135] 
+2026-09-21 18:34:55:177 640 sec: 24664953 operations; 40800.1 current ops/sec; est completion in 12 minutes [READ: Count=203911, Max=14967, Min=376, Avg=2338.27, 50=2209, 90=3723, 99=5419, 99.9=7279, 99.99=10071] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=204069, Max=20639, Min=1669, Avg=7460.36, 50=7291, 90=9967, 99=12919, 99.9=15519, 99.99=17871] 
+2026-09-21 18:35:05:177 650 sec: 25068794 operations; 40384.1 current ops/sec; est completion in 12 minutes [READ: Count=202154, Max=10855, Min=398, Avg=2327.37, 50=2211, 90=3683, 99=5291, 99.9=6955, 99.99=8823] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=201692, Max=18127, Min=2202, Avg=7580.13, 50=7447, 90=9927, 99=12519, 99.9=14887, 99.99=16911] 
+2026-09-21 18:35:15:177 660 sec: 25471029 operations; 40223.5 current ops/sec; est completion in 12 minutes [READ: Count=201447, Max=14095, Min=411, Avg=2313.36, 50=2193, 90=3661, 99=5235, 99.9=6891, 99.99=9135] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=200782, Max=18591, Min=2066, Avg=7636.88, 50=7499, 90=10047, 99=12647, 99.9=14959, 99.99=16879] 
+2026-09-21 18:35:25:177 670 sec: 25864892 operations; 39386.3 current ops/sec; est completion in 12 minutes [READ: Count=196590, Max=13647, Min=397, Avg=2401.04, 50=2263, 90=3825, 99=5611, 99.9=7591, 99.99=10127] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=197261, Max=21823, Min=1732, Avg=7742.78, 50=7547, 90=10383, 99=13407, 99.9=16191, 99.99=18639] 
+2026-09-21 18:35:35:177 680 sec: 26268834 operations; 40394.2 current ops/sec; est completion in 11 minutes [READ: Count=201954, Max=15727, Min=399, Avg=2345.97, 50=2215, 90=3727, 99=5415, 99.9=7219, 99.99=9583] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=202010, Max=22287, Min=1904, Avg=7552.58, 50=7355, 90=10079, 99=13287, 99.9=16399, 99.99=19247] 
+2026-09-21 18:35:45:177 690 sec: 26670170 operations; 40133.6 current ops/sec; est completion in 11 minutes [READ: Count=200261, Max=17359, Min=385, Avg=2332.9, 50=2193, 90=3725, 99=5455, 99.9=7463, 99.99=11143] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=201044, Max=21535, Min=1669, Avg=7619.22, 50=7431, 90=10183, 99=13343, 99.9=16495, 99.99=18687] 
+2026-09-21 18:35:55:177 700 sec: 27067458 operations; 39728.8 current ops/sec; est completion in 11 minutes [READ: Count=198896, Max=14919, Min=391, Avg=2385.46, 50=2237, 90=3839, 99=5663, 99.9=7751, 99.99=10079] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=198409, Max=23823, Min=1857, Avg=7687.4, 50=7459, 90=10463, 99=13959, 99.9=17455, 99.99=20111] 
+2026-09-21 18:36:05:177 710 sec: 27471202 operations; 40374.4 current ops/sec; est completion in 11 minutes [READ: Count=201973, Max=13399, Min=434, Avg=2352.26, 50=2219, 90=3755, 99=5455, 99.9=7331, 99.99=9495] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=201759, Max=24863, Min=1804, Avg=7553.85, 50=7371, 90=10095, 99=13335, 99.9=16895, 99.99=21295] 
+2026-09-21 18:36:15:177 720 sec: 27872762 operations; 40156 current ops/sec; est completion in 11 minutes [READ: Count=201057, Max=10775, Min=389, Avg=2352.01, 50=2223, 90=3741, 99=5411, 99.9=7191, 99.99=9159] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=200505, Max=23151, Min=1815, Avg=7614.33, 50=7443, 90=10135, 99=13015, 99.9=15447, 99.99=17807] 
+2026-09-21 18:36:25:177 730 sec: 28234746 operations; 36198.4 current ops/sec; est completion in 11 minutes [READ: Count=180819, Max=20703, Min=316, Avg=2386.78, 50=2213, 90=3901, 99=5927, 99.9=8295, 99.99=11319] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=181176, Max=37663, Min=1626, Avg=8648.44, 50=8159, 90=11935, 99=19855, 99.9=27503, 99.99=34879] 
+2026-09-21 18:36:35:177 740 sec: 28562178 operations; 32743.2 current ops/sec; est completion in 11 minutes [READ: Count=163552, Max=31951, Min=340, Avg=2290.41, 50=2051, 90=3919, 99=6175, 99.9=8847, 99.99=11527] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=163874, Max=55199, Min=944, Avg=9918.93, 50=9007, 90=15391, 99=23135, 99.9=30975, 99.99=50303] 
+2026-09-21 18:36:45:177 750 sec: 28896565 operations; 33438.7 current ops/sec; est completion in 10 minutes [READ: Count=167066, Max=18095, Min=298, Avg=2285.99, 50=2049, 90=3905, 99=6207, 99.9=8527, 99.99=10887] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=167325, Max=113471, Min=1048, Avg=9660.98, 50=8831, 90=14183, 99=22863, 99.9=81087, 99.99=108671] 
+2026-09-21 18:36:55:177 760 sec: 29242446 operations; 34588.1 current ops/sec; est completion in 10 minutes [READ: Count=172710, Max=29375, Min=316, Avg=2400.65, 50=2179, 90=4055, 99=6319, 99.9=8719, 99.99=11479] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=173166, Max=44735, Min=1858, Avg=9160.83, 50=8727, 90=12887, 99=19055, 99.9=24703, 99.99=27871] 
+2026-09-21 18:37:05:179 770 sec: 29600163 operations; 35768.12 current ops/sec; est completion in 10 minutes [READ: Count=178921, Max=16279, Min=379, Avg=2455.15, 50=2239, 90=4111, 99=6367, 99.9=9087, 99.99=12431] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=178805, Max=121791, Min=793, Avg=8727.78, 50=8311, 90=12111, 99=16591, 99.9=96959, 99.99=118271] 
+2026-09-21 18:37:15:177 780 sec: 29957836 operations; 35770.88 current ops/sec; est completion in 10 minutes [READ: Count=179108, Max=18607, Min=339, Avg=2459.93, 50=2245, 90=4119, 99=6387, 99.9=9063, 99.99=13903] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=178577, Max=77055, Min=1025, Avg=8726.62, 50=8391, 90=12063, 99=16639, 99.9=39999, 99.99=73855] 
+2026-09-21 18:37:25:177 790 sec: 30314932 operations; 35709.6 current ops/sec; est completion in 10 minutes [READ: Count=178582, Max=18575, Min=367, Avg=2440.57, 50=2227, 90=4081, 99=6291, 99.9=8783, 99.99=12391] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=178492, Max=33087, Min=1557, Avg=8760.3, 50=8487, 90=12127, 99=15967, 99.9=19039, 99.99=23263] 
+2026-09-21 18:37:35:177 800 sec: 30669551 operations; 35461.9 current ops/sec; est completion in 10 minutes [READ: Count=177064, Max=17439, Min=365, Avg=2384.37, 50=2181, 90=3979, 99=6135, 99.9=8735, 99.99=13191] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=177577, Max=133887, Min=1208, Avg=8882.63, 50=8487, 90=12079, 99=16399, 99.9=106495, 99.99=131199] 
+2026-09-21 18:37:45:177 810 sec: 31027068 operations; 35751.7 current ops/sec; est completion in 10 minutes [READ: Count=179394, Max=15039, Min=419, Avg=2512.51, 50=2299, 90=4183, 99=6463, 99.9=8927, 99.99=11327] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=178104, Max=29503, Min=1952, Avg=8695.15, 50=8407, 90=11951, 99=15991, 99.9=20399, 99.99=24383] 
+2026-09-21 18:37:55:177 820 sec: 31381752 operations; 35468.4 current ops/sec; est completion in 9 minutes [READ: Count=176847, Max=18175, Min=365, Avg=2472.87, 50=2253, 90=4119, 99=6459, 99.9=9143, 99.99=11903] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=177845, Max=113919, Min=1076, Avg=8784.2, 50=8391, 90=12047, 99=15959, 99.9=88575, 99.99=111423] 
+2026-09-21 18:38:05:177 830 sec: 31729070 operations; 34731.8 current ops/sec; est completion in 9 minutes [READ: Count=173734, Max=18111, Min=372, Avg=2456.6, 50=2229, 90=4095, 99=6483, 99.9=10159, 99.99=15095] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=173559, Max=84031, Min=912, Avg=9060.07, 50=8631, 90=12679, 99=17647, 99.9=52415, 99.99=82431] 
+2026-09-21 18:38:15:177 840 sec: 32075970 operations; 34690 current ops/sec; est completion in 9 minutes [READ: Count=173702, Max=37151, Min=386, Avg=2418.2, 50=2203, 90=4007, 99=6243, 99.9=9679, 99.99=22015] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=173224, Max=52191, Min=1242, Avg=9119.64, 50=8735, 90=12711, 99=17647, 99.9=31391, 99.99=44831] 
+2026-09-21 18:38:25:177 850 sec: 32424965 operations; 34899.5 current ops/sec; est completion in 9 minutes [READ: Count=175038, Max=21903, Min=370, Avg=2479.21, 50=2253, 90=4163, 99=6535, 99.9=9471, 99.99=13175] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=173955, Max=121855, Min=839, Avg=8998.98, 50=8495, 90=12655, 99=17919, 99.9=96703, 99.99=120255] 
+2026-09-21 18:38:35:177 860 sec: 32793330 operations; 36836.5 current ops/sec; est completion in 9 minutes [READ: Count=184168, Max=33119, Min=391, Avg=2481.09, 50=2235, 90=4047, 99=6835, 99.9=15863, 99.99=23551] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=184189, Max=34079, Min=1823, Avg=8375.15, 50=7927, 90=12127, 99=17135, 99.9=23295, 99.99=27759] 
+2026-09-21 18:38:45:177 870 sec: 33178485 operations; 38515.5 current ops/sec; est completion in 9 minutes [READ: Count=192875, Max=29567, Min=380, Avg=2434.94, 50=2237, 90=3929, 99=6235, 99.9=13823, 99.99=21999] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=192304, Max=32959, Min=1623, Avg=7955, 50=7583, 90=11143, 99=16375, 99.9=21599, 99.99=24831] 
+2026-09-21 18:38:55:177 880 sec: 33543140 operations; 36465.5 current ops/sec; est completion in 8 minutes [READ: Count=182343, Max=24943, Min=343, Avg=2413.46, 50=2215, 90=3977, 99=6223, 99.9=9583, 99.99=15567] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=182261, Max=34975, Min=1622, Avg=8549.95, 50=8095, 90=12119, 99=18031, 99.9=24639, 99.99=28543] 
+2026-09-21 18:39:05:177 890 sec: 33880567 operations; 33742.7 current ops/sec; est completion in 8 minutes [READ: Count=168938, Max=161919, Min=337, Avg=2365.86, 50=2099, 90=4033, 99=6675, 99.9=11151, 99.99=15495] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=168522, Max=35327, Min=1757, Avg=9499.59, 50=8919, 90=13823, 99=21231, 99.9=26639, 99.99=30671] 
+2026-09-21 18:39:15:177 900 sec: 34278121 operations; 39755.4 current ops/sec; est completion in 8 minutes [READ: Count=199336, Max=13351, Min=379, Avg=2373.41, 50=2217, 90=3829, 99=5731, 99.9=7667, 99.99=9647] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=198212, Max=23423, Min=1834, Avg=7699.8, 50=7447, 90=10503, 99=14079, 99.9=17711, 99.99=21295] 
+2026-09-21 18:39:25:177 910 sec: 34674946 operations; 39682.5 current ops/sec; est completion in 8 minutes [READ: Count=198281, Max=14911, Min=341, Avg=2351.59, 50=2207, 90=3759, 99=5539, 99.9=7495, 99.99=10783] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=198542, Max=24063, Min=2076, Avg=7722.07, 50=7479, 90=10495, 99=13879, 99.9=16607, 99.99=20127] 
+2026-09-21 18:39:35:177 920 sec: 35078292 operations; 40334.6 current ops/sec; est completion in 8 minutes [READ: Count=202510, Max=15591, Min=369, Avg=2340.21, 50=2201, 90=3737, 99=5527, 99.9=7599, 99.99=11231] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=200843, Max=24383, Min=1782, Avg=7595.31, 50=7375, 90=10231, 99=13535, 99.9=17327, 99.99=21247] 
+2026-09-21 18:39:45:177 930 sec: 35477696 operations; 39940.4 current ops/sec; est completion in 8 minutes [READ: Count=199812, Max=13159, Min=365, Avg=2341.73, 50=2191, 90=3761, 99=5615, 99.9=7683, 99.99=9607] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=199597, Max=28975, Min=1563, Avg=7673.53, 50=7363, 90=10607, 99=15071, 99.9=20047, 99.99=23423] 
+2026-09-21 18:39:55:177 940 sec: 35879020 operations; 40132.4 current ops/sec; est completion in 7 minutes [READ: Count=200109, Max=12919, Min=355, Avg=2338.26, 50=2205, 90=3725, 99=5439, 99.9=7355, 99.99=10559] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=201196, Max=23759, Min=1732, Avg=7611.62, 50=7435, 90=10175, 99=13215, 99.9=16151, 99.99=19135] 
+2026-09-21 18:40:05:177 950 sec: 36278590 operations; 39957 current ops/sec; est completion in 7 minutes [READ: Count=199512, Max=13319, Min=390, Avg=2351.99, 50=2205, 90=3771, 99=5619, 99.9=7711, 99.99=10543] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=200063, Max=23663, Min=1747, Avg=7648.03, 50=7399, 90=10367, 99=14143, 99.9=17887, 99.99=20639] 
+2026-09-21 18:40:15:177 960 sec: 36684106 operations; 40551.6 current ops/sec; est completion in 7 minutes [READ: Count=202749, Max=11983, Min=374, Avg=2333.81, 50=2201, 90=3707, 99=5431, 99.9=7295, 99.99=9839] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=202775, Max=21711, Min=1920, Avg=7527.42, 50=7335, 90=10031, 99=13183, 99.9=15999, 99.99=19263] 
+2026-09-21 18:40:25:177 970 sec: 37089030 operations; 40492.4 current ops/sec; est completion in 7 minutes [READ: Count=202268, Max=14471, Min=393, Avg=2322.6, 50=2177, 90=3709, 99=5523, 99.9=7519, 99.99=9943] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=202660, Max=26767, Min=1969, Avg=7547.52, 50=7275, 90=10295, 99=14471, 99.9=19215, 99.99=22367] 
+2026-09-21 18:40:35:177 980 sec: 37480142 operations; 39111.2 current ops/sec; est completion in 7 minutes [READ: Count=195411, Max=52383, Min=358, Avg=2396.01, 50=2199, 90=3819, 99=5911, 99.9=16447, 99.99=48607] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=195711, Max=63135, Min=958, Avg=7824.14, 50=7411, 90=10711, 99=15495, 99.9=51871, 99.99=59711] 
+2026-09-21 18:40:45:177 990 sec: 37884435 operations; 40429.3 current ops/sec; est completion in 7 minutes [READ: Count=202157, Max=14663, Min=340, Avg=2355.15, 50=2201, 90=3779, 99=5643, 99.9=7787, 99.99=10359] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=202136, Max=24207, Min=1877, Avg=7535.87, 50=7275, 90=10351, 99=14119, 99.9=17391, 99.99=20175] 
+2026-09-21 18:40:55:177 1000 sec: 38288101 operations; 40366.6 current ops/sec; est completion in 6 minutes [READ: Count=201175, Max=13327, Min=347, Avg=2325.63, 50=2187, 90=3707, 99=5503, 99.9=7499, 99.99=9951] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=202487, Max=21279, Min=1834, Avg=7563.91, 50=7323, 90=10231, 99=13799, 99.9=17375, 99.99=19663] 
+2026-09-21 18:41:05:177 1010 sec: 38683202 operations; 39510.1 current ops/sec; est completion in 6 minutes [READ: Count=197499, Max=15815, Min=361, Avg=2358.35, 50=2209, 90=3771, 99=5675, 99.9=8051, 99.99=11983] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=197581, Max=27487, Min=1949, Avg=7760.76, 50=7503, 90=10551, 99=14215, 99.9=17551, 99.99=21359] 
+2026-09-21 18:41:15:177 1020 sec: 39019409 operations; 33620.7 current ops/sec; est completion in 6 minutes [READ: Count=167719, Max=69951, Min=351, Avg=2349.58, 50=2057, 90=3969, 99=6459, 99.9=17327, 99.99=61407] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=168498, Max=87295, Min=820, Avg=9527.58, 50=8751, 90=13983, 99=22943, 99.9=64735, 99.99=74111] 
+2026-09-21 18:41:25:177 1030 sec: 39354991 operations; 33558.2 current ops/sec; est completion in 6 minutes [READ: Count=168162, Max=25775, Min=347, Avg=2352.75, 50=2079, 90=4047, 99=6659, 99.9=10655, 99.99=20751] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=167420, Max=70975, Min=906, Avg=9580.8, 50=8823, 90=14399, 99=22767, 99.9=33631, 99.99=68031] 
+2026-09-21 18:41:35:177 1040 sec: 39722177 operations; 36718.6 current ops/sec; est completion in 6 minutes [READ: Count=183629, Max=171135, Min=326, Avg=2338.59, 50=2123, 90=3885, 99=6167, 99.9=9303, 99.99=15423] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=183570, Max=28799, Min=1814, Avg=8553.57, 50=8059, 90=12503, 99=17983, 99.9=22447, 99.99=25807] 
+2026-09-21 18:41:45:177 1050 sec: 40123564 operations; 40138.7 current ops/sec; est completion in 6 minutes [READ: Count=201028, Max=18399, Min=377, Avg=2312.6, 50=2175, 90=3691, 99=5411, 99.9=7211, 99.99=9527] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=200324, Max=22831, Min=2006, Avg=7659.92, 50=7403, 90=10375, 99=14439, 99.9=17855, 99.99=20479] 
+2026-09-21 18:41:55:177 1060 sec: 40533532 operations; 40996.8 current ops/sec; est completion in 5 minutes [READ: Count=204683, Max=14655, Min=378, Avg=2300.23, 50=2183, 90=3629, 99=5211, 99.9=6759, 99.99=8831] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=205314, Max=25119, Min=2086, Avg=7445.54, 50=7295, 90=9799, 99=12367, 99.9=14551, 99.99=16527] 
+2026-09-21 18:42:05:177 1070 sec: 40939771 operations; 40623.9 current ops/sec; est completion in 5 minutes [READ: Count=202808, Max=12375, Min=370, Avg=2310.53, 50=2187, 90=3659, 99=5287, 99.9=7039, 99.99=9103] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=203434, Max=22015, Min=1813, Avg=7525.1, 50=7359, 90=9927, 99=12783, 99.9=16055, 99.99=19135] 
+2026-09-21 18:42:15:177 1080 sec: 41334146 operations; 39437.5 current ops/sec; est completion in 5 minutes [READ: Count=196937, Max=11751, Min=375, Avg=2354.7, 50=2211, 90=3777, 99=5543, 99.9=7391, 99.99=9431] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=197437, Max=22367, Min=2096, Avg=7778.41, 50=7563, 90=10407, 99=13735, 99.9=16831, 99.99=19295] 
+2026-09-21 18:42:25:177 1090 sec: 41739933 operations; 40578.7 current ops/sec; est completion in 5 minutes [READ: Count=203459, Max=15711, Min=383, Avg=2338.61, 50=2209, 90=3727, 99=5451, 99.9=7263, 99.99=9511] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=202317, Max=23551, Min=1822, Avg=7530, 50=7347, 90=10055, 99=13015, 99.9=15415, 99.99=18367] 
+2026-09-21 18:42:35:177 1100 sec: 42144598 operations; 40466.5 current ops/sec; est completion in 5 minutes [READ: Count=202775, Max=11751, Min=336, Avg=2325.43, 50=2201, 90=3701, 99=5347, 99.9=6915, 99.99=8839] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=201897, Max=20015, Min=1953, Avg=7568.35, 50=7395, 90=10095, 99=13063, 99.9=15799, 99.99=18735] 
+2026-09-21 18:42:45:177 1110 sec: 42544801 operations; 40020.3 current ops/sec; est completion in 4 minutes [READ: Count=200354, Max=15695, Min=387, Avg=2326.28, 50=2197, 90=3699, 99=5363, 99.9=7107, 99.99=9511] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=199823, Max=21391, Min=2076, Avg=7672.32, 50=7523, 90=10135, 99=12871, 99.9=15511, 99.99=18271] 
+2026-09-21 18:42:55:177 1120 sec: 42946403 operations; 40160.2 current ops/sec; est completion in 4 minutes [READ: Count=200834, Max=11799, Min=383, Avg=2356.05, 50=2229, 90=3741, 99=5427, 99.9=7223, 99.99=9007] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=200833, Max=27151, Min=1990, Avg=7602.71, 50=7427, 90=10039, 99=13095, 99.9=18287, 99.99=23519] 
+2026-09-21 18:43:05:177 1130 sec: 43354010 operations; 40760.7 current ops/sec; est completion in 4 minutes [READ: Count=203895, Max=12335, Min=385, Avg=2312.37, 50=2193, 90=3657, 99=5271, 99.9=6879, 99.99=9119] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=203662, Max=23279, Min=2022, Avg=7499.91, 50=7343, 90=9879, 99=12703, 99.9=16383, 99.99=20319] 
+2026-09-21 18:43:15:177 1140 sec: 43760880 operations; 40687 current ops/sec; est completion in 4 minutes [READ: Count=203641, Max=12847, Min=361, Avg=2300.56, 50=2173, 90=3647, 99=5283, 99.9=7027, 99.99=9479] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=203222, Max=23791, Min=2092, Avg=7533.31, 50=7363, 90=9999, 99=12967, 99.9=16167, 99.99=19759] 
+2026-09-21 18:43:25:177 1150 sec: 44116042 operations; 35516.2 current ops/sec; est completion in 4 minutes [READ: Count=177742, Max=53151, Min=359, Avg=2355.48, 50=2139, 90=3899, 99=6183, 99.9=9671, 99.99=45791] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=177413, Max=70911, Min=1153, Avg=8908.01, 50=8215, 90=12935, 99=21631, 99.9=27887, 99.99=57343] 
+2026-09-21 18:43:35:177 1160 sec: 44462027 operations; 34598.5 current ops/sec; est completion in 4 minutes [READ: Count=173393, Max=117119, Min=325, Avg=2254.82, 50=2041, 90=3795, 99=5987, 99.9=8511, 99.99=12551] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=172617, Max=124159, Min=831, Avg=9321.51, 50=8519, 90=14127, 99=22575, 99.9=27423, 99.99=31199] 
+2026-09-21 18:43:45:177 1170 sec: 44868686 operations; 40665.9 current ops/sec; est completion in 3 minutes [READ: Count=203189, Max=14503, Min=360, Avg=2288.26, 50=2169, 90=3631, 99=5219, 99.9=6875, 99.99=9935] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=203477, Max=23311, Min=1482, Avg=7541.28, 50=7375, 90=10007, 99=12991, 99.9=16375, 99.99=21295] 
+2026-09-21 18:43:55:177 1180 sec: 45269849 operations; 40116.3 current ops/sec; est completion in 3 minutes [READ: Count=200914, Max=14639, Min=385, Avg=2316.93, 50=2181, 90=3691, 99=5419, 99.9=7279, 99.99=9807] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=200247, Max=23615, Min=1896, Avg=7659.75, 50=7471, 90=10191, 99=13207, 99.9=16303, 99.99=19487] 
+2026-09-21 18:44:05:177 1190 sec: 45675137 operations; 40528.8 current ops/sec; est completion in 3 minutes [READ: Count=202870, Max=11831, Min=394, Avg=2346.81, 50=2225, 90=3723, 99=5363, 99.9=7139, 99.99=9799] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=202396, Max=24079, Min=1987, Avg=7526.55, 50=7355, 90=9959, 99=12879, 99.9=15703, 99.99=18575] 
+2026-09-21 18:44:15:177 1200 sec: 46081303 operations; 40616.6 current ops/sec; est completion in 3 minutes [READ: Count=202633, Max=11599, Min=408, Avg=2308.56, 50=2189, 90=3657, 99=5227, 99.9=6779, 99.99=8431] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=203554, Max=20767, Min=2000, Avg=7525.18, 50=7363, 90=9935, 99=12631, 99.9=15007, 99.99=17151] 
+2026-09-21 18:44:25:177 1210 sec: 46484808 operations; 40350.5 current ops/sec; est completion in 3 minutes [READ: Count=201413, Max=15255, Min=382, Avg=2310.03, 50=2187, 90=3653, 99=5287, 99.9=7067, 99.99=9663] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=202081, Max=21903, Min=2082, Avg=7591.14, 50=7435, 90=9967, 99=12663, 99.9=15383, 99.99=18575] 
+2026-09-21 18:44:35:177 1220 sec: 46883219 operations; 39841.1 current ops/sec; est completion in 3 minutes [READ: Count=199117, Max=17823, Min=350, Avg=2371.06, 50=2237, 90=3767, 99=5563, 99.9=8059, 99.99=12095] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=199301, Max=29887, Min=1972, Avg=7663.61, 50=7467, 90=10239, 99=13623, 99.9=17199, 99.99=22975] 
+2026-09-21 18:44:45:177 1230 sec: 47290633 operations; 40741.4 current ops/sec; est completion in 2 minutes [READ: Count=203840, Max=18095, Min=383, Avg=2320.58, 50=2201, 90=3665, 99=5303, 99.9=7023, 99.99=10087] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=203570, Max=22399, Min=1884, Avg=7497.98, 50=7343, 90=9879, 99=12695, 99.9=15911, 99.99=18991] 
+2026-09-21 18:44:55:177 1240 sec: 47695233 operations; 40460 current ops/sec; est completion in 2 minutes [READ: Count=202375, Max=12399, Min=406, Avg=2317.73, 50=2195, 90=3677, 99=5307, 99.9=7011, 99.99=9175] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=202237, Max=21551, Min=1845, Avg=7568.04, 50=7411, 90=10047, 99=12839, 99.9=15743, 99.99=18319] 
+2026-09-21 18:45:05:177 1250 sec: 48085722 operations; 39048.9 current ops/sec; est completion in 2 minutes [READ: Count=195015, Max=35039, Min=370, Avg=2396.2, 50=2245, 90=3825, 99=5727, 99.9=8463, 99.99=21135] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=195471, Max=41695, Min=975, Avg=7837.68, 50=7595, 90=10543, 99=14303, 99.9=24863, 99.99=35199] 
+2026-09-21 18:45:15:177 1260 sec: 48485405 operations; 39968.3 current ops/sec; est completion in 2 minutes [READ: Count=199820, Max=13727, Min=394, Avg=2370.6, 50=2237, 90=3775, 99=5459, 99.9=7323, 99.99=9951] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=199855, Max=22687, Min=1766, Avg=7633.99, 50=7475, 90=10127, 99=12991, 99.9=15671, 99.99=18607] 
+2026-09-21 18:45:25:177 1270 sec: 48874721 operations; 38931.6 current ops/sec; est completion in 2 minutes [READ: Count=194727, Max=12623, Min=411, Avg=2397.8, 50=2259, 90=3845, 99=5579, 99.9=7451, 99.99=9695] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=194597, Max=23103, Min=1989, Avg=7875.49, 50=7695, 90=10551, 99=13823, 99.9=16783, 99.99=18911] 
+2026-09-21 18:45:35:177 1280 sec: 49245306 operations; 37058.5 current ops/sec; est completion in 2 minutes [READ: Count=185318, Max=15167, Min=413, Avg=2429.31, 50=2271, 90=3935, 99=5783, 99.9=7851, 99.99=10159] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=185245, Max=33695, Min=1763, Avg=8362.94, 50=8015, 90=11383, 99=17295, 99.9=25087, 99.99=30575] 
+2026-09-21 18:45:45:177 1290 sec: 49555166 operations; 30986 current ops/sec; est completion in 1 minute [READ: Count=155017, Max=38751, Min=326, Avg=2321.72, 50=2038, 90=3991, 99=6531, 99.9=11719, 99.99=33439] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=154855, Max=52031, Min=1223, Avg=10589.44, 50=9535, 90=16831, 99=25375, 99.9=32751, 99.99=43903] 
+2026-09-21 18:45:55:177 1300 sec: 49867736 operations; 31257 current ops/sec; est completion in 1 minute [READ: Count=156174, Max=19807, Min=313, Avg=2327.77, 50=2065, 90=4013, 99=6423, 99.9=9295, 99.99=12959] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=156394, Max=35295, Min=1289, Avg=10459.67, 50=9463, 90=16543, 99=24367, 99.9=29423, 99.99=33247] 
+2026-09-21 18:46:05:177 1310 sec: 50178963 operations; 31122.7 current ops/sec; est completion in 1 minute [READ: Count=155260, Max=20159, Min=317, Avg=2300.68, 50=2028, 90=3989, 99=6487, 99.9=9039, 99.99=12223] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=155977, Max=47487, Min=1475, Avg=10530.29, 50=9407, 90=16863, 99=25487, 99.9=32543, 99.99=43103] 
+2026-09-21 18:46:15:177 1320 sec: 50488468 operations; 30950.5 current ops/sec; est completion in 1 minute [READ: Count=155114, Max=21919, Min=300, Avg=2314.03, 50=2028, 90=4053, 99=6591, 99.9=9039, 99.99=11807] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=154381, Max=37823, Min=1321, Avg=10626.19, 50=9631, 90=16975, 99=24831, 99.9=29871, 99.99=33439] 
+2026-09-21 18:46:25:177 1330 sec: 50791786 operations; 30331.8 current ops/sec; est completion in 1 minute [READ: Count=151206, Max=58303, Min=322, Avg=2388.09, 50=2061, 90=4183, 99=7019, 99.9=12407, 99.99=44671] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=152102, Max=61247, Min=1123, Avg=10770.64, 50=9703, 90=17183, 99=26255, 99.9=44095, 99.99=54879] 
+2026-09-21 18:46:35:177 1340 sec: 51154395 operations; 36260.9 current ops/sec; est completion in 1 minute [READ: Count=181287, Max=91135, Min=395, Avg=2496.15, 50=2223, 90=3935, 99=6291, 99.9=46943, 99.99=71551] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=181330, Max=102207, Min=963, Avg=8533.32, 50=7779, 90=11687, 99=22943, 99.9=74495, 99.99=95551] 
+2026-09-21 18:46:45:177 1350 sec: 51549115 operations; 39472 current ops/sec; est completion in 1 minute [READ: Count=197036, Max=14015, Min=353, Avg=2386.99, 50=2239, 90=3835, 99=5631, 99.9=7639, 99.99=9783] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT: Count=197695, Max=26255, Min=1599, Avg=7734.13, 50=7543, 90=10407, 99=13631, 99.9=16543, 99.99=19343] 
+2026-09-21 18:46:55:177 1360 sec: 51936010 operations; 38689.5 current ops/sec; est completion in 55 seconds [READ: Count=193325, Max=14375, Min=377, Avg=2400.04, 50=2253, 90=3853, 99=5651, 99.9=7619, 99.99=10071] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [CLEANUP: Count=3, Max=250, Min=76, Avg=134.33, 50=77, 90=250, 99=250, 99.9=250, 99.99=250] [INSERT: Count=193576, Max=23391, Min=2054, Avg=7847.43, 50=7631, 90=10543, 99=13863, 99.9=17727, 99.99=21663] 
+2026-09-21 18:47:05:177 1370 sec: 52320528 operations; 38451.8 current ops/sec; est completion in 44 seconds [READ: Count=192264, Max=15255, Min=517, Avg=2423.08, 50=2247, 90=3925, 99=6023, 99.9=8591, 99.99=12095] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [CLEANUP: Count=11, Max=108, Min=60, Avg=85.82, 50=87, 90=104, 99=108, 99.9=108, 99.99=108] [INSERT: Count=192247, Max=26735, Min=1751, Avg=7655.47, 50=7351, 90=10759, 99=15183, 99.9=19183, 99.99=22127] 
+2026-09-21 18:47:15:177 1380 sec: 52666064 operations; 34553.6 current ops/sec; est completion in 35 seconds [READ: Count=172932, Max=16719, Min=466, Avg=2428.67, 50=2193, 90=4091, 99=6319, 99.9=8743, 99.99=12151] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [CLEANUP: Count=54, Max=120, Min=36, Avg=62.3, 50=61, 90=88, 99=120, 99.9=120, 99.99=120] [INSERT: Count=172592, Max=25743, Min=1481, Avg=6831.62, 50=6347, 90=10415, 99=14551, 99.9=17759, 99.99=20879] 
+2026-09-21 18:47:25:177 1390 sec: 52958655 operations; 29259.1 current ops/sec; est completion in 28 seconds [READ: Count=146215, Max=19311, Min=493, Avg=2543.86, 50=2309, 90=4147, 99=6163, 99.9=8407, 99.99=10967] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [CLEANUP: Count=3, Max=81, Min=64, Avg=75.33, 50=81, 90=81, 99=81, 99.9=81, 99.99=81] [INSERT: Count=146391, Max=23071, Min=1560, Avg=6342.75, 50=5955, 90=9319, 99=13047, 99.9=16175, 99.99=18815] 
+2026-09-21 18:47:35:177 1400 sec: 53249755 operations; 29110 current ops/sec; est completion in 20 seconds [READ: Count=145355, Max=13623, Min=554, Avg=2472.97, 50=2233, 90=4031, 99=6091, 99.9=8463, 99.99=11207] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [CLEANUP: Count=19, Max=89, Min=49, Avg=69.68, 50=67, 90=89, 99=89, 99.9=89, 99.99=89] [INSERT: Count=145732, Max=24095, Min=1404, Avg=5996.73, 50=5599, 90=8927, 99=12887, 99.9=16207, 99.99=18799] 
+2026-09-21 18:47:45:177 1410 sec: 53485457 operations; 23570.2 current ops/sec; est completion in 14 seconds [READ: Count=117779, Max=9791, Min=493, Avg=2174.16, 50=2115, 90=3227, 99=4447, 99.9=5679, 99.99=7403] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [CLEANUP: Count=56, Max=145, Min=33, Avg=47, 50=41, 90=67, 99=145, 99.9=145, 99.99=145] [INSERT: Count=117908, Max=14519, Min=804, Avg=4033.69, 50=3841, 90=5935, 99=8111, 99.9=10119, 99.99=11903] 
+2026-09-21 18:47:55:177 1420 sec: 53671190 operations; 18573.3 current ops/sec; est completion in 9 second [READ: Count=92613, Max=7207, Min=750, Avg=2068.52, 50=2014, 90=2793, 99=3663, 99.9=4587, 99.99=5475] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [CLEANUP: Count=11, Max=94, Min=57, Avg=74.73, 50=76, 90=84, 99=94, 99.9=94, 99.99=94] [INSERT: Count=93117, Max=9447, Min=1473, Avg=3161.65, 50=2963, 90=4407, 99=5931, 99.9=7363, 99.99=8231] 
+2026-09-21 18:48:05:177 1430 sec: 53840067 operations; 16887.7 current ops/sec; est completion in 5 second [READ: Count=84112, Max=5003, Min=797, Avg=1729.28, 50=1702, 90=2227, 99=2843, 99.9=3567, 99.99=4475] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [CLEANUP: Count=15, Max=95, Min=41, Avg=64.07, 50=64, 90=79, 99=95, 99.9=95, 99.99=95] [INSERT: Count=84768, Max=7247, Min=1509, Avg=2551.9, 50=2443, 90=3265, 99=4263, 99.9=5363, 99.99=6467] 
+2026-09-21 18:48:15:177 1440 sec: 53963430 operations; 12336.3 current ops/sec; est completion in 1 second [READ: Count=61585, Max=3255, Min=847, Avg=1440.54, 50=1463, 90=1751, 99=2065, 99.9=2481, 99.99=3013] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [CLEANUP: Count=21, Max=79, Min=36, Avg=48.43, 50=43, 90=67, 99=79, 99.9=79, 99.99=79] [INSERT: Count=61769, Max=5627, Min=1425, Avg=2052.73, 50=2017, 90=2395, 99=2845, 99.9=3359, 99.99=3861] 
+2026-09-21 18:48:25:177 1450 sec: 53995896 operations; 3246.6 current ops/sec; est completion in 1 second [READ: Count=16174, Max=2609, Min=898, Avg=1331.46, 50=1425, 90=1504, 99=1658, 99.9=1804, 99.99=2353] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [CLEANUP: Count=3, Max=74, Min=63, Avg=69.67, 50=72, 90=74, 99=74, 99.9=74, 99.99=74] [INSERT: Count=16292, Max=2755, Min=1437, Avg=1770.77, 50=1762, 90=1944, 99=2115, 99.9=2293, 99.99=2743] 
+Could not wait until max specified time, TerminatorThread interrupted.
+2026-09-21 18:48:27:614 1452 sec: 54000000 operations; 1684.04 current ops/sec; [READ: Count=2036, Max=2183, Min=999, Avg=1328.06, 50=1426, 90=1481, 99=1610, 99.9=1697, 99.99=2183] [NEXT-KEYGEN: Count=0, Max=0, Min=0, Avg=0, 50=0, 90=0, 99=0, 99.9=0, 99.99=0] [CLEANUP: Count=4, Max=76, Min=41, Avg=53.25, 50=43, 90=76, 99=76, 99.9=76, 99.99=76] [INSERT: Count=2066, Max=2919, Min=1554, Avg=1742.14, 50=1744, 90=1855, 99=2026, 99.9=2133, 99.99=2919] 
+[OVERALL], RunTime(ms), 1452436
+[OVERALL], Throughput(ops/sec), 37178.91872688366
+[TOTAL_GCS_PS_Scavenge], Count, 9848
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 12000
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.8261981939307481
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 9848
+[TOTAL_GC_TIME], Time(ms), 12000
+[TOTAL_GC_TIME_%], Time(%), 0.8261981939307481
+[READ], Operations, 27003258
+[READ], AverageLatency(us), 2341.571631245385
+[READ], MinLatency(us), 296
+[READ], MaxLatency(us), 761343
+[READ], 50thPercentileLatency(us), 2175
+[READ], 90thPercentileLatency(us), 3785
+[READ], 95thPercentileLatency(us), 4367
+[READ], 99thPercentileLatency(us), 5711
+[READ], 99.99PercentileLatency(us), 13687
+[READ], 99.99999PercentileLatency(us), 691199
+[READ], Return=OK, 27003258
+[NEXT-KEYGEN], Operations, 0
+[NEXT-KEYGEN], AverageLatency(us), 0.0
+[NEXT-KEYGEN], MinLatency(us), 0
+[NEXT-KEYGEN], MaxLatency(us), 0
+[NEXT-KEYGEN], 50thPercentileLatency(us), 0
+[NEXT-KEYGEN], 90thPercentileLatency(us), 0
+[NEXT-KEYGEN], 95thPercentileLatency(us), 0
+[NEXT-KEYGEN], 99thPercentileLatency(us), 0
+[NEXT-KEYGEN], 99.99PercentileLatency(us), 0
+[NEXT-KEYGEN], 99.99999PercentileLatency(us), 0
+[NEXT-KEYGEN], Return=Loop, 88386664
+[CLEANUP], Operations, 200
+[CLEANUP], AverageLatency(us), 60.575
+[CLEANUP], MinLatency(us), 33
+[CLEANUP], MaxLatency(us), 250
+[CLEANUP], 50thPercentileLatency(us), 58
+[CLEANUP], 90thPercentileLatency(us), 84
+[CLEANUP], 95thPercentileLatency(us), 90
+[CLEANUP], 99thPercentileLatency(us), 120
+[CLEANUP], 99.99PercentileLatency(us), 250
+[CLEANUP], 99.99999PercentileLatency(us), 250
+[INSERT], Operations, 26996742
+[INSERT], AverageLatency(us), 8016.968608063891
+[INSERT], MinLatency(us), 793
+[INSERT], MaxLatency(us), 216191
+[INSERT], 50thPercentileLatency(us), 7627
+[INSERT], 90thPercentileLatency(us), 11095
+[INSERT], 95thPercentileLatency(us), 12687
+[INSERT], 99thPercentileLatency(us), 17967
+[INSERT], 99.99PercentileLatency(us), 59231
+[INSERT], 99.99999PercentileLatency(us), 196863
+[INSERT], Return=OK, 26996742
