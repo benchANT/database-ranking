@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "userId": "benchANT",
+    "projectId": "performance-ranking",
+    "batchId": "tpc-c",
+    "configurationId": "ionos-postgresql-17-3-nodes-small",
+    "executions": 1,
+    "executionCounter": 1
+  },
+  "resourceProvider": {
+    "name": "IONOS",
+    "api": "IONOS"
+  },
+  "dbaasProvider": {
+    "name": "IONOS",
+    "api": "IONOSRDS"
+  },
+  "dbmsDeployment": {
+    "dbmsType": "POSTGRESQL",
+    "operationType": "DBAAS",
+    "version": "17",
+    "DBAAS": {
+		 "costs": {
+		  "onDemand": 2103
+		},
+      "ionosRdsInstance": {
+        "location": "de/fra",
+        "instances": {
+          "count": 3,
+          "cores": 8,
+          "ram": 32,
+          "storageSize": 500
+        },
+        "replicationMode": "STRICTLY_SYNCHRONOUS",
+        "connectionPooler": "DISABLED"
+      }
+    }
+  },
+  "benchmarkDeployment": {
+    "benchmarkNodes": {
+      "numberOfNodes": 1,
+      "resource": {
+        "ionosVm": {
+          "location": "de/fra",
+          "availabilityZone": "AUTO",
+          "cores": 16,
+          "cpuFamiliy": "INTEL_XEON",
+          "ram": 32768,
+          "image": "ubuntu:24.04",
+          "diskType": "SSD",
+          "volumeSize": 50
+        }
+      }
+    }
+  },
+  "benchmark": {
+    "id": "tpc-c",
+    "distribution": "BENCHBASETPCC",
+    "version": "master",
+    "benchbaseTPCC": {
+      "dbmsEndpoints": [],
+      "workload": {
+        "workloadPhase": "LOAD",
+        "runtime": 1800,
+        "terminals": 75,
+        "intervalMonitor": 1000,
+        "sample": 10,
+        "isolation": "TRANSACTION_SERIALIZABLE",
+        "batchSize": 1024,
+        "scaleFactor": 150.0
+      }
+    }
+  }
+}
